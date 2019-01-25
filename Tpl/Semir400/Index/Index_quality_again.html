@@ -1,0 +1,285 @@
+<include file="Public:head"/><include file="Public:navbar"/>
+<link rel="stylesheet" type="text/css" href="<{:RES}>/public/upload/css/css.css?<{:time()}>" />
+<!-- <script src="<{:RES}>/public/upload/js/jquery.js"></script> -->
+<script src="<{:RES}>/public/upload/js/LocalResizeIMG.js"></script>
+<script src="<{:RES}>/public/upload/js/mobileBUGFix.mini.js"></script>
+<script type="text/javascript" src="<{:RES}>/public/js/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="<{:RES}>/public/js/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+<link href="<{:RES}>/public/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<script type="text/javascript">
+$(document).ready(function(){
+  ////////////////////
+  $('.form_date').datetimepicker({
+    language: 'zh-CN',
+    weekStart: 1,
+    todayBtn: 1,
+	  autoclose: 1,
+	  todayHighlight: 1,
+	  startView: 2,
+	  minView: 2,
+	  forceParse: 0
+});
+
+});
+</script>
+<style>
+.upload-image { 
+    width: 100px;   
+}
+</style>
+<div class="container"> 
+<div id="msgShow"></div>
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+       <div class="topRightBut pull-right"> <a href="javascript:history.go(-1);" class=" "><i class="fa fa-mail-reply" aria-hidden="true"></i> 返回</a> </div>
+      <h1><i class="fa fa-bell-o" aria-hidden="true"></i> 质量投诉 <small>>> 质量投诉申请</small> <small>>> 重新投诉</small></h1>
+     
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="<{:U('index/qualityrefer_again')}>" role="form">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="com_code">投诉编号</label>
+            <div class="col-sm-8 "> 
+               <p class="form-control-static rightFont"><{$info.com_code}></p>
+               <input type="hidden"  name="com_code" value="<{$info.com_code}>"/>
+            </div>
+          </div>
+          
+            <eq name="feedback.tra_type" value="3">
+            <div class="form-group">
+	            <label class="col-sm-3 control-label" for="com_type">投诉类别</label>
+	            <div class="col-sm-4">
+	            	<p class="form-control-static rightFont">照片鉴定</p>
+	               <input type="hidden"  name="com_type" value="1"/>
+	            </div>
+            </div>
+            <div class="form-group" id="pic">
+            	<label class="col-sm-3 control-label" for="reg_amount">上传照片</label>
+            	
+	            <div class="col-sm-5">
+	            <div><label class="control-label">请分别上传问题点局部、全图 、洗唛正面 、洗唛反面四张照片</label></div>
+	              	<div class="upload-image">
+						<i class="icon icon-camerafill x6"></i>选择图片
+						<input type="file" name="upfile" id="post-pictures-file" accept="image/*" style="opacity: 0; left: 0;top: 0;bottom: 0;margin: 0; position: absolute;  width: 100px;cursor:pointer;" />
+					</div>
+					<div class="showLine"></div>
+	            </div>
+	            <div class="col-sm-5">
+	            	<span class="rightMsg" id="msgAmount"></span>
+	            </div>
+          </div>
+            </eq>
+            
+          <eq name="feedback.tra_type" value="4">
+          <div class="form-group">
+	            <label class="col-sm-3 control-label" for="com_type">投诉类别</label>
+	            <div class="col-sm-4">
+	            	<p class="form-control-static rightFont">实物鉴定</p>
+	               <input type="hidden"  name="com_type" value="2"/>
+	            </div>
+          </div>
+          <div id="expressinfo">
+	           <div class="form-group">
+	            	<label class="col-sm-3 control-label" for="fol_express">快递公司</label>
+		            <div class="col-sm-4">
+		              	<input type="text" class="form-control" name="fol_express"  id="fol_express" placeholder="请输入快递公司" value="">
+		            </div>
+		            <div class="col-sm-5">
+		            	<span class="rightMsg" id="color_id"></span>
+		            </div>
+	          </div>
+	          <div class="form-group">
+	            	<label class="col-sm-3 control-label" for="fol_express_number">快递单号</label>
+		            <div class="col-sm-4">
+		              	<input type="text" class="form-control" name="fol_express_number"  id="fol_express_number" placeholder="请输入快递单号" value="">
+		            </div>
+		            <div class="col-sm-5">
+		            	<span class="rightMsg" id="color_id"></span>
+		            </div>
+	          </div>
+	          <div class="form-group">
+	            	<label class="col-sm-3 control-label" for="fol_express_address">快递回寄地址</label>
+		            <div class="col-sm-4">
+		              	<input type="text" class="form-control" name="fol_express_address"  id="fol_express_address" placeholder="请输入快递回寄地址" value="">
+		            </div>
+		            <div class="col-sm-5">
+		            	<span class="rightMsg" id="color_id"></span>
+		            </div>
+	          </div>
+          </div>
+          </eq>
+          
+           <!--item -->
+           
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="fol_contents">问题描述</label>
+            <div class="col-sm-4">
+              <textarea class="form-control" name="fol_contents"  id="fol_contents" placeholder="请输入问题描述"></textarea>
+            </div>
+             <div class="col-sm-5">
+            <span class="rightMsg" id="com_contents"></span>
+            </div>
+          </div>
+           
+           <!--item -->
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for=""></label>
+            <div class="col-sm-4">
+             <button  class="btn btn-success btn-sm" type="submit"> 
+            <span class='glyphicon glyphicon-ok-circle'></span> 提交投诉申请 
+            </button>
+            
+            </div>
+          </div>
+           <!--item -->
+        </div>
+      
+      </form>
+    </div>
+  </div> 
+  </div> 
+<include file="Public:foot"/>
+<script type="text/javascript">
+$(function(){
+	$('#subForm').bootstrapValidator({
+		   message: 'This value is not valid',
+		     feedbackIcons: {
+		       valid: 'glyphicon glyphicon-ok fui-check',
+		        invalid: 'glyphicon glyphicon-remove fui-cross',
+		        validating: 'glyphicon glyphicon-refresh'
+		    }, 
+		    fields: {
+		    	
+		    	   fol_express: {
+		               message: '请输入快递公司',
+		               validators: {
+							notEmpty: {
+		                       message:  '请输入快递公司'
+		                   }
+		               }
+		           },
+		           fol_express_number: {
+		               message: '请输入快递单号',
+		               validators: {
+							notEmpty: {
+		                       message:  '请输入快递单号'
+		                   }
+		               }
+		           },
+		           fol_express_address: {
+		               message: '请输入快递回寄地址',
+		               validators: {
+							notEmpty: {
+		                       message:  '请输入快递回寄地址'
+		                   }
+		               }
+		           },
+		           fol_contents: {
+		               message: '请输入问题描述',
+		               validators: {
+							notEmpty: {
+		                       message:  '请输入问题描述'
+		                   }
+		               }
+		           },
+			}
+		}).on('success.form.bv', function(e) {
+		 
+		});
+	
+
+})
+
+</script>
+  <script>
+  $('#post-pictures-file').on('click',function(){
+	  if($('.uploadResult').length>=4){
+		  BootstrapDialog.show({
+				type:"type-danger",
+				title: '上传图片错误：',
+				message: '你只能上传4张照片',
+				buttons: [{
+					label: 'Close',
+					action: function(dialogRef) {
+						dialogRef.close();
+					}
+				}]
+			}); 
+          return false;
+	  }
+	    $(this).localResizeIMG({
+	        width: 1000,
+	        quality: 0.9,
+	        before: function() {
+	            if (checkHtml5Support() == false) {
+	            	BootstrapDialog.show({
+						type:"type-danger",
+						title: '浏览器错误：',
+						message: '你的老掉牙浏览器不支持HTML5，请使用先进浏览器',
+						buttons: [{
+							label: 'Close',
+							action: function(dialogRef) {
+								dialogRef.close();
+							}
+						}]
+					}); 
+	                return false;
+	            }
+	        },
+	        success: function(result) {
+	            var img = new Image();
+	            img.src = result.base64;
+	            var rand = new Date().getTime();
+	            var newDiv = '<div id=\"uploadFile' + rand + '\" class=\"uploadResult\"><div class=\"info\">压缩上传中...</div><img class=\"previewImage\"></div>';
+	            $('.showLine').before(newDiv);
+	            $.ajax({
+	                xhr: function(){
+	                    var xhr = new window.XMLHttpRequest();
+	                    xhr.upload.addEventListener("progress", function(evt){
+	                        if (evt.lengthComputable) {
+	                            // 获取进度百分比
+	                            var percentComplete = parseInt((evt.loaded / evt.total)*100);
+	                            $(".info:last").html("已上传："+percentComplete + "%");
+	                        }
+	                    });
+	                    return xhr;
+	                },
+	                url: '<{:U("index/upload")}>',
+	                type: 'POST',
+	                data: {
+	                    'base64': result.base64
+	                },
+	                timeout: 45000,
+	                error: function() {
+	                    alert('上传发生错误或超时，请重试');
+	                    $('#uploadFile' + rand).hide();
+	                },
+	                success: function(data) {
+	                	var newDiv2 = $('<div class=\"delPic\" onclick=\"javascript:delUploadImage(\'uploadFile' + rand + '\');\" title=\"删除\" style=\"display: block;\"><i class=\"icon icon-roundclose x2\"></i><input type="hidden" name="fol_pic[]" value="'+data+'"/></div>');
+	                    $('#uploadFile' + rand + ' img').after(newDiv2);
+	                    $('#uploadFile' + rand + ' img').attr("src", result.base64);
+	                    $('#uploadFile' + rand + ' .info').html('上传完成');
+	                }
+	            });
+	        }
+	    });
+	});
+function checkHtml5Support() {
+    if (window.applicationCache) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function delUploadImage(id){
+	$('#'+id).remove();
+}
+</script>

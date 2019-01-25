@@ -1,0 +1,356 @@
+<include file="Public:head"/><include file="Public:navbar"/>
+<link rel="stylesheet" type="text/css" href="<{:RES}>/public/upload/css/css.css?<{:time()}>" />
+<style>
+.upload-image { 
+    width: 100px;   
+}
+
+.text-danger{
+	margin:0 0 10px 0; 
+	padding: 5px;
+	font-size:12px;
+	border:1px solid #ECECEC;
+	list-style:none;
+}
+.text-danger li{  
+}
+</style>
+<!-- <script src="<{:RES}>/public/upload/js/jquery.js"></script> -->
+<script src="<{:RES}>/public/upload/js/LocalResizeIMG.js"></script>
+<script src="<{:RES}>/public/upload/js/mobileBUGFix.mini.js"></script>
+ 
+ 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#subForm').bootstrapValidator({
+      message: 'This value is not valid',
+        feedbackIcons: {
+          valid: 'glyphicon glyphicon-ok fui-check',
+           invalid: 'glyphicon glyphicon-remove fui-cross',
+           validating: 'glyphicon glyphicon-refresh'
+       }, 
+       fields: {
+    	   agent_area: {
+               message: '请选择区域',
+               validators: {
+					notEmpty: {
+                       message:  '请选择区域'
+                   }
+               }
+           },
+		    agent_storename: {
+		               message: '请输入店铺名称',
+		               validators: {
+							notEmpty: {
+		                       message:  '请输入店铺名称'
+		                   }
+		               }
+		           },
+           agent_tel: {
+               message: '请输入联系方式',
+               validators: {
+					notEmpty: {
+                       message:  '请输入联系方式'
+                   },
+                  /* stringLength: {
+                        min: 11,
+                        max: 11,
+                        message: '请输入11位手机号码'
+                    },
+                    regexp: {
+                        regexp: /^1[[0-9]{1}[0-9]{9}$/,
+                        message: '请输入正确的手机号码'
+                    }*/
+               }
+           },
+           agent_person: {
+               message: '请输入联系人',
+               validators: {
+					notEmpty: {
+                       message:  '请输入联系人'
+                   }
+               }
+           },
+           style_id: {
+               message: '请输入款号',
+               validators: {
+					notEmpty: {
+                       message:  '请输入款号'
+                   },
+		            stringLength: {
+		                        min: 11,
+		                        max: 11,
+		                        message: '请输入11位款号，如有多款，可在描述中添加'
+		                    },
+		            regexp: {
+		                        regexp: /^1[[0-9]{1}[0-9]{9}$/,
+		                        message: '请输入正确的产品款号'
+		                    }/**/
+               }
+           },
+           color_id: {
+               message: '请输入色号',
+               validators: {
+					notEmpty: {
+                       message:  '请输入色号'
+                   }
+               }
+           },
+          /* number: {
+               message: '请输入抽检数量',
+               validators: {
+					notEmpty: {
+                       message:  '请输入抽检数量'
+                   },
+                   
+                   regexp:{
+                	   regexp:/^\+?[1-9][0-9]*$/ ,
+                	   message:'请输入数值'
+                   }
+               }
+           }, 
+           take_dept: {
+               message: '请输入抽检机构',
+               validators: {
+					notEmpty: {
+                       message:  '请输入抽检机构'
+                   }
+               }
+           },
+		    detection_dept: {
+               message: '请输入检测机构',
+               validators: {
+					notEmpty: {
+                       message:  '请输入检测机构'
+                   }
+               }
+           },*/
+		    com_contents: {
+               message: '请输入详细描述',
+               validators: {
+					notEmpty: {
+                       message:  '请输入详细描述'
+                   }
+               }
+           }
+		}
+   }).on('success.form.bv', function(e) {
+	 
+	});
+	///
+	
+});
+</script>
+
+<div class="container"> 
+<div id="msgShow"></div>
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="topRightBut pull-right"> <a href="<{:U('Index/sampling')}>" class=" "><i class="fa fa-mail-reply" aria-hidden="true"></i> 返回</a>   </div>
+      <h1><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 终端抽检 <small>>> 终端抽检申请</small> </h1>
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="<{:U('index/samplingrefer')}>" role="form">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="com_code">投诉编号</label>
+            <div class="col-sm-4 "> 
+               <p class="form-control-static rightFont"><{$ComplaintNo}></p>
+               <input type="hidden"  name="com_code" value="<{$ComplaintNo}>"/>
+            </div>
+          
+            <label class="col-sm-1 control-label" for="deptname">组织名称</label>
+            <div class="col-sm-4">
+              <p class="form-control-static rightFont"> <{$thisUser.province}>/<{$thisUser.deptname}> </p>
+              <input type="hidden"  name="agent_province" value="<{$thisUser.province}>"/>
+              <input type="hidden"  name="agent_name" value="<{$thisUser.deptname}>"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="agent_area">区域</label>
+            <div class="col-sm-4">
+              <select name="agent_area" id="agent_area" class="form-control">
+              	<option value="">请选择区域</option>
+              	<volist name="arealist" id="vo">
+              		<option value="<{$vo.areaname}>"><{$vo.areaname}></option>
+              	</volist>
+              </select>
+            </div>
+              <label class="col-sm-1 control-label" for="agent_storename">店铺名称</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="agent_storename"  id="agent_storename" placeholder="请输入店铺名称" value="">
+	            </div>
+          </div>
+           <!--item -->
+               <div class="form-group">
+            	<label class="col-sm-2 control-label" for="agent_person">联系人</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="agent_person"  id="agent_person" placeholder="请输入联系人" value="">
+	            </div>
+	            
+          
+            	<label class="col-sm-1 control-label" for="agent_tel">联系电话</label>
+	            <div class="col-sm-2">
+	              	<input type="text" class="form-control" name="agent_tel"  id="agent_tel" placeholder="请输入联系电话" value="">
+	            </div>
+	            
+          </div>
+     
+          
+          
+           <!--item -->
+            <div id="inputVal">
+             <!--item -->
+          <div class="form-group">
+            	<label class="col-sm-2 control-label" for="style_id">款号</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="style_id"  id="style_id" placeholder="请输入款号" value="">
+	            </div>
+	           
+         
+            	<label class="col-sm-1 control-label" for="color_id">色号</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="color_id"  id="color_id" placeholder="请输入色号" value="">
+	            </div>
+	             
+          </div>
+          <div class="form-group">
+            	<label class="col-sm-2 control-label" for="number">抽检数量</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="number"  id="number" placeholder="请输入抽检数量" value="">
+	            </div>
+	            <div class="col-sm-5">
+	            	<span class="rightMsg" id="number"></span>
+	            </div>
+          </div>  
+            <!--item -->
+          <div class="form-group">
+            	<label class="col-sm-2 control-label" for="take_dept">抽检单位</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="take_dept"  id="take_dept" placeholder="请输入抽检单位" value="">
+	            </div>
+	           
+         
+            	<label class="col-sm-1 control-label" for="color_id">质检单位</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="detection_dept"  id="detection_dept" placeholder="请输入质检单位" value="">
+	            </div>
+	             
+          </div>
+              <!--item -->
+<!--item -->
+
+          <div class="form-group">
+            	 <label class="col-sm-2 control-label" for="com_contents">质检描述</label>
+            <div class="col-sm-6">
+            <ul class="text-danger" style="">
+<li>如有多款，可在描述中添加款号、色号。</li> 
+</ul>
+              <textarea class="form-control" name="com_contents"  id="com_contents" placeholder="请输入质检的相关说明或其他信息"></textarea>
+            </div>
+          </div>
+           <!--item -->
+          <div class="form-group">
+            	<label class="col-sm-2 control-label" for="reg_amount">抽样单照片</label>
+	            <div class="col-sm-5">
+	              	<div class="upload-image">
+						<i class="icon icon-camerafill x6"></i>选择图片
+						<input type="file" name="upfile" id="post-pictures-file" accept="image/*" style="opacity: 0; left: 0;top: 0;bottom: 0;margin: 0; position: absolute; width: 100px;cursor:pointer;" />
+					</div>
+					<div class="showLine"></div>
+	            </div>
+	            <div class="col-sm-5">
+	            	<span class="rightMsg" id="msgAmount"></span>
+	            </div>
+          </div>
+           <!--item -->
+            </div>
+           
+           <!--item -->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for=""></label>
+            <div class="col-sm-4">
+             <button  class="btn btn-success btn-sm" type="submit"> 
+            <span class='glyphicon glyphicon-ok-circle'></span> 提交投诉申请 
+            </button>
+            
+            </div>
+          </div>
+           <!--item -->
+        </div>
+      
+      </form>
+    </div>
+  </div> 
+  </div> 
+  <include file="Public:foot"/>
+
+  <script>
+$('#post-pictures-file').on('click',function(){
+    $(this).localResizeIMG({
+        width: 1000,
+        quality: 0.9,
+        before: function() {
+            if (checkHtml5Support() == false) {
+                alertMessage("你的老掉牙浏览器不支持HTML5，请使用先进浏览器");
+                return false;
+            }
+        },
+        success: function(result) {
+            var img = new Image();
+            img.src = result.base64;
+            var newDiv = '<div id=\"uploadFile\" class=\"uploadResult\"><div class=\"info\">压缩上传中...</div><img class=\"previewImage\"></div>';
+            if($('#uploadFile').length<1){
+            	$('.showLine').before(newDiv);
+            }
+            
+            $.ajax({
+                xhr: function(){
+                    var xhr = new window.XMLHttpRequest();
+                    xhr.upload.addEventListener("progress", function(evt){
+                        if (evt.lengthComputable) {
+                            // 获取进度百分比
+                            var percentComplete = parseInt((evt.loaded / evt.total)*100);
+                            $(".info:last").html("已上传："+percentComplete + "%");
+                        }
+                    });
+                    return xhr;
+                },
+                url: '<{:U("index/upload")}>',
+                type: 'POST',
+                data: {
+                    'base64': result.base64
+                },
+                timeout: 45000,
+                error: function() {
+                    alertMessage('上传发生错误或超时，请重试');
+                    $('#uploadFile').hide();
+                },
+                success: function(data) {
+                	var newDiv2 = $('<div class=\"delPic\" onclick=\"javascript:delUploadImage(\'uploadFile\');\" title=\"删除\" style=\"display: block;\"><i class=\"icon icon-roundclose x2\"></i><input type="hidden" name="com_pic" value="'+data+'"/></div>');
+                	$('#uploadFile img').after(newDiv2);
+                    $('#uploadFile img').attr("src", result.base64);
+                    $('#uploadFile .info').html('上传完成');
+                }
+            });
+        }
+    });
+});
+function checkHtml5Support() {
+    if (window.applicationCache) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function delUploadImage(id){
+	$('#'+id).remove();
+}
+</script>

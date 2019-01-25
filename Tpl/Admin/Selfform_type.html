@@ -1,0 +1,45 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+ <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">问卷调查</a>><a href="type">问卷分类</a></div>
+<div class="bloc">
+  <div class="wrap ">
+      <dl class="dl_line">
+        <dt><a href="typeadd" class="xz">新增</a></dt>
+      </dl>
+    </div>
+</div>
+<div class="wrap">
+ <div class="wrap"> 
+   <table width="100%" cellpadding="0" cellspacing="0" class="list" id="list-table"> 
+    <thead> 
+    <tr> 
+      <th class="text-left" style="padding-left:10px;">分类名称</th> 
+	  <th>问卷数量</th> 
+      <th>排序</th> 
+      <th style="width:200px;">操作</th> 
+    </tr> 
+    </thead>
+        <volist name="alist" id="vo">
+	        <tr class="<{$vo.pid}>" id="<{$vo.pid}>_<{$vo.id}>"> 
+		      <td style="padding-left:10px; text-align:left">
+		      <for start="1" end="$vo['level']">
+		                &nbsp;&nbsp;&nbsp;
+		      </for>
+		      <img src="/Public/admin/images/menu_minus.gif" id="icon_<{$vo.pid}>_<{$vo.id}>" onclick="rowClicked(this)" border="0" height="9" width="9"> 
+		      <a href="<{:U('Selfform/index',array('type_id'=>$vo['id']))}>"><u><{$vo.name}></u></a></td> 
+			  <td><{$vo.count}></td> 
+		      <td><{$vo.sort}></td> 
+		      <td>
+		      
+		      <a href="<{:U('Selfform/typeedit',array('id'=>$vo['id']))}>" class="edit">修改</a>
+		      <a href="<{:U('Selfform/typedel',array('id'=>$vo['id']))}>" onclick="return confirm('确定删除吗？')" class="delete">删除</a>
+		      </td> 
+		    </tr> 
+     	</volist>
+     	</table> 
+ 	
+         
+</div>
+</body>
+</html>

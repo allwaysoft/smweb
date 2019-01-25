@@ -1,0 +1,59 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" style="padding-left:0px;"><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>">首页</a>><a href="pass_ed">修改密码</a></div>
+  <div class="bloc">
+ <dl  class="t_1_h">
+
+      <div class="wrap">
+    <form id="form1" name="form1" method="post" action="">
+    <input type="hidden" name="id" value="<{$aid}>"/>
+      <table class="add">
+        <tbody>
+          <tr>
+            <th>原密码：<font class="red">*</font></th>
+            <td><input name="opwd" maxlength="20" class="input" id="old_password" style="width:200px;" type="password"/>
+            </td>
+          </tr>
+          <tr>
+            <th>新密码：<font class="red">*</font></th>
+            <td><input name="npwd" maxlength="20" class="input" id="password" style="width:200px;" type="password"/>
+              <span> 5~20个字符</span> </td>
+          </tr>
+          <tr>
+            <th>确认新密码：<font class="red">*</font></th>
+            <td><input name="confirmpassword" maxlength="20" class="input" id="confirmpassword" style="width:200px;" type="password"/>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input name="btnSubmit" id="btnSubmit" value="确定" type="submit">
+              <input name="btnReset" id="btnReset" value="清除" type="reset">
+              <input name="btnBack" id="btnBack" value="返回" type="button">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			user_id: { required: true,minlength:5 },
+			opwd:{required:true,minlength:5},
+			npwd:{required:true,minlength:5},
+			confirmpassword:{required:true,equalTo: "#password"}
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+})
+
+</script> 

@@ -1,0 +1,196 @@
+<include file="Public:head"/>
+<style>
+.designer li,.type li,.year li{padding:3px 4px; border:1px  dashed red;max-width:120px;float:left;min-width:50px; margin:4px;text-align: center;cursor:pointer;}
+.checked{background:#ccc; color:#FFF;}
+#option table th{width:100px;text-align: right;}
+</style>
+<!--  CONTEN  ---->
+<!-- 1. Add these JavaScript inclusions in the head of your page -->
+<script type="text/javascript" src="__PUBLIC__/admin/js/tjjs/highcharts.js"></script>
+		
+<!-- 1a) Optional: the exporting module -->
+<script type="text/javascript" src="__PUBLIC__/admin/js/tjjs/modules/exporting.js"></script>
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">商品管理</a>><a href="<{:U('Product/index')}>">商品列表</a>><a href="#">统计分析</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th>产品总点击率：</th>
+          <td><font style="color:red;"><{$sum}></font>次</td>
+        </tr>
+        <tr><th>点击率前十款：</th>
+        <td>
+		<volist name="maxlist" id="vo">
+		TOP<{$i}>(<font style="color:red;"><{$vo.click}></font>次):<a href="<{:U('Product/index',array('keyword'=>$vo['styleID']))}>"><{$vo.styleID}></a> &nbsp;/&nbsp;
+		</volist>
+		</td></tr>
+        <tr><th>点赞前十款：</th>
+        <td>
+		<volist name="zanlist" id="vo">
+		TOP<{$i}>(<font style="color:red;"><{$vo.zan}></font>次):<a href="<{:U('Product/index',array('keyword'=>$vo['styleID']))}>"><{$vo.styleID}></a> &nbsp;/&nbsp;
+		</volist>
+		</td></tr>
+      </tbody>
+    </table>
+</div>
+<div id="option" style="width: 95%; height: auto; margin: 10px auto; border:1px solid #ccc;padding:10px;">
+<p style="font-size:13px;">筛选条件</p>
+<table>
+<tr>
+<th>设计师：</th>
+<td>
+<ul class="designer">
+<volist name="designer" id="vo">
+<li><{$vo.designer}></li>
+</volist>
+</ul>
+</td>
+</tr>
+<tr>
+<th>分类：</th>
+<td>
+<ul class="type">
+<volist name="type" id="vo">
+<li><{$vo.typename}></li>
+</volist>
+</ul>
+</td>
+</tr>
+<tr>
+<th>年份：</th>
+<td>
+<ul class="year">
+<volist name="year" id="vo">
+<li><{$vo.year}></li>
+</volist>
+</ul>
+</td>
+</tr>
+<tr>
+<th></th><td><input type="button" id="shaixuan" value="筛选"/>&nbsp;<input type="button" id="exportData" value="导出数据"/><label id="export_notice"></label></td>
+</tr>
+</table>
+</div>
+<div id="container" style="width: 800px; height: auto; margin: 0 auto; "></div>
+</div>
+</body>
+</html>
+<script>
+$('#option ul li').toggle(function(){
+	$(this).addClass('checked');
+},function(){
+	$(this).removeClass('checked');
+})
+$('#shaixuan').click(function(){
+	var designer='';
+	$('.designer .checked').each(function(){
+		designer+=$(this).html()+',';
+	})
+	designer=designer.substring(0,designer.length-1);
+	var type='';
+	$('.type .checked').each(function(){
+		type+=$(this).html()+',';
+	})
+	type=type.substring(0,type.length-1);
+	var year='';
+	$('.year .checked').each(function(){
+		year+=$(this).html()+',';
+	})
+	year=year.substring(0,year.length-1);
+	
+	var url="<{:U('Product/result')}>";
+	var chart;
+	$.post(url,{designer:designer,typename:type,year:year},function(msg){
+		var styleID=new Array();
+		var click=new Array();
+		
+		for(var i in msg.styleID){
+			styleID.push(msg.styleID[i]);
+			click.push(parseInt(msg.click[i]));
+		}
+		tuxing(styleID,click)
+	})
+})
+function tuxing(x,y){
+
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'container',
+			defaultSeriesType: 'column',
+			margin: [ 50, 50, 100, 80]
+		},
+		title: {
+			text: '产品点击率统计示意'
+		},
+		xAxis: {
+			categories: x,
+			labels: {
+				rotation: -45,
+				align: 'right',
+				style: {
+					 font: 'normal 13px Verdana, sans-serif'
+				}
+			}
+		},
+		yAxis: {
+			min: 0,
+			title: {
+				text: '点击率(次)'
+			}
+		},
+		legend: {
+			enabled: false
+		},
+		tooltip: {
+			formatter: function() {
+				return '<b>'+ this.x +'</b><br/>'+
+					 '点击率: '+ Highcharts.numberFormat(this.y, 1) +
+					 ' 次';
+			}
+		},
+	        series: [{
+			name: 'Population',
+			data: y,
+			dataLabels: {
+				enabled: true,
+				rotation: -90,
+				color: '#FFFFFF',
+				align: 'right',
+				x: -3,
+				y: 10,
+				formatter: function() {
+					return this.y;
+				},
+				style: {
+					font: 'normal 13px Verdana, sans-serif'
+				}
+			}			
+		}]
+	});
+}
+$('#exportData').click(function(){
+	if(confirm("确定导出选中的数据吗？")){
+		var designer='';
+		$('.designer .checked').each(function(){
+			designer+=$(this).html()+',';
+		})
+		designer=designer.substring(0,designer.length-1);
+		var type='';
+		$('.type .checked').each(function(){
+			type+=$(this).html()+',';
+		})
+		type=type.substring(0,type.length-1);
+		var year='';
+		$('.year .checked').each(function(){
+			year+=$(this).html()+',';
+		})
+		year=year.substring(0,year.length-1);
+		window.location.href="__CONTROLLER__/export_prod?designer="+designer+"&typename="+type+"&year="+year
+	}
+})
+</script>

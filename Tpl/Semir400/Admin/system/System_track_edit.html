@@ -1,0 +1,120 @@
+<script type="text/javascript" src="<{:RES}>/public/js/bootstrap-validator/bootstrapValidator.js"></script>
+<script type="text/javascript" src="<{:RES}>/public/jquery.form.js"></script> 
+<script type="text/javascript">
+    $(document).ready(function(){
+     $('#subForm').bootstrapValidator({
+       message: 'This value is not valid',
+         feedbackIcons: {
+           valid: 'glyphicon glyphicon-ok fui-check',
+            invalid: 'glyphicon glyphicon-remove fui-cross',
+            validating: 'glyphicon glyphicon-refresh'
+        }, 
+        fields: {
+			 content: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  '回复内容必填'
+                    }
+                }
+            } 
+		}
+    }).on('success.form.bv', function(e) {
+		$.each(BootstrapDialog.dialogs, function(id, dialog){
+					 dialog.close();
+				 });
+		 var post_data = $("#subForm").serializeArray();
+		 		var post_url;
+				//alert($("input[name=id]").val());
+                 post_url = "/semir400admin.php/System/track_edit_do"; 
+                 //  post_url = "{%site_url('admin/homepage/edit')%}"; 
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    cache:false,
+                    data: post_data,
+                    success: function(msg){ 
+                        if(msg==0){
+                            // $("#editbox").html("");
+							BootstrapDialog.show({
+								type:BootstrapDialog.TYPE_SUCCESS,
+								title: '添加投诉主题成功',
+								message: '正在刷新页面，请稍后!!' 
+							});     
+                             
+                             setTimeout(function(){
+                                 window.location.reload();
+                            },1000);
+                            //  Alert(msg);
+                        }else{
+                            BootstrapDialog.show({
+								type:"type-danger",
+								title: '操作错误',
+								message: msg,
+								buttons: [{
+									label: 'Close',
+									action: function(dialogRef) {
+										dialogRef.close();
+									}
+								}]
+							});     
+                        }
+                    },
+                    error:function(){
+                        BootstrapDialog.show({
+								type:"type-danger",
+								title: '操作错误',
+								message: "请联系开发人员！！",
+								closable: false,
+								buttons: [{
+									label: 'Close',
+									action: function(dialog) {
+										dialog.close();
+										// You can also use BootstrapDialog.closeAll() to close all dialogs.
+										
+									}
+								}]
+							});
+						
+                    }
+                });
+                return false;
+	});
+	  
+	  //////////////
+});
+</script>
+ 
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="" role="form">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group form-group-sm"> 
+          <label class="col-sm-3 control-label" for="type">回复类型</label>
+          <div class="col-sm-9 ">
+            <label class="radio-inline">
+              <input name="type" type="radio" id="type" value="1" <eq name="info.type" value="1">checked="checked"</eq> >
+              服务投诉 </label>
+            <label class="radio-inline">
+              <input type="radio" name="type" id="type" value="2"  <eq name="info.type" value="2">checked="checked"</eq> >
+              质量投诉 </label>
+            <label class="radio-inline">
+              <input type="radio" name="type" id="type" value="3"  <eq name="info.type" value="3">checked="checked"</eq> >
+              终端服务 </label>
+          </div>
+        </div>
+         <!--item -->
+            <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="content">回复内容</label>
+            <div class="col-sm-6 ">
+              <input type="text" class="form-control" name="content"  id="content" placeholder="请输入投诉主题" value="<{$info.content}>">
+            </div>
+          </div>
+          <!--item --> 
+         
+           <input type="hidden"   name="id" id="id" placeholder="id" value="<{$info.id}>">
+        </div>
+       </form>
+    </div>
+  </div> 

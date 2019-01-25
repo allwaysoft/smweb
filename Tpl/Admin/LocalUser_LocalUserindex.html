@@ -1,0 +1,131 @@
+<include file="Public:head" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.fbmodel.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/fbmodal.css" />
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">用户管理</a>><a href="<{:U('LocalUser/LocalUserindex')}>">本机用户</a></div>
+<div class="bloc">
+<!-- 代码 begin -->
+<div  class=" wrap">
+<form action="" method="get">
+  <dl class="dl_line">
+    <dd >
+    	<select name="condition">
+    		<option value=''></option>
+    		<option <eq name='condition' value='L_active'>selected="selected"</eq> value='L_active'>登陆活跃</option>
+    		<option <eq name='condition' value='L_free'>selected="selected"</eq> value='L_free'>登陆空闲</option>
+    		<option <eq name='condition' value='L_lock'>selected="selected"</eq> value='L_lock'>登陆锁定</option>
+    		<option <eq name='condition' value='S_open'>selected="selected"</eq> value='S_open'>账号启用</option>
+    		<option <eq name='condition' value='S_lock'>selected="selected"</eq> value='S_lock'>账号禁用</option>
+    	</select>
+      <input type="text" name="keyword" id="keyword" value="<{$keyword}>" onfocus="this.value='';"  />
+      <input type="submit" id="btnSearch" value=" 搜 索 " />
+    </dd>
+  </dl>
+ </form>
+ <form action="<{:U('LocalUser/LocalUserdel')}>" method="post">
+  <dl class="dl_line">
+    <dt><a href="LocalUseradd" class="xz" >新增</a> <a href="LocalUserimport" class="daoru " style="width:50px" >批量导入</a><input type="submit" class="schu" value="删除" onclick="return listDelete(this.form.name);" id="btnDelete" /></dt>
+  </dl>
+  <div class="content">
+    <table class="list">
+      <thead>
+        <tr>
+          <th ><input type="checkbox" id="all" /></th>
+          <th>序号</th>
+          <th>账号</th>
+          <th>姓名</th>
+          <th>分类</th>
+       
+          <th>省份</th>
+          <th>城市</th>
+          <th>归属区域1</th>
+          <th>归属区域2</th>
+          <th>当前状态</th>
+          <th>ip状态</th>
+          <th>账号状态</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+      <volist name="list" id="vo">
+        <tr>
+          <td><input type="checkbox" name="id[]" value="<{$vo.id}>" /></td>
+           <td><{$i}></td>
+            <td><{$vo.user_name}></td>
+             <td><{$vo.name}></td>
+              <td><{$vo.deptname}></td>
+              <td><{$vo.province}></td>
+              <td><{$vo.city}></td>
+              <td><{$vo.area1}></td>
+              <td><{$vo.area2}></td>
+              <td id="td_<{$vo.id}>"><if condition="$vo.login_state eq 0">活跃<elseif condition="$vo.login_state eq 1"/>空闲<elseif condition="$vo.login_state eq 2"/><a href="javascript:void()" onclick="ChangeLoginState(<{$vo.id}>)"><span style="color:red;">超时锁定</span></a></if></td>
+              <td><if condition="$vo.qure eq 0">IP正常<else/><span style="color:red;">IP异常</span></if></td>
+               <td><if condition="$vo.states eq 0">启用<else/>禁用</if></td>
+              <td><a href="<{:U('LocalUser/logs',array('id'=>$vo['id']))}>">查看</a><a href="<{:U('LocalUser/LocalUseredit',array('id'=>$vo['id']))}>" style="margin:0px 10px;">编辑</a><a  style="padding-left:10px;" href="<{:U('LocalUser/LocalUserdel',array('id'=>$vo['id']))}>">删除</a><a id="no<{$vo.id}>" style="padding-left:10px;" href="javascript:voil(0)" onclick="ResetPwd(<{$vo.id}>)">密码重置</a></td>
+        </tr>
+        </volist>
+    </table>
+  </div>
+</form>
+</div>
+<div class="page">
+  <div class="pagination"><{$page}></div>
+</div>
+<div class="test">
+    <p style="line-height:2;text-indent:1.5em;"></p>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script>
+function ChangeLoginState(obj){
+	var url="<{:U('LocalUser/Getinfo')}>";
+	$.post(url,{id:obj},function(msg){
+		$(".test p").html('用户：'+msg+'因超时登陆被锁定，确定解锁，恢复至活跃状态吗？');
+		$(".test").fbmodal({
+	         modalwidth: "400"}
+	     	,function(callback){
+	          if(callback == 1){
+	        	 var url1="<{:U('LocalUser/ChangeLoginState')}>";
+	        	 $.post(url1,{id:obj},function(msg){
+	        		 if(msg=='1'){
+	        			 $('#td_'+obj).html('活跃');
+	        			 alert('修改成功');
+	        		 }else{
+	        			 alert('修改失败');
+	        		 }
+	        	 })
+	             
+	         }
+				if(callback == 2){
+	             alert("你点了取消按钮");
+	         }
+	     });  
+	})
+	 
+}
+function ResetPwd(obj){
+	$.ajax({
+		type:"get",
+		url :"<{:U('LocalUser/resetPwd')}>",
+		data:{id:obj},
+		beforeSend :function(){
+			$("#no"+obj).html("<img src='__PUBLIC__/admin/images/onload.gif' align='middle'/>");
+		},
+		success: function(msg){
+			if(msg=="1"){
+				alert('重置成功');
+			}else{
+				alert('重置失败');
+			}
+			$("#no"+obj).html("密码重置");
+		},
+		error: function(){
+			alert('发生错误');
+			$("#no"+obj).html("密码重置");
+		}
+	})
+}
+</script>

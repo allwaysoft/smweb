@@ -1,0 +1,105 @@
+<script type="text/javascript" src="<{:RES}>/public/js/bootstrap-validator/bootstrapValidator.js"></script>
+<script type="text/javascript" src="<{:RES}>/public/jquery.form.js"></script> 
+<script type="text/javascript">
+    $(document).ready(function(){
+     $('#subForm').bootstrapValidator({
+       message: 'This value is not valid',
+         feedbackIcons: {
+           valid: 'glyphicon glyphicon-ok fui-check',
+            invalid: 'glyphicon glyphicon-remove fui-cross',
+            validating: 'glyphicon glyphicon-refresh'
+        }, 
+        fields: {
+			 areaname: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  '地区名称必填'
+                    }
+                }
+            } 
+		}
+    }).on('success.form.bv', function(e) {
+		$.each(BootstrapDialog.dialogs, function(id, dialog){
+					 dialog.close();
+				 });
+		 var post_data = $("#subForm").serializeArray();
+		 		var post_url;
+				//alert($("input[name=id]").val());
+                 post_url = "/semir400admin.php/System/area_add_do"; 
+                 //  post_url = "{%site_url('admin/homepage/edit')%}"; 
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    cache:false,
+                    data: post_data,
+                    success: function(msg){ 
+                        if(msg==0){
+                            // $("#editbox").html("");
+							BootstrapDialog.show({
+								type:BootstrapDialog.TYPE_SUCCESS,
+								title: '添加地区成功',
+								message: '正在刷新页面，请稍后!!' 
+							});     
+                             
+                             setTimeout(function(){
+                                 window.location.reload();
+                            },1000);
+                            //  Alert(msg);
+                        }else{
+                            BootstrapDialog.show({
+								type:"type-danger",
+								title: '操作错误',
+								message: msg,
+								buttons: [{
+									label: 'Close',
+									action: function(dialogRef) {
+										dialogRef.close();
+									}
+								}]
+							});     
+                        }
+                    },
+                    error:function(){
+                        BootstrapDialog.show({
+								type:"type-danger",
+								title: '操作错误',
+								message: "请联系开发人员！！",
+								closable: false,
+								buttons: [{
+									label: 'Close',
+									action: function(dialog) {
+										dialog.close();
+										// You can also use BootstrapDialog.closeAll() to close all dialogs.
+										
+									}
+								}]
+							});
+						
+                    }
+                });
+                return false;
+	});
+	  
+	  //////////////
+});
+</script>
+ 
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="" role="form">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+            <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="areaname">地区名称</label>
+            <div class="col-sm-6 ">
+              <input type="text" class="form-control" name="areaname"  id="areaname" placeholder="请输入地区名称" value="">
+            </div>
+          </div>
+          <!--item --> 
+         
+           <!--item -->
+        </div>
+       </form>
+    </div>
+  </div> 

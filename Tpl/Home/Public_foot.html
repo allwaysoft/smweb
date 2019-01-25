@@ -1,0 +1,62 @@
+<!----ewm--->
+<div class="ewm">
+  <div class="ewm_b">
+	<ul>
+		<volist name="botlist" id="vo">
+		<if condition="$vo.ispic eq 1">
+		<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><img src="<{$vo.image}>"></a></li>
+		<else />
+		<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><{$vo.name}></a></li>
+		</if>
+		</volist>
+	</ul>
+  </div>
+</div>
+<!----ewm--->
+<div class="footer">
+  <div class="footer_b">
+    <div class="footer_c"> 
+      <div class="banquanxx"><{:C('copyright')}><br />
+        <{:C('ipc')}>
+        
+        <a href="javascript:;" class="ucUrl">CRM</a>
+        <script type="text/javascript">	
+			$(document).ready(function($){
+				 $(".ucUrl").click(function(){
+					 $.ajax({
+						type: "POST",
+						url: "/uclogin.php/index/uc_urlRed",
+						cache:false,
+						data:'',
+						dataType:'json',
+						success: function(msg){
+							// alert(msg.ret_code);
+							if(msg.ret_code == 0){
+								var data = msg.data;
+									var urlHref = "http://www.******.com?openid="+data.openid+"&token="+data.token; 
+									alert(msg);//window.open(urlHref); 
+								}else{
+									 alert("系统暂时无法跨域验证用户！");
+								}   
+                   		} 
+               		});
+				});
+			});
+		</script>
+        </div>
+       
+    </div>
+    <div class="dibulogo"><img src="__PUBLIC__/home/images/logo_03.png" width="237" height="46" /></div>
+    <div class="clear"></div>
+  </div>
+  
+</div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1d1ef8057b9a94915f0083b267f4a404' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

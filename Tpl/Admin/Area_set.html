@@ -1,0 +1,134 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">系统设置</a>><a href="set">区域设置</a></div>
+  <div class="bloc">
+    <div class="wrap ">
+      <dl class="dl_line">
+        <dt>区域设置：<input <if condition="$areaset.checkname eq 'province'">checked="checked"</if> type="radio" name="areaset" class="areaset" value="province"/>省&nbsp;&nbsp;
+        <input <if condition="$areaset.checkname eq 'area1'">checked="checked"</if> type="radio" class="areaset" name="areaset" value="area1"/>大区&nbsp;&nbsp;
+        <input <if condition="$areaset.checkname eq 'area2'">checked="checked"</if> type="radio" class="areaset" name="areaset" value="area2"/>小区&nbsp;&nbsp;
+        </dt>
+      </dl>
+    </div>
+  </div>
+   <div class="bloc">
+   <div style="font-size:16px; color:#F00; padding:10px 0 0 0;">
+   地区设置为系统底层级别设置，请谨慎操作！！！ <br />重新筛选地区，将会清空现在所有区域的产品配额及栏目显示信息，请谨慎操作！！！
+   </div>
+    <div class="wrap ">
+      <dl class="dl_line">
+        <dt>
+        <a href="javascript:void(0)" onclick="filter(0);" class="xz">筛选</a>
+        <!--<a href="javascript:void(0)" onclick="savearea();" class="save">保存</a>-->
+        <a href="javascript:void(0)" onclick="filter(1);" class="xz" style="width:90px;">未有区域筛选</a>
+        <a href="javascript:void(0)" onclick="saveNoarea();" class="save" id="othersave" style="width:90px;display:none;">未有区域保存</a>
+        </dt>       
+      </dl>
+    </div>
+  </div>
+  <div class="wrap">
+  <input type="hidden" value="" id="typeno"/>
+    <form method="post" action="" id="form1">
+      <table width="100%" cellpadding="0" cellspacing="0" class="list">
+        <thead>
+          <tr>
+            <th width="50">序号</th>
+            <th class="text-left">区域名称</th>
+            <th class="text-left">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+</body>
+<script>
+$('.areaset').change(function(){
+	var checkname=$(this).val();
+	var url="<{:U('Area/areacheck')}>";
+	$.post(url,{checkname:checkname},function(msg){
+		alert(msg);
+	})
+})
+function filter(obj){
+	var style=obj;
+	var val=$('.areaset:checked').val();
+	var url="<{:U('Area/arealist')}>";
+	$.post(url,{val:val,style:style},function(data){
+		var str='<tbody>';
+		$.each(data,function(idx,item){
+			if(item.state==0){
+				var operation='<a href="javascript:voil(0)" onclick="Addarea(this)"><img src="__PUBLIC__/admin/images/success.gif" />可添加</a>'
+			}else if(item.state==1){
+				var operation='<a href="javascript:voil(1)">已添加</a>'
+			}
+			if(val=='province'){
+				if(item.province!=null){
+					str+='<tr><td>'+idx+'</td>'
+					str+='<td>'+item.province+'</td>'
+					str+='<td>'+operation+'</td>'
+				}
+			}else if(val=='area1'){
+				if(item.area1!=null){
+					str+='<tr><td>'+idx+'</td>'
+					str+='<td>'+item.area1+'</td>'
+					str+='<td>'+operation+'</td>'
+				}
+			}else if(val=='area2'){
+				if(item.area2!=null){
+					str+='<tr><td>'+idx+'</td>'
+					str+='<td>'+item.area2+'</td>'
+					str+='<td>'+operation+'</td>'
+				}
+			}
+			str+='</tr>'
+		})
+		str+='</tbody>'
+		$('.list tbody').replaceWith(str)
+	})
+	if(style==1){
+		$('#othersave').css('display','inline-block')
+	}else{
+		$('#othersave').css('display','none')
+	}
+	$('#typeno').val(obj);
+}
+function savearea(){
+	if(confirm("保存后将清空所有数据，确定保存吗？")){
+		var val=$('.areaset:checked').val();
+		var url="<{:U('Area/savearea')}>";
+		$.post(url,{val:val},function(msg){
+			alert(msg);
+			
+		})
+	}
+	
+}
+function saveNoarea(){
+	if(confirm("确定保存这些区域吗？")){
+		var val=$('.areaset:checked').val();
+		var url="<{:U('Area/saveNoarea')}>";
+		$.post(url,{val:val},function(msg){
+			alert(msg);
+			filter(1);
+		})
+	}
+}
+function Addarea(obj){
+	var typeno=$('#typeno').val();
+	var areaname=$(obj).parent().parent().children().eq(1).html();
+	var url="<{:U('Area/addarea')}>";
+	
+	$.post(url,{areaname:areaname},function(msg){
+		alert(msg)
+		if(msg=='添加成功'){
+			filter(typeno);
+		}
+	})
+}
+</script>
+</html>

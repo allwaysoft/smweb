@@ -1,0 +1,78 @@
+<header>
+  <nav class="navbar navbar-inverse  navbar-fixed-top">
+    <div class="container"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <h4><span style="color:#FFF"> <img src="<{:RES}>/admin/images/logow.png" width="120px"  alt="森马"/> 400客服系统</span></h4>  </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li 
+          <if condition="(CONTROLLER_NAME eq 'Staff') and (ACTION_NAME eq 'quality')"> class='active' </if>
+          ><a href="<{:U('staff/quality')}>" ><i class="fa fa-bell-o" aria-hidden="true"></i> 质量投诉</a>
+          </li>
+          
+          <li 
+          <if condition="(CONTROLLER_NAME eq 'Staff') and (ACTION_NAME eq 'service')"> class='active' </if>
+          ><a href="<{:U('staff/service')}>" ><span class="glyphicon glyphicon-eye-open"></span> 服务投诉</a>
+          </li>
+          
+          <li 
+          <if condition="(CONTROLLER_NAME eq 'Staff') and (ACTION_NAME eq 'terminal')"> class='active' </if>
+          ><a href="<{:U('terminal')}>" ><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 终端抽检</a>
+          </li>
+           <p class="navbar-text">|</p> 
+           <li 
+          <if condition="CONTROLLER_NAME eq 'Staffser'"> class='active' </if>
+          ><a href="<{:U('staffser/quality')}>" > <i class="fa fa-search" aria-hidden="true"></i> 数据查询</a>
+          </li>
+         
+          <p class="navbar-text">|</p> 
+          <li class="dropdown" >
+         <a href="" class="dropdown-toggle" data-toggle="dropdown" > <i class="fa fa-user" aria-hidden="true"></i>  <{$_SESSION['staffinfo']['user_name']}> / <{$_SESSION['staffinfo']['c_name']}>   <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          	<li><a href="#" class="cgpw"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 修改密码</a></li>
+          	<li><a href="<{:U('Login/loginout')}>"><i class="fa fa-lock" aria-hidden="true"></i> 安全退出</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </div>
+    <!-- /.container-fluid --> 
+  </nav>
+</header>
+<script type="text/javascript">
+ // JavaScript Document 
+$(document).ready(function(){ 
+///////////////////////// 
+// add and edit gallery end 
+	$(".cgpw").click(function() { 
+		BootstrapDialog.show({
+            title: '修改密码',
+			closeByBackdrop: false,
+			buttons: [ {
+						label: '<span class="glyphicon glyphicon-ok"></span> 提交',
+						cssClass: 'btn-primary btn-sm',
+						action: function(){
+							$('#subForm').submit(); 
+						}
+					},
+					{
+						label: 'Close',
+						cssClass: ' btn-default btn-sm',
+						action: function(dialogItself){
+							dialogItself.close();
+						}
+					}],
+            message: $('<div></div>').load("/semir400admin.php/Login/cg_spw") 
+        }); 
+	});
+	////add end
+	
+/////////////////////////
+});
+</script>

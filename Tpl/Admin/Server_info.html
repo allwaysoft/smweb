@@ -1,0 +1,72 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">系统设置</a>><a href="javascript:void(0)">站点设置</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="<{:U('Server/set')}>">
+    <table class="add">
+      <tbody>
+      <input type="hidden" name="Id" value="<{$info.Id}>"/>
+      	<tr>
+          <th>名称：<font class="red">*</font></th>
+          <td><input name="Name" maxlength="100" type="text" class="input" id="Name" style="width:400px;" value="<{$info.Name}>"></td>
+        </tr>
+        <tr>
+          <th>服务器外网地址：<font class="red">*</font></th>
+          <td><input name="ExtranetUrl" maxlength="100" type="text" class="input" id="ExtranetUrl" style="width:400px;" value="<{$info.ExtranetUrl}>"></td>
+        </tr>
+        <tr>
+          <th>服务器内网地址：<font class="red">*</font></th>
+          <td><input name="IntranetUrl" maxlength="100" type="text" class="input" id="IntranetUrl" style="width:400px;" value="<{$info.IntranetUrl}>"></td>
+        </tr>
+        <!-- <tr>
+          <th>登录账号：</th>
+          <td><input name="UserName" maxlength="100" type="text" class="input" id="UserName" style="width:400px;" value=""></td>
+        </tr>
+        <tr>
+          <th>登录密码：</th>
+          <td><input name="PassWord" maxlength="100" type="text" class="input" id="PassWord" style="width:400px;" value=""></td>
+        </tr> -->
+        <tr>
+          <th>数据库服务器：<font class="red">*</font></th>
+          <td><input name="DatabaseUrl" maxlength="100" type="text" class="input" id="DatabaseUrl" style="width:400px;" value="<{$info.DatabaseUrl}>"></td>
+        </tr>
+        <!-- <tr>
+          <th>数据库账号：</th>
+          <td><input name="DbName" maxlength="100" type="text" class="input" id="DbName" style="width:400px;" value=""></td>
+        </tr>
+        <tr>
+          <th>数据库密码：</th>
+          <td><input name="Dbpwd" maxlength="100" type="text" class="input" id="Dbpwd" style="width:400px;" value=""></td>
+        </tr> -->
+        <tr>
+	      	<th></th>
+	        <td><input type="submit" id="btnSubmit" value="确定"></td>
+	      </tr>
+      </tbody>
+      
+    </table>
+  </form>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			Name: { required: true},
+			ExtranetUrl:{ required: true},
+			IntranetUrl:{required:true},
+			DatabaseUrl:{required:true}
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+})
+</script>

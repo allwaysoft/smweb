@@ -1,0 +1,66 @@
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/selfform.css"  />
+<!--banner -->
+
+<div class="banner_div_send">
+  <div class="banner_send"> </div>
+</div>
+<!----banner---> 
+<!-- page link -->
+<div class="page_link"> <a href="<{:U('Main/index')}>">首页</a> &raquo; <a href="<{:U('Selfform/index',array('pid'=>$tselfform['id']))}>"><{$tinfo.name}></a> &raquo;
+  详细 </div>
+<!-- page link end --> 
+<!----home_con--->
+<div class="home_con"> 
+  <!----home_con_L--->
+  <div class="home_con_L"> 
+    <!-- start -->
+    
+    <div  class="newsPageNav">
+      <div class="newsInfo">
+        <h2><{$tselfform.title}></h2>
+        <div class="newsInfoTime">发布时间：<{$tselfform.addtime|date="Y年m月d日 H:i:s",###}></div>
+        <div class="newsInfoContents">
+       		 <form action="<{:U('Selfform/refer')}>" method="post">
+       		 <input name="formid" type="hidden" value="<{$tselfform.id}>"/>
+       		 <volist name="list" id="vo">
+       		 <ul>
+       		 <div><{$i}>.<{$vo.displayname}></div>
+       		 	<li>
+       		 		<{$vo.optionstr}>
+       		 	</li>
+                 <div class="clear"></div>
+       		 </ul>
+       		 </volist>
+	       		 <center><input type="submit" class="submit" value="立即提交"/></center>
+       		 </form>
+        </div>
+      </div>
+    </div>
+    <div class="h10"></div>
+    
+    <!-- end --> 
+  </div>
+  <div class="in_right"> 
+    <!-- news categary-->
+    <div class="newRightNav">
+      <p class="title"><{$cateLink.name}></p>
+      <ul>
+        <volist name="cateList" id="vo">
+          <li> <a href="<{:U('Main/newslist',array('pid'=>$cateLink['id'],'tid'=>$vo['id']))}>" 
+            
+            <if condition="$pinfo.id eq  $vo['id']"> class ="curren" </if>
+            >&raquo; <{$vo.name}></a> </li>
+        </volist>
+       
+      </ul>
+    </div>
+	 
+    <!-- news categary-->
+    
+    
+  </div>
+  <div class="clear"></div>
+</div>
+<!----home_con_R--->
+<include file="Public:foot"/>

@@ -1,0 +1,104 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" style="padding-left:0px;"><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>">首页</a>><a href="<{:U('LocalUser/LocalUserindex')}>">本机用户</a>><a href="<{:U('LocalUser/LocalUseredit',array('id'=>$user['id']))}>">修改</a></div>
+  <div class="bloc">
+ <dl  class="t_1_h">
+
+    <div class="wrap">
+    <form id="form1" name="form1" method="post" action="">
+    <input type="hidden" name="id" value="<{$user.id}>"/>
+      <table class="add">
+        <tbody>
+          <tr>
+            <th>登录用户名：<font class="red">*</font></th>
+            <td><input name="user_name" maxlength="20" class="input" id="user_name" style="width:200px;" type="text" value="<{$user.user_name}>"/>
+              <span> 登录用户名不能重复</span> </td>
+          </tr>
+          <tr>
+            <th>姓名：<font class="red">*</font></th>
+            <td><input name="name" maxlength="20" class="input" id="name" style="width:200px;" type="text" value="<{$user.name}>"/>
+            </td>
+          </tr>
+          <tr>
+            <th>分类：</th>
+            <td><input name="deptname" maxlength="20" class="input" id="daili" style="width:200px;" type="text" value="<{$user.deptname}>"/>
+            </td>
+          </tr>
+          <tr>
+            <th>省份：<font class="red">*</font></th>
+            <td><input name="province" maxlength="20" class="input" id="province" style="width:200px;" type="text" value="<{$user.province}>"/>
+            </td>
+          </tr>
+          <tr>
+            <th>城市：<font class="red">*</font></th>
+            <td><input name="city" maxlength="20" class="input" id="city" style="width:200px;" type="text" value="<{$user.city}>"/>
+            </td>
+          </tr>
+          <tr>
+            <th>归属区域1：<font class="red">*</font></th>
+            <td><input name="area1" maxlength="20" class="input" id="area1" style="width:200px;" type="text" value="<{$user.area1}>"/>
+            </td>
+          </tr>
+          <tr>
+            <th>归属区域2：<font class="red">*</font></th>
+            <td><input name="area2" maxlength="20" class="input" id="area2" style="width:200px;" type="text" value="<{$user.area2}>"/>
+            </td>
+          </tr>
+          <tr>
+            <th>邮箱：</th>
+            <td><input name="email" maxlength="50" class="input" id="email" style="width:200px;" type="text" value="<{$user.email}>"/>
+              <span> 找回密码时使用</span> </td>
+          </tr>
+          <tr>
+            <th>手机：</th>
+            <td><input name="phone" maxlength="50" class="input" id="phone" style="width:200px;" type="text" value="<{$user.phone}>"/>
+              <span> 获取验证码时使用</span> </td>
+          </tr>
+          <tr>
+            <th>所属状态：<font class="red">*</font></th>
+            <td><select id="states" name="states" style="width:210px;">
+                <option value="">﹄ 请选择</option>
+                <option <if condition="$user.states eq 1">selected="selected"</if> value="1">﹄ 禁止</option>
+                <option <if condition="$user.states eq 0">selected="selected"</if> value="0">﹄ 启用</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input name="btnSubmit" id="btnSubmit" value="确定" type="submit">
+              <input name="btnReset" id="btnReset" value="清除" type="reset">
+              <input name="btnBack" id="btnBack" value="返回" type="button">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			user_name: { required: true,minlength:5 },
+			password:{required:true,minlength:5},
+			confirmpassword:{required:true,equalTo: "#password"},
+			area1:{required:true},
+			area2:{required:true},
+			name:{required:true},
+			email:{email:true},
+			phone:{isMobile:true},
+			equipment_type:{required:true},
+			states:{required:true}
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+})
+
+</script> 

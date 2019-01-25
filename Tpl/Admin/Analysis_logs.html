@@ -1,0 +1,218 @@
+<include file="Public:head"/>
+<style>
+.option table th{width:50px;text-align: center;padding:4px 0;}
+.option table td{width:100px;text-align: center;padding:4px 0;}
+</style>
+<!--  CONTEN  ---->
+<!-- 1. Add these JavaScript inclusions in the head of your page -->
+<script type="text/javascript" src="__PUBLIC__/admin/js/tjjs/highcharts.js"></script>
+		
+<!-- 1a) Optional: the exporting module -->
+<script type="text/javascript" src="__PUBLIC__/admin/js/tjjs/modules/exporting.js"></script>
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">系统日志</a>><a href="#">统计分析</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<volist name="user_type" id="vo">
+<div class="option" style="width: 95%; height: auto; margin: 10px auto; border:1px solid #ccc;padding:10px;">
+<p style="font-size:13px;font-weight:bold;">
+<if condition="$vo.user_type eq 0">本地用户
+<elseif condition="$vo.user_type eq 1"/>网域用户
+<elseif condition="$vo.user_type eq 2"/>分销用户</if>(<font color="red"><{$vo.user_count}></font>人)
+</p>
+<table>
+<tr>
+	<th>登陆状态：</th><td>活跃：<font color="red"><{$vo.active_count}></font>人</td><td>空闲：<font color="red"><{$vo.free_count}></font>人</td><td>锁定：<font color="red"><{$vo.lock_count}></font>人</td>
+</tr>
+<tr>
+	<th>账号状态：</th><td>启用：<font color="red"><{$vo.open_count}></font>人</td><td>禁用：<font color="red"><{$vo.close_count}></font>人</td>
+</tr>
+<tr><th>本月登陆异常：</th><td><font color="red"><{$vo.unusual_count}></font>人</td></tr>
+</table>
+</div>
+</volist>
+<div class="option" style="width: 95%; height: auto; margin: 10px auto; border:1px solid #ccc;padding:10px;">
+<table>
+<tr>
+<th style="width:30px;">选择时间范围：</th>
+<td style="text-align:left;">
+<input id="startime" type="text" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})"  class="input" value="<{$date[0]|date="Y-m-d",###}>">-<input id="endtime" type="text" style="width:100px" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})"  class="input" value="<{$date[1]|date="Y-m-d",###}>">
+</td>
+</tr>
+<tr><th></th><td style="text-align:left;"><input type="button" id="shaixuan" value="筛选"/></td></tr>
+</table>
+</div>
+<div id="errorinfo" style="width:100%;text-align:center;"></div>
+<div id="container" style="width: 800px; height: auto; margin: 0 auto; "></div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+		
+			var chart;
+			$(document).ready(function() {
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container',
+						defaultSeriesType: 'column'
+					},
+					title: {
+						text: '用户登录日志统计分析'
+					},
+					xAxis: {
+						categories: [
+						    '总数',
+							'登陆状态(活跃)', 
+							'登陆状态(空闲)', 
+							'登陆状态(锁定)', 
+							'账号启用', 
+							'账号禁用', 
+							'登陆异常'
+						],
+						labels: {
+							rotation: -45,
+							align: 'right',
+							style: {
+								 font: 'normal 13px Verdana, sans-serif'
+							}
+						}
+					},
+					yAxis: {
+						min: 0,
+						title: {
+							text: '人数 (人)'
+						}
+					},
+					legend: {
+						layout: 'vertical',
+						backgroundColor: '#FFFFFF',
+						align: 'left',
+						verticalAlign: 'top',
+						x: 100,
+						y: 70
+					},
+					tooltip: {
+						formatter: function() {
+							return ''+
+								this.x +': '+ this.y +' 人';
+						}
+					},
+					plotOptions: {
+						column: {
+							pointPadding: 0.2,
+							borderWidth: 0
+						}
+					},
+				        series: [{
+						name: '本地用户',
+						data: [<{$local}>]
+				
+					}, {
+						name: '网域用户',
+						data: [<{$domain}>]
+				
+					}, {
+						name: '分销用户',
+						data: [<{$fenxiao}>]
+				
+					}]
+				});
+				
+				
+			});
+$('#shaixuan').click(function(){
+	var startime=$('#startime').val();
+	var endtime=$('#endtime').val();
+	$.ajax({
+		type:"get",
+		url:"<{:U('Analysis/logsResult')}>",
+		data:{startime:startime,endtime:endtime},
+		beforeSend:function(){
+			$('#errorinfo').html('数据读取中...')
+		},
+		success:function(msg){
+			var local=new Array();
+			var domain=new Array();
+			var fenxiao=new Array();
+			for(var i in msg[0]){
+				local.push(parseInt(msg[0][i]));
+				domain.push(parseInt(msg[1][i]));
+				fenxiao.push(parseInt(msg[2][i]));
+			}
+			chart = new Highcharts.Chart({
+				chart: {
+					renderTo: 'container',
+					defaultSeriesType: 'column'
+				},
+				title: {
+					text: '用户登录日志统计分析'
+				},
+				xAxis: {
+					categories: [
+					    '总数',
+						'登陆状态(活跃)', 
+						'登陆状态(空闲)', 
+						'登陆状态(锁定)', 
+						'账号启用', 
+						'账号禁用', 
+						'登陆异常'
+					],
+					labels: {
+						rotation: -45,
+						align: 'right',
+						style: {
+							 font: 'normal 13px Verdana, sans-serif'
+						}
+					}
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: '人数 (人)'
+					}
+				},
+				legend: {
+					layout: 'vertical',
+					backgroundColor: '#FFFFFF',
+					align: 'left',
+					verticalAlign: 'top',
+					x: 100,
+					y: 70
+				},
+				tooltip: {
+					formatter: function() {
+						return ''+
+							this.x +': '+ this.y +' 人';
+					}
+				},
+				plotOptions: {
+					column: {
+						pointPadding: 0.2,
+						borderWidth: 0
+					}
+				},
+			        series: [{
+					name: '本地用户',
+					data: local
+			
+				}, {
+					name: '网域用户',
+					data: domain
+			
+				}, {
+					name: '分销用户',
+					data: fenxiao
+			
+				}]
+			});
+			$('#errorinfo').html('');
+		},
+		error:function(){
+			alert('参数错误');
+			$('#errorinfo').html('');
+		}
+	})
+})				
+</script>

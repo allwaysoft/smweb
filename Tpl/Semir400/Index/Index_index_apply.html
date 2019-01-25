@@ -1,0 +1,160 @@
+<include file="Public:head"/><include file="Public:navbar"/>
+ 
+<div class="container"> 
+<div id="msgShow"></div>
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+       <div class="topRightBut pull-right"> <a href="<{:U('Index/index')}>" class=" "><i class="fa fa-mail-reply" aria-hidden="true"></i> 返回</a>  </div>
+      <h1><span class="glyphicon glyphicon-eye-open"></span> 服务投诉 <small>>> 投诉申请</small> </h1>
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="<{:U('index/indexrefer')}>" role="form">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group ">
+            <label class="col-sm-2 control-label" for="com_code">投诉编号</label>
+            <div class="col-sm-8 "> 
+               <p class="form-control-static rightFont"><{$ComplaintNo}></p>
+               <input type="hidden"  name="com_code" value="<{$ComplaintNo}>"/>
+            </div>
+          </div>
+          <!--item -->
+            <!--item -->
+          <div class="form-group ">
+            <label class="col-sm-2 control-label" for="deptname">店铺名称</label>
+            <div class="col-sm-4">
+              <p class="form-control-static rightFont"> <{$thisUser.province}>/<{$thisUser.deptname}> </p>
+              <input type="hidden"  name="agent_province" value="<{$thisUser.province}>"/>
+              <input type="hidden"  name="agent_name" value="<{$thisUser.deptname}>"/>
+            </div>
+          </div>
+          <div class="form-group  ">
+            <label class="col-sm-2 control-label" for="agent_area">区域</label>
+            <div class="col-sm-4">
+              <select name="agent_area" id="agent_area" class="form-control">
+              	<option value="">请选择区域</option>
+              	<volist name="arealist" id="vo">
+              		<option value="<{$vo.areaname}>"><{$vo.areaname}></option>
+              	</volist>
+              </select>
+            </div>
+              <label class="col-sm-1 control-label" for="agent_storename">店铺名称</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="agent_storename"  id="agent_storename" placeholder="请输入店铺名称" value="">
+	            </div>
+          </div>
+           <div class="form-group ">
+            	<label class="col-sm-2 control-label" for="agent_person">联系人</label>
+	            <div class="col-sm-4">
+	              	<input type="text" class="form-control" name="agent_person"  id="agent_person" placeholder="请输入联系人" value="">
+	            </div>
+	           
+           
+            	<label class="col-sm-1 control-label" for="agent_tel">联系电话</label>
+	            <div class="col-sm-2">
+	              	<input type="text" class="form-control" name="agent_tel"  id="agent_tel" placeholder="请输入联系电话" value="">
+	            </div>
+	            
+          </div>
+         
+            <div id="inputVal">
+             <!--item -->
+          <div class="form-group ">
+            <label class="col-sm-2 control-label" for="com_contents">服务投诉内容</label>
+            <div class="col-sm-6">
+              <textarea class="form-control" name="com_contents"  id="com_contents" placeholder="请输入投诉内容"></textarea>
+            </div>
+             
+          </div>
+           <!--item -->
+            </div>
+           
+           <!--item -->
+          <div class="form-group ">
+            <label class="col-sm-2 control-label" for=""></label>
+            <div class="col-sm-4">
+             <button  class="btn btn-success btn-sm" type="submit"> 
+            <span class='glyphicon glyphicon-ok-circle'></span> 提交投诉申请 
+            </button>
+            
+            </div>
+          </div>
+           <!--item -->
+        </div>
+      
+      </form>
+    </div>
+  </div> 
+  </div> 
+  <include file="Public:foot"/>
+  <script>
+  $(function(){
+	  $('#subForm').bootstrapValidator({
+	       message: 'This value is not valid',
+	         feedbackIcons: {
+	           valid: 'glyphicon glyphicon-ok fui-check',
+	            invalid: 'glyphicon glyphicon-remove fui-cross',
+	            validating: 'glyphicon glyphicon-refresh'
+	        }, 
+	        fields: {
+	        	agent_area: {
+	                message: '请选择区域',
+	                validators: {
+						notEmpty: {
+	                        message:  '请选择区域'
+	                    }
+	                }
+	            },
+				 agent_storename: {
+		               message: '请输入店铺名称',
+		               validators: {
+							notEmpty: {
+		                       message:  '请输入店铺名称'
+		                   }
+		               }
+		           },
+	            agent_tel: {
+	                message: '请输入联系方式',
+	                validators: {
+						notEmpty: {
+	                        message:  '请输入联系方式'
+	                    },
+	                  /*  stringLength: {
+	                         min: 11,
+	                         max: 11,
+	                         message: '请输入11位手机号码'
+	                     },
+	                     regexp: {
+	                         regexp: /^1[[0-9]{1}[0-9]{9}$/,
+	                         message: '请输入正确的手机号码'
+	                     }*/
+	                }
+	            },
+	            agent_person: {
+	                message: '请输入联系人',
+	                validators: {
+						notEmpty: {
+	                        message:  '请输入联系人'
+	                    }
+	                }
+	            },
+	            com_contents: {
+	                message: '请输入服务投诉内容',
+	                validators: {
+						notEmpty: {
+	                        message:  '请输入服务投诉内容'
+	                    }
+	                }
+	            },
+			}
+	    }).on('success.form.bv', function(e) {
+		 
+		});
+  });
+  </script>

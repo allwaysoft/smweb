@@ -1,0 +1,256 @@
+<style>
+select{
+	appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+}
+#track .form-group,#info .form-group{margin-bottom: 0px !important;}
+</style>
+<script type="text/javascript" src="<{:RES}>/public/js/bootstrap-validator/bootstrapValidator.js"></script>
+<script type="text/javascript" src="<{:RES}>/public/jquery.form.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+     $('#subForm').bootstrapValidator({
+       message: 'This value is not valid',
+         feedbackIcons: {
+           valid: 'glyphicon glyphicon-ok fui-check',
+            invalid: 'glyphicon glyphicon-remove fui-cross',
+            validating: 'glyphicon glyphicon-refresh'
+        }, 
+        fields: {
+        	tra_type: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  '请选择回复类别'
+                    }
+                }
+            },
+            tra_contents: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  '请填写回复内容'
+                    }
+                }
+            },
+		}
+    }).on('success.form.bv', function(e) {
+		$.each(BootstrapDialog.dialogs, function(id, dialog){
+					 dialog.close();
+				 });
+		 var post_data = $("#subForm").serializeArray();
+		 		var post_url;
+				//alert($("input[name=id]").val());
+                 post_url = "/semir400admin.php/Staff/reply/type/service"; 
+                 //  post_url = "{%site_url('admin/homepage/edit')%}"; 
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    cache:false,
+                    data: post_data,
+                    success: function(msg){
+                        if(msg.status==true){
+                            // $("#editbox").html("");
+							BootstrapDialog.show({
+								type:BootstrapDialog.TYPE_SUCCESS,
+								title: '操作成功',
+								message: '正在刷新页面，请稍后!!' 
+							});     
+                             
+                             setTimeout(function(){
+                                 window.location.reload();
+                            },1000);
+                            //  Alert(msg);
+                        }else{
+                            BootstrapDialog.show({
+								type:"type-danger",
+								title: '操作错误',
+								message: msg.info,
+								buttons: [{
+									label: 'Close',
+									action: function(dialogRef) {
+										dialogRef.close();
+									}
+								}]
+							});     
+                        }
+                    },
+                    error:function(){
+                        BootstrapDialog.show({
+								type:"type-danger",
+								title: '操作错误',
+								message: "请联系开发人员！！",
+								closable: false,
+								buttons: [{
+									label: 'Close',
+									action: function(dialog) {
+										dialog.close();
+										// You can also use BootstrapDialog.closeAll() to close all dialogs.
+										
+									}
+								}]
+							});
+						
+                    }
+                });
+                return false;
+	});
+	/* $('#tra_type').change(function(){
+		var bootstrapValidator = $('#subForm').data('bootstrapValidator');
+		if($(this).val()==2||$(this).val()==''){
+			bootstrapValidator.enableFieldValidators('tra_contents', true);
+		}else{
+			bootstrapValidator.addField('tra_contents',{  
+				  validators: {
+							notEmpty: {
+								message:  '请输入回复内容'
+							}
+						}
+				 }); 
+		}
+	})  */ 
+	$('#dictionary').change(function(){
+		var val=$(this).val();
+		$('#tra_contents').html(val);
+		var bootstrapValidator = $('#subForm').data('bootstrapValidator');
+		bootstrapValidator.addField('tra_contents',{  
+			  validators: {
+						notEmpty: {
+							message:  '请填写回复内容'
+						}
+					}
+			 }); 
+	})
+	  //////////////
+});
+</script>
+ 
+  <div class="row">
+    <div class="col-sm-12" id="info">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="user_name">投诉编号</label>
+            <div class="col-sm-3 ">
+              <p class="form-control-static rightFont"><{$info.com_code}></p>
+            </div>
+            <label class="col-sm-2 control-label" for="user_name">投诉时间</label>
+            <div class="col-sm-4 ">
+              <p class="form-control-static rightFont"><{$info.add_time|date="Y-m-d H:i:s",###}></p>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="user_name">店铺名称</label>
+            <div class="col-sm-3 ">
+              <p class="form-control-static rightFont"><{$info.agent_province}>/<{$info.agent_name}></p>
+            </div>
+            <label class="col-sm-2 control-label" for="user_name">区域</label>
+            <div class="col-sm-4 ">
+              <p class="form-control-static rightFont"><{$info.agent_area}></p>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="user_name">联系人</label>
+            <div class="col-sm-3 ">
+              <p class="form-control-static rightFont"><{$info.agent_person}></p>
+            </div>
+            <label class="col-sm-2 control-label" for="user_name">联系电话</label>
+            <div class="col-sm-4 ">
+              <p class="form-control-static rightFont"><{$info.agent_tel}></p>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="user_name">代理商账号</label>
+            <div class="col-sm-3 ">
+              <p class="form-control-static rightFont"><{$info.agent_code}></p>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="user_name">投诉描述</label>
+            <div class="col-sm-5 ">
+              <p class="form-control-static rightFont" style="height:auto;"><{$info.com_contents}></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <notempty name="tracklist">
+    <h1>回复记录</h1>
+    <div class="col-sm-12" id="track" style="margin-top:12px">
+    <volist name="tracklist" id="vo">
+    	<div class="my-form form-horizontal" style="border:1px solid #ccc">
+    		<div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="user_name">客服</label>
+            <div class="col-sm-3 ">
+              <p class="form-control-static rightFont"><{$vo.com_user}></p>
+            </div>
+            <label class="col-sm-2 control-label" for="user_name">时间</label>
+            <div class="col-sm-4 ">
+              <p class="form-control-static rightFont"><{$vo.add_time|date="Y-m-d H:i:s",###}></p>
+            </div>
+          </div> 
+          <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="user_name">类别</label>
+            <div class="col-sm-3 ">
+              <p class="form-control-static rightFont">
+              	<eq name="vo.tra_type" value="1">拒收/驳回</eq>
+              	<eq name="vo.tra_type" value="2">启动OA</eq>
+              	<eq name="vo.tra_type" value="3">接收回复</eq>
+			</p>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="user_name">回复内容</label>
+            <div class="col-sm-3 ">
+              <p class="form-control-static rightFont" style="height:auto;"><{$vo.tra_contents}></p>
+            </div>
+          </div>
+    	</div>
+    </volist>
+    </div>
+    </notempty>
+    <eq name="info.com_status" value="2">
+    <h1>回复</h1>
+    <div class="col-sm-12" style="margin-top:12px">
+    
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="" role="form">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group form-group-sm">
+          <input type="hidden" name="com_code" value="<{$info.com_code}>"/>
+            <label class="col-sm-3 control-label" for="tra_type">回复类别</label>
+            <div class="col-sm-4 ">
+              <select name="tra_type" id="tra_type" class="form-control">
+              	<option value="">请选择</option>
+              	<option value="1">拒收/驳回</option>
+              	<option value="2">启动OA</option>
+              	<option value="3">接收回复</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label">回复字典</label>
+            <div class="col-sm-8 ">
+              <select id="dictionary" class="form-control">
+              	<option value="">请选择</option>
+              	<volist name="dictionary" id="vo">
+              	<option value="<{$vo.content}>"><{$vo.content}></option>
+              	</volist>
+              </select>
+            </div>
+          </div>
+          <!--item --> 
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="tra_contents">回复内容</label>
+            <div class="col-sm-8">
+             <textarea class="form-control" name="tra_contents"  id="tra_contents" placeholder="回复内容"></textarea>
+            </div>
+          </div>
+           <!--item --> 
+          
+        </div>
+        
+      </form>
+    </div>
+    </eq>
+  </div> 

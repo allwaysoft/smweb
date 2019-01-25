@@ -1,0 +1,36 @@
+ 
+ 
+  <!-- top ----->
+  <div><strong>贷款信息：</strong></div>
+  <!-- top -----> 
+  <div class="">
+  贷款编号:<{$reginfo['sap_code']}>, 贷款：<{$reginfo['reg_amount']}>元 / <{$reginfo['sap_cycle']}>天 / <{$reginfo['sap_start_time']}>~<{$reginfo['sap_end_time']}>
+  </div>
+  <hr />
+  <!-- main ----->
+   <div><strong>还款记录</strong></div>
+  <div class="row">
+    <div class="col-xs-12"> 
+      <form action="" method=" "> 
+        <table  id="listTable" class="table table-condensed table-hover table-striped table-bordered "  cellspacing="0" >
+          <thead>
+            <tr>
+              <th width="39%">还款日期 <span class="sr-only">还款日期</span></th> 
+              <th width="34%">还款SAP单号<span class="sr-only">还款单号</span></th>  
+              <th width="27%">还款金额(元)<span class="sr-only">还款金额(元)</span></th>  
+             
+            </tr>
+          </thead>
+          <volist name="list" id="vo">
+          <tr>
+            <td><{$vo.rep_date}></td> 
+            <td><{$vo.sap_rep_code}></td>
+            <td><{$vo.rep_amount}></td>
+          </tr>
+          </volist>
+        </table>
+      </form>
+    </div>
+  </div>
+  <!-- main --> 
+ 

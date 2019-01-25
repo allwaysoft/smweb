@@ -1,0 +1,45 @@
+<include file="Public:head"/>
+<!--  CONTEN  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">大爆款</a>><a href="import">导入销售数据</a></div>
+<div class="bloc">
+  <div class="wrap ">
+    
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" enctype="multipart/form-data" action="">
+    <table class="add">
+      <tbody>
+      	<tr>
+      		<th>导入模板：</th>
+      		<td><img alt="" src="__PUBLIC__/admin/images/execl.png"/><a href="__PUBLIC__/admin/UploadModel/hotsales.xls">销售数据导入模板下载(.xls文件)</a></td>
+      	</tr>
+        <tr>
+          <th>导入文件：<font class="red">*</font></th>
+          <td><input class="btnGray" type="file" name="inputExcel" id="inputExcel" /></td>
+        </tr>
+        <tr><th></th><td><input id="loaddata" class="btnGray" type="submit" value="导入数据"/>   <a href="hnImport" target="_blank">导入HANA数据(Test)</a></td></tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+<script type="text/javascript"> 
+$("#loaddata").click(function(){
+	  var val=$("#inputExcel").val();
+	  if(val!=''){
+		  var extStart=val.lastIndexOf(".");
+        var ext=val.substring(extStart,val.length).toUpperCase(); 
+        if(ext!='.XLS'){
+      	  alert("文件格式不正确，请上传xls文件");
+      	  return false;
+        }
+	  }else{
+		  alert("请选择上传文件")
+		  return false;  
+	  }	  
+})
+</script>
+</div>
+</body>
+</html>

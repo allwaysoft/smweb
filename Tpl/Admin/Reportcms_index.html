@@ -1,0 +1,71 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="<{:U('index')}>">廉洁森马</a>><a href="<{:U('index')}>">投诉列表</a></div>
+  <div class="bloc">
+    <div class="wrap ">
+    <form action="" method="get">
+      <dl class="dl_line">
+        <dt></dt>
+        <dd style="width:500px; float:right; margin-top:10px;  text-align:right;">
+          <select id="Status" name="Status" style="display:inline-block;">
+            <option value="">﹄ 请选择...</option>
+            <option value="0" <eq name="_GET['Status']" value="0"> selected="selected"</eq>>﹄ 未处理</option>
+            <option value="1" <eq name="_GET['Status']" value="1"> selected="selected"</eq>>﹄ 处理中 </option>
+            <option value="2" <eq name="_GET['Status']" value="2"> selected="selected"</eq>>﹄ 完结 </option>
+          </select>
+          <input type="submit" name="button" id="btnSearch" value=" 搜 索 " />
+        </dd>
+      </dl>
+   </form>
+    </div>
+  </div>
+  <div class="wrap">
+    <form method="post" action="" id="form1">
+      <table width="100%" cellpadding="0" cellspacing="0" class="list">
+        <thead>
+          <tr>
+            <th style="width:50px;"><input type="checkbox" id="all" /></th>
+            <th>序号</th>
+            <th class="text-left">投诉人</th>
+            <th>投诉人类型</th>
+            <th>联系电话</th>
+            <th>联系邮箱</th>
+            <th>投诉日期</th>
+            <th>处理状态</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+          <tr>
+            <td><input type="checkbox" name="id[]" value="2" /></td>
+             <td><{$i}></td>
+            <td style="text-align:left;"><{$vo.ReportName}></td>
+            <td>
+            	<eq name="vo.ReportObjectId" value="1">员工</eq>
+            	<eq name="vo.ReportObjectId" value="2">供应商</eq>
+            	<eq name="vo.ReportObjectId" value="3">代理商</eq>
+            	<eq name="vo.ReportObjectId" value="4">合作伙伴/其他</eq>
+            </td>
+            <td><{$vo.Mobile}></td>
+            <td><{$vo.Email}></td>
+            <td><{$vo.CreateTime}></td>
+            <td>
+            	<eq name="vo.Status" value="0">未处理</eq>
+            	<eq name="vo.Status" value="1">处理中</eq>
+            	<eq name="vo.Status" value="2">完结</eq>
+            </td>
+            <td><a href="<{:U('Reportcms/detail',array('id'=>$vo['Id']))}>" class="edit">查看</a><a href="<{:U('Reportcms/del',array('id'=>$vo['Id']))}>" class="edit">删除</a></td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+      <div class="page">
+        <div class="pagination"><{$page}></div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

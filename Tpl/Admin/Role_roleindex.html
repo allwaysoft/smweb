@@ -1,0 +1,44 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">管理员设置</a>><a href="<{:U('Role/roleindex')}>">权限管理组</a></div>
+ <div class="bloc">
+    <div class="content">
+    <dl class="dl_line">
+         <dt><a href="roleadd" class="xz">新增</a><a href="roledel" class="schu">删除</a></dt>
+          <dd >
+            <input type="text" name="keyword" id="keyword" value="" onfocus="this.value='';"  />
+            <input type="submit" name="button" id="btnSearch" value=" 搜 索 " />
+          </dd>
+        </dl>
+      <table  class="list">
+        <thead>
+          <tr>
+            <th width="59"><input type="checkbox" class="checkall"/></th>
+            <th width="60">ID</th>
+            <th>角色名称</th>
+            <th >拥有用户数</th>
+            <th width="160" style="text-align:center; margin-left:10px;" >操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+          <tr>
+            <td><if condition="$vo['id'] != 1"><input type="checkbox" name="id[]" value="<{$vo.id}>"/></if></td>
+            <td><{$i}></td>
+            <td><{$vo.name}></td>
+            <td><{$vo.count}></td>
+            <td class="actions"><a href = "<{:U('Admin/Role/roleedit',array('id'=>$vo['id']))}>" >修改</a>|<if condition="$vo['id'] != 1"><a href="<{:U('Admin/Role/roleset',array('roleid'=>$vo['id']))}>" title="权限">权限设置</a><else/>权限设置</if>|<a href="<{:U('Admin/Role/roledel',array('id'=>$vo['id']))}>" title="删除">删除</a></td>
+          </tr>
+		</volist>
+        </tbody>
+      </table>
+      <div id="fade" class="black_overlay"></div>
+    <div class="page">
+        <div class="pagination"><{$page}></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

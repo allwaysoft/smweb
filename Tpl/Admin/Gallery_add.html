@@ -1,0 +1,157 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+
+<style>
+.imgbox table{border: 1px solid #E1E1E1; width:100%}
+.imgbox table tr td{vertical-align: middle;text-align:center;border: 1px solid #E1E1E1; }
+</style>
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">图库管理</a>><a href="index">店铺列表</a>><a href="add">添加店铺</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th>店铺名称：<font class="red">*</font></th>
+          <td><input name="title" maxlength="100" type="text" class="input" id="title" style="width:400px;" value=""></td>
+        </tr>
+        <tr>
+          <th>区域选择：<font class="red">*</font></th>
+          <td>
+          <select select id="type_id" name="type_id" class="valid">
+              <option value="">﹄ 请选择...</option>
+              <volist name="alist" id="vo">
+              <option value="<{$vo.id}>"><for start="1" end="$vo['level']">&nbsp;&nbsp;&nbsp;</for>﹄ <{$vo.name}></option>
+              </volist>
+            </select>
+			</td>
+        </tr>
+        <tr>
+        	<th>首页显示：</th>
+        	<td>
+        		<input type="radio" value="1" name="is_display"/>是&nbsp;&nbsp;&nbsp;&nbsp;
+        		<input type="radio" value="0" name="is_display" checked="checked"/>否
+        	</td>
+        </tr>
+        <tr> 
+		    <th>封面图片：</th>
+		    <td>
+		    <input name="cover_image" maxlength="100" type="text" class="input" id="cover_image" style="width:400px;" value="" />      
+		    <br />
+		    <input id="coverimage_upload" type="file" name="Filedata" /> 
+		    <span class="coverimgbox"><img src="" height="38" id="spic" style="margin-top:8px;" /></span> 
+		    </td>
+		</tr>
+        <tr id="small_img"> 
+		    <th>上传图片：</th>
+		    <td>
+		    <input id="image_upload" type="file" name="Filedata" /> 
+		    <span class="imgbox" style="min-height:50px; width:800px;">
+		    <table cellpadding="0" cellspacing="0">
+		    
+		    </table>
+		    </span> 
+		    <td>
+		</tr>
+        <tr>
+          <th>发布日期：<font class="red">*</font></th>
+          <td><input name="time" id="time" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  class="input" value="<{$time|date="Y-m-d H:i:s",###}>"></td>
+        </tr>
+        <tr>
+          <th>截止日期：<font class="red">*</font></th>
+          <td><input name="endtime" id="endtime" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  class="input" value="<{$endtime|date="Y-m-d H:i:s",###}>"></td>
+        </tr>
+        <tr>
+          <th>作者：</th>
+          <td><input name="author" id="author" type="text" class="input" style="width:100px;" ></td>
+        </tr>
+        <tr>
+          <th>排序：<font class="red">*</font></th>
+          <td><input name="sort" type="text" class="input" value="0" id="sort" maxlength="5" style="width:50px;" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
+        </tr>
+        <tr>
+          <th>店铺描述：</th>
+          <td><textarea style=" width:79%; height:80px;" name="contents" class="input" id="contents"></textarea>
+           </td>
+        </tr>
+        <tr>
+      <th></th>
+        <td><input name="btnSubmit" type="submit" id="btnSubmit" value="确定">
+          <input name="btnReset" type="reset" id="btnReset" value="清除">
+          <input name="btnBack" type="button" id="btnBack" value="返回"></td>
+      </tr>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			title: { required: true},
+			type_id:{ required: true},
+			cover_image:{ required: true},
+			time:{required:true},
+			endtime:{required:true}
+		}
+	});
+})
+$(function() {
+		$('#coverimage_upload').uploadify({
+		  'uploader'  : '__PUBLIC__/admin/uploadify/uploadify.swf',
+		  'script'    : '<{:U("Upload/gallery")}>',
+		  'folder'	  : '',
+		  'cancelImg' : '__PUBLIC__/admin/uploadify/cancel.png',
+		  'removeCompleted' : true,
+		  'auto':true,
+		  'buttonText': 'SELECT IMAGE',
+		  'fileExt'     : '*.jpg',
+		  'fileDesc'    : 'Select Files *.jpg',
+		  'onCancel'    : function(event,ID,fileObj,data) {
+      		  $("#btnSubmit").attr("disabled",false);
+    	  },
+		  'onSelect':function(event,ID,fileObj) {
+			  $("#btnSubmit").attr("disabled",false);
+		  },
+		  'onComplete' :function(event,queueID,fileObj,response,data){
+			   $("#cover_image").val(response);
+			   $("#spic").attr("src",response);
+			   $("#btnSubmit").attr("disabled",false);
+		  }
+		});	
+
+	});
+$(function() {
+		$('#image_upload').uploadify({
+		  'uploader'  : '__PUBLIC__/admin/uploadify/uploadify.swf',
+		  'script'    : '<{:U("Upload/gallery")}>',
+		  'folder'	  : '',
+		  'cancelImg' : '__PUBLIC__/admin/uploadify/cancel.png',
+		  'removeCompleted' : true,
+		  'multi':true,
+		  'auto':true,
+		  'buttonText': 'SELECT IMAGE',
+		  'fileExt'     : '*.jpg',
+		  'fileDesc'    : 'Select Files *.jpg',
+		  'onCancel'    : function(event,ID,fileObj,data) {
+      		  $("#btnSubmit").attr("disabled",false);
+    	  },
+		  'onSelect':function(event,ID,fileObj) {
+			  $("#btnSubmit").attr("disabled",false);
+		  },
+		  'onComplete' :function(event,queueID,fileObj,response,data){
+			   $(".imgbox table").append("<tr><td width='270'><input type='text' name='image[]' style='width:250px' readonly='readonly' value='"+response+"'/></td><td width='100'><img src='"+response+"' height='30px'/></td><td width='350'>描述：<input type='text' name='description[]' style='width:300px'/></td><td><a href='javascript:;' onclick='delthis(this)'>删除</a></td></tr>")
+		  }
+		});
+	});
+function delthis(obj){
+	$(obj).parent().parent().remove();
+}
+</script> 

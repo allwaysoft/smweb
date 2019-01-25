@@ -1,0 +1,339 @@
+<include file="Public:head"/><include file="Public:navbar"/> 
+ <script type="text/javascript" src="<{:RES}>/public/iviewer-master/jqueryui.js" ></script>
+<script type="text/javascript" src="<{:RES}>/public/iviewer-master/jquery.mousewheel.js" ></script>
+ <script type="text/javascript" src="<{:RES}>/public/iviewer-master/jquery.iviewer.js" ></script>
+ <link rel="stylesheet" href="<{:RES}>/public/iviewer-master/style.css" />
+  <link rel="stylesheet" href="<{:RES}>/public/iviewer-master/jquery.iviewer.css" />
+  
+    
+   
+
+<div class="container">
+  <div id="msgShow"></div>
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="topRightBut pull-right"> <a href="<{:U('Index/quality')}>" class=" "><i class="fa fa-mail-reply" aria-hidden="true"></i> 返回</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="<{:U('Index/quality_apply')}>" class="btn btn-success  btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> 质量投诉申请</a> </div>
+      <h1><i class="fa fa-bell-o" aria-hidden="true"></i> 质量投诉 <small>>> 详细信息</small></h1>
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row">
+    <div class="col-sm-12"> 
+      <!-- base -->
+      <div class="col-sm-2" >
+        <p class="lead">基本信息</p>
+      </div>
+      <div class="col-sm-10" > 
+        <!-- item -->
+        <p class="pull-right small"><{$info.add_time|date="Y-m-d H:i:s",###}></p>
+        <p >投诉编号：<{$info.com_code}> </p>
+        <p >投 诉 人：<{$info.agent_code}>  /   <{$info.agent_storename}>  / <{$info.agent_name}>  / <{$info.agent_province}> / <{$info.agent_area}></p>
+        <p >联 系 人：<{$info.agent_person}>  /  <{$info.agent_tel}></p>
+        <hr>
+        <div class="row"> 
+          <!-- item -->
+          <div class="col-sm-4" >
+            <p >款 号：<{$info.style_id}></p>
+            <p > 色号：<{$info.color_id}> </p>
+            <p > 次品数量：<{$info.number}></p>
+            <p > 购买时间：<{$info.sale_time}></p>
+            <p > 销售类型：
+              <eq name="info.sale_type" value="0">未销售</eq>
+              <eq name="info.sale_type" value="1">已销售</eq>
+            </p>
+          </div>
+          <!-- item --> 
+          <!-- item -->
+          <div class="col-sm-8" >
+            <p class="text-danger">投诉类别：
+              <eq name="info.com_type" value="1">照片鉴定</eq>
+              <eq name="info.com_type" value="2">实物鉴定</eq>
+            </p>
+            <eq name="info.com_type" value="1">
+              <div class="row gallery" >
+                
+                  <volist name="info.com_pic" id="vo">
+                    <div class="uploadResult col-sm-3"><a href='<{$vo}>' class="go" rel="gallery" ><img src='<{$vo}>' class="img-responsive previewImage"/> </a> </div>
+                  </volist>
+                
+              </div>
+            </eq>
+            <eq name="info.com_type" value="2">
+              <p > 快递公司：<{$info.com_express}></p>
+              <p > 快递单号：<{$info.com_express_number}></p>
+              <p > 回寄地址：<{$info.com_express_address}></p>
+            </eq>
+          </div>
+          <!-- item --> 
+        </div>
+        <!-- item -->
+        <hr />
+        <!-- item -->
+        <p >投诉描述： <{$info.com_contents}></p>
+        <!-- item -->
+        <hr>
+        <p >处理状态：
+          <eq name="info.com_status" value="1">待处理</eq>
+          <eq name="info.com_status" value="2">处理中...</eq>
+          <eq name="info.com_status" value="3">处理结束</eq>
+        </p>
+      </div>
+      <!-- base --> 
+      <!-- follow -->
+      <notempty name="follow">
+      <div class="row">
+        <div class="col-sm-12">
+          <hr>
+          <div class="col-sm-2" >
+            <p class="lead">再次提交信息</p>
+          </div>
+          <div class="col-sm-10" > 
+            <!-- item -->
+            <volist name="follow" id="vo">
+            <div class="row">
+              <div class="col-sm-12">
+                 <p class="pull-right small"><{$vo.add_time|date="Y-m-d H:i:s",###}></p>
+                <p class="text-danger">投诉类别：
+                  <eq name="vo.com_type" value="1">照片鉴定</eq>
+                  <eq name="vo.com_type" value="2">实物鉴定</eq>
+                </p>
+              </div>
+              <div class="col-sm-12">
+                <eq name="vo.com_type" value="1">
+               <div class="row gallery" >
+                    <volist name="vo.fol_pic" id="v">
+                      <div class="col-sm-3 uploadResult"> <a href="<{$v}>"  class="go" rel="gallery"><img src="<{$v}>" class="img-responsive previewImage"/> </a> </div>
+                    </volist>
+                   
+                  <div class="clearfix"></div>
+                </div> 
+              </eq>
+              <eq name="vo.com_type" value="2">
+                <p > 快递公司：<{$vo.fol_express}></p>
+                <p > 快递单号：<{$vo.fol_express_number}></p>
+                <p > 回寄地址：<{$vo.fol_express_address}></p>
+              </eq>
+            </div>
+            <div class="col-sm-12">
+              <p> 问题描述：<{$vo.fol_contents}> </p>
+            </div>
+          </div>
+          <hr />
+          </volist>
+          <!-- item --> 
+        </div>
+      </div>
+    </div> 
+    </notempty>
+    <!-- follow --> 
+    <!--tracklist -->
+    <notempty name="feedback">
+      <div class="col-sm-12" id="track" >
+        <hr>
+        <div class="col-sm-2" >
+          <p class="lead">客服回复 <i class="fa fa-comments-o" aria-hidden="true"></i></p>
+        </div>
+        <div class="col-sm-10" >
+          <volist name="feedback" id="vo">
+            <blockquote>
+              <div class="row">
+                <div  class="col-sm-2">
+                  <p> <span class="text-danger">
+                     
+                      <eq name="vo.tra_type" value="1">不接收</eq>
+                <eq name="vo.tra_type" value="2">启动OA</eq>
+                <eq name="vo.tra_type" value="3">图片鉴定</eq>
+                <eq name="vo.tra_type" value="4">实物鉴定</eq>
+                <eq name="vo.tra_type" value="5">接收</eq>
+                 <eq name="vo.tra_type" value="99">废弃</eq>
+                    </span> </p>
+                  <p>
+                    <eq name="i" value="1">
+                      <eq name="info.com_status" value="2">
+                        <in name="vo.tra_type" value="3,4"> <a href="<{:U('index/quality_again',array('id'=>$info['id']))}>"  class="btn btn-success btn-sm applyagain" type="button">
+                          <eq name="vo.tra_type" value="3"><i class="fa fa-photo" aria-hidden="true"></i> 照片鉴定 </eq>
+                          <eq name="vo.tra_type" value="4"><i class="fa fa-navicon" aria-hidden="true"></i> 实物鉴定 </eq>
+                          </a> </in>
+                      </eq>
+                    </eq>
+                  </p>
+                </div>
+                <div  class="col-sm-10">
+                 <!-- 启动OA-->
+                  <eq name="vo.tra_type" value="2">
+                  <p class="blockquote_title text-primary"> 投诉主题：<{$vo.com_title}>  
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;季度：<{$vo.com_quarter}>   
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;保质期内：
+                    <eq name="vo.com_deadline" value="1">是</eq>
+                    <eq name="vo.com_deadline" value="2">否</eq>
+                  </p>
+                  </eq>
+                   <!-- 启动OA-->
+                  <p><{$vo.tra_contents}></p>
+                  <footer> <cite title="Source Title "><{$vo.com_user}> / <{$vo.add_time|date="Y-m-d H:i:s",###}></cite> </footer>
+                </div>
+              </div>
+            </blockquote>
+          </volist>
+        </div>
+      </div>
+    </notempty>
+    <!--tracklist -->  
+    
+  </div>
+</div>
+</div>
+<!-- -->
+ <div id="iviewer">
+        <div class="loader"></div>
+       
+        <div class="viewer" style=""></div>
+ 
+        <ul class="controls">
+            <li class="close"> </li>
+            <li class="zoomin"></li>
+            <li class="zoomout"></li>  
+                
+        </ul>
+
+	 <div class="info" >            		
+	 	<a href="#" id="prevLink" class="go"  ><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+		<p id="imageCount"></p>
+		<a href="#" id="nextLink" class="go"  ><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>       
+        </div>        
+    </div>
+<!-- -->
+<script>
+ 
+	(function($) {
+    var gallery = new Array();
+    function init() {	
+        var viewer = $("#iviewer .viewer").
+        width($(window).width() - 80).
+        height($(window).height()).
+        iviewer({
+            ui_disabled : true,
+            zoom : 'fit',
+			
+            onFinishLoad : function(ev) {
+                $("#iviewer .loader").fadeOut();
+                $("#iviewer .viewer").fadeIn();			
+            }
+        }
+        );
+
+        $("#iviewer .zoomin").click(function(e) {
+            e.preventDefault();
+            viewer.iviewer('zoom_by', 1);
+        });
+
+        $("#iviewer .zoomout").click(function(e) {
+            e.preventDefault();
+            viewer.iviewer('zoom_by', -1);
+        });
+
+        /*
+         * Populate gallery array.
+         * NOTE: In order to add image to gallery, Anchor tag of images that are to be opened in lightbox, should have attribute 'rel' set to 'gallery'.
+         */
+        $( "a[rel='gallery']" ).each(function( index ) {
+            gallery[index] =  $( this ).attr("href");	    
+        });
+    }
+
+    function open(src) {
+        $("#iviewer").fadeIn().trigger('fadein');
+        $("#iviewer .loader").show();
+        $("#iviewer .viewer").hide();
+
+        var viewer = $("#iviewer .viewer")
+        .iviewer('loadImage', src)
+        .iviewer('set_zoom', 'fit');
+    }
+
+    function close() {
+        $("#iviewer").fadeOut().trigger('fadeout');
+    }
+
+    $('.go').click(function(e) {
+        e.preventDefault();
+        var src = $(this).attr('href');
+        open(src);
+        // Refresh next and prev links
+        refreshNextPrevLinks(src);
+    });
+
+    $("#iviewer .close").click(function(e) {
+        e.preventDefault();
+        close();
+    });
+
+    $("#iviewer").bind('fadein', function() {
+        $(window).keydown(function(e) {
+            if (e.which == 27) close();
+        });
+    });
+
+    /*
+    *  refreshNextPrevLinks() refreshes Next and previous links
+    */
+    function refreshNextPrevLinks(src){
+	console.log('RefreshNextPrevLinks called. src: '+src);
+        var imageIndex = 0;
+        //Iterate over gallery and find the index of current image.
+        for (i=0;i<gallery.length;i++)
+        {         
+	 if(src == gallery[i]){
+                imageIndex = i;
+            }
+        }
+	
+        //Setting Next link
+        var nextLink = document.getElementById('nextLink');
+        if(gallery.length > imageIndex+1){
+            nextLink.href =  gallery[imageIndex+1];
+            nextLink.style.visibility = 'visible';
+        }else{
+            nextLink.href = "#";
+            nextLink.style.visibility = 'hidden';
+        }	
+
+        //Setting Prev link
+        var prevLink = document.getElementById('prevLink');
+        if(imageIndex > 0){
+            prevLink.href = gallery[imageIndex-1];
+            prevLink.style.visibility = 'visible';
+        }else{
+            prevLink.setAttribute("href", "#");
+            prevLink.style.visibility = 'hidden';
+        }	
+
+        document.getElementById('imageCount').innerHTML= "图片: "+ (imageIndex+1) + "/" + gallery.length;	
+    }
+
+    //Binding keypress event of left arrow and right arrow button. Image would be changed, if right arrow or left arrow button is pressed.
+    $(document).keyup(function(e) {
+        //left arrow key
+        if (e.keyCode == 37) { 
+            if($("#prevLink").attr("href") != "#"){
+                $("#prevLink").click();
+            }
+        }
+        //right arrow
+        if (e.keyCode == 39) {
+            if($("#nextLink").attr("href") != "#"){
+                $("#nextLink").click();
+            }
+        }
+    });
+
+    init();
+})(jQuery);
+  
+   
+  </script>
+<include file="Public:foot"/> 

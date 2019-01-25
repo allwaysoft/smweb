@@ -1,0 +1,64 @@
+
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+ <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">系统设置</a>><a href="<{:U('Banner/index')}>">Banner图设置</a></div>
+  <div class="bloc">
+    <div class="content">
+        <dl class="dl_line">
+			<dt><a href="add" class="xz">新增</a><!-- <a href="type" class="save">分类</a><a href="" class="schu">删除</a> --></dt>
+			<dd >
+			  <th>图片分类：</th>
+			  <td>
+				<select id="type_id" name="type_id" class="valid">
+				  <option value="">﹄ 请选择...</option>
+				  <volist name="alist" id="vo">
+				  <option <if condition="$type_id eq $vo['id']">selected="selected"</if> value="<{$vo.id}>">﹄ <{$vo.name}></option>
+				  </volist>
+				</select>
+			  </td>
+			</dd>
+        </dl>
+	    <form method="post" action="<{:U('Banner/del')}>" id="form1">
+		<table id="alist" border="0" cellpadding="0" cellspacing="0" width="100%" class="list" style="float:left" >  
+			<tbody>
+			<tr>
+			<th style="width:116px"><input type="checkbox" id="all" class="checkall"/></th>
+			<th>序号</th>
+			<th >名称</th>
+			<th >图片类型</th>
+			<th >图片预览</th>
+			<th>外链</th>
+			<th >操作</th>
+			</tr>
+			<volist name="list" id="vo">
+			  <tr>
+				<td><input type="checkbox" name="id[]" value="<{$vo.id}>"/></td>
+				<td><{$i}></td>
+				<td><{$vo.title}></td>
+				<td><{$vo.type_name}></td>
+				<td><img src="<{$vo.image}>" width="100" height="33"></td>
+				<td><{$vo.url|default="null"}></td>
+				<td class="actions" style="text-align:center; margin-left:10px;"><a href = "<{:U('Admin/Banner/edit',array('id'=>$vo['id']))}>" >修改</a> <!-- | <a href="<{:U('Admin/Download/viddel',array('id'=>$vo['id']))}>" title="删除">删除</a> --></td>
+			  </tr>
+			</volist>        
+			</tbody>
+		</table>
+		<div class="page">
+			<dl class="dl_line">
+				<dt><input type="submit" class="schu" style="width: 64px; text-align: right; height: 32px; position: absolute; top: 66px; left: 100px; " value="删除" onclick="return listDelete(this.form.name);" id="btnDelete" /></dt>
+			</dl>
+			<div class="pagination"><{$page}></div>
+        </div>
+	    </form>
+	</div>
+</div>
+</body>
+<script>
+$('#type_id').change(function(){
+	var type_id=$(this).val();
+	var url="<{:U('Banner/index')}>";
+	window.location.href = url + "?type_id=" + type_id;
+})
+</script>
+</html>

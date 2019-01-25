@@ -1,0 +1,84 @@
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/news.css"  />
+<!--banner -->
+
+<div class="banner_div_send">
+  <div class="banner_send"> </div>
+</div>
+<!----banner---> 
+<!-- page link -->
+<div class="page_link"> <a href="<{:U('Main/index')}>">首页</a> &raquo; <a href="<{:U('Main/newcatgary',array('pid'=>$cateLink['id']))}>"><{$cateLink.name}></a> &raquo; <a href="<{:U('Main/newslist',array('pid'=>$cateLink['id'],'tid'=>$pinfo['id']))}>"><{$pinfo.name}></a> &raquo;
+  详细 </div>
+<!-- page link end --> 
+<!----home_con--->
+<div class="home_con"> 
+  <!----home_con_L--->
+  <div class="home_con_L"> 
+    <!-- start -->
+    
+    <div  class="newsPageNav">
+      <div class="newsInfo">
+        <h2><{$newsinfo.title}></h2>
+        <div class="newsInfoTime">发布时间：<{$newsinfo.time|date="Y年m月d日 H:i:s",###}> &nbsp;&nbsp;&nbsp;&nbsp; 发布人：<{$newsinfo.author}> &nbsp;&nbsp;&nbsp;&nbsp; 点击率：<{$newsinfo.count}></div>
+        <!-- <if condition="$newsinfo.image neq  ''">
+        <div class=newsInfoImg><img src="<{$newsinfo.image}>"  /></div>
+        </if>-->
+        <div class="newsInfoContents">
+       		 <{$newsinfo.contents}>
+        </div>
+      </div>
+    </div>
+    <div class="h10"></div>
+    
+    <!-- end --> 
+  </div>
+  <div class="in_right"> 
+    <!-- news categary-->
+    <div class="newRightNav">
+      <p class="title"><{$cateLink.name}></p>
+      <ul>
+        <volist name="cateList" id="vo">
+          <li> <a href="<{:U('Main/newslist',array('pid'=>$cateLink['id'],'tid'=>$vo['id']))}>" 
+            
+            <if condition="$pinfo.id eq  $vo['id']"> class ="curren" </if>
+            >&raquo; <{$vo.name}></a> </li>
+        </volist>
+      </ul>
+    </div>
+	<div class="zhongdianzhanshig">
+      <p class="yc_title">最新资讯</p>
+      <div>
+        <volist name="newnews" id="vo">
+        <div class="dongtainrdl">
+		  <if condition="$vo.image neq  ''">
+          <div class="dongtainrdd"><a href="<{:U('Main/newsdetail',array('nid'=>$vo['id']))}>"><img src="<{:U('Thumb/index',array('thumb'=>$vo['image'],'w'=>71,'h'=>71))}>" title="<{$vo.title}>" /></a></div>
+		  </if>
+          <div class="dongtainrdt"><a href="<{:U('Main/newsdetail',array('nid'=>$vo['id']))}>" title="<{$vo.title}>"><{$vo.title|msubstr=0,36,'utf-8',true}></a>
+            <p class="p_2">发布日期:  <{$vo.time|date="Y-m-d",###}> </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+        </volist>
+      </div>
+    </div>
+    <!-- news categary-->
+    <div class="in_yc_banner"><img src="<{$gg.image}>" width="220" /></div>
+    <div class="shiyonggju">
+      <p class="yc_title">实用工具</p>
+      <div class="shiyonggju_b">
+        <ul>
+			<volist name="tools" id="vo">
+			<if condition="$vo.ispic eq 1">
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><img src="<{$vo.image}>"></a></li>
+			<else />
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><{$vo.name}></a></li>
+			</if>
+			</volist>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!----home_con_R--->
+<include file="Public:foot"/>

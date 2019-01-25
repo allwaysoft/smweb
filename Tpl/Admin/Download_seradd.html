@@ -1,0 +1,50 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" style="padding-left:0px;"><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>">首页</a>><a href="javascript:void(0)">下载管理</a>><a href="server">服务器管理</a>><a href="seradd">服务器添加</a></div>
+  <div class="bloc">
+ <dl  class="t_1_h"></dl>
+
+      <div class="wrap">
+    <form id="form1" name="form1" method="post" action="">
+      <table class="add">
+        <tbody>
+          <tr>
+            <th>服务器名称：<font class="red">*</font></th>
+            <td><input name="name" maxlength="20" class="input" id="name" style="width:200px;" type="text"/>
+              <span> 服务器名称不能重复</span> </td>
+          </tr>
+          <tr>
+            <th>服务器地址：<font class="red">*</font></th>
+            <td><input name="url" maxlength="200" class="input" id="name" style="width:200px;" type="text"/><span> 服务器地址必须以  http://  开头</span> </td>
+          </tr>
+          
+          <tr>
+            <th></th>
+            <td><input name="btnSubmit" id="btnSubmit" value="确定" type="submit">
+              <input name="btnReset" id="btnReset" value="清除" type="reset">
+              <input name="btnBack" id="btnBack" value="返回" type="button">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			name: { required: true,minlength:2 }
+		},
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		}
+	});
+})
+
+</script> 

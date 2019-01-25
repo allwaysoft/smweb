@@ -1,0 +1,240 @@
+<include file="Public:head"/>
+<link href="__PUBLIC__/home/css/product.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/home/css/fdj.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/home/js/fdj.js" type="text/javascript"></script>
+<script src="__PUBLIC__/home/js/slider.js" type="text/javascript"></script>
+<div class="banner_div_send">
+  <div class="banner_send"> </div>
+</div>
+<!-- main  start -->
+<div class="main center">
+  <div style=" padding:10px 0; " ><span><a href="<{:U('Main/index')}>">首页</a></span> &raquo; <span><a href="<{:U('Product/index')}>">产品中心</a></span> &raquo; <span><a href="<{:U('Product/index',array('pcid'=>$pc['id']))}>"><{$pc.title}></a></span> &raquo; <span><{$info.pname}></span></div>
+  <div class="pro_js">
+    <div class="preview" > 
+      <!--smallImg  -->
+      <div class="smallImg">
+        <div class="scrollbutton smallImgUp disabled"></div>
+        <div id="imageMenu">
+          <ul>
+            <li id="onlickImg"><img src="/Upload/<{$info.catalog}>/S_<{$info.styleID}>-<{$info['colorname'][0]['codename']}>.jpg" width="68" height="85" alt="" onerror="this.src='__PUBLIC__/home/images/nopic.jpg';this.onerror=null"/></li>
+            <li><img src="/Upload/<{$info.catalog}>/S_<{$info.styleID}>-<{$info['colorname'][0]['codename']}>-01.jpg" width="68" height="85" alt="" onerror="this.style.display='none';this.onerror=null"/></li>
+            <li><img src="/Upload/<{$info.catalog}>/S_<{$info.styleID}>-<{$info['colorname'][0]['codename']}>-02.jpg" width="68" height="85" alt="" onerror="this.style.display='none';this.onerror=null"/></li>
+            <li><img src="/Upload/<{$info.catalog}>/S_<{$info.styleID}>-<{$info['colorname'][0]['codename']}>-03.jpg" width="68" height="85" alt="" onerror="this.style.display='none';this.onerror=null"/></li>
+            <li><img src="/Upload/<{$info.catalog}>/S_<{$info.styleID}>-<{$info['colorname'][0]['codename']}>-04.jpg" width="68" height="85" alt="" onerror="this.style.display='none';this.onerror=null"/></li>
+          </ul>
+        </div>
+        <div class="scrollbutton smallImgDown"></div>
+      </div>
+      <!--smallImg end--> 
+      <!--bigImg end-->
+      <div id="vertical" class="bigImg"> <img src="/Upload/<{$info.catalog}>/B_<{$info.styleID}>-<{$info['colorname'][0]['codename']}>.jpg" width="400" height="500" alt="" id="midimg" onerror="this.src='__PUBLIC__/home/images/nopic.jpg';this.onerror=null"/>
+        <div style="display:none;" id="winSelector"></div>
+      </div>
+      <div id="bigView" style="display:none;"><img width="800" height="800" alt="" src="" /></div>
+      <!--bigImg end-->
+      <div class="clear"></div>
+    </div>
+    <!--cpxx start-->
+    <div class="cpxx"  >
+      <div class="nk_t"><{$info.pname}> <span class="styleId"><{$info.styleID}></span></div>
+      <div style="padding:1px 0 5px 0"><span  class="priceLine" >&yen;<{$info.price}></span> <span class="kcfont">
+         <if condition="$vo.stock eq 0"></if>
+        <if condition="$vo.stock gt 0  && $vo.stock elt 10000"> <span class="kzinfo2">库存:少量</span> </if>
+        <if condition="$info.stock gt 300 && $info.stock elt 1000"> <span class="kcfont2">库存:中量</span> </if>
+        <if condition="$info.stock gt 1000"> <span class="kcfont3">库存:大量</span> </if>
+        </span> <span class="djfont"> 人气(<{$info.click}>)&nbsp;&nbsp;&nbsp;&nbsp; <a href="javascript:;" class="dzFunction "> 赞<span>(<{$info.zan}>)</span></a> </span> </div>
+        
+       <div class="change_color">
+    	<ul>
+        <li>颜色:&nbsp;</li>
+        <volist name="info.colorname" id="vo">
+        <li><a href="javascript:;" title="<{$vo.codename}>" alt="<{$vo.name}>"><{$vo.codename}></a></li>
+        </volist>
+        <div class="clear"></div>
+     	</ul>
+      </div>
+     <div class="size">
+    	<ul>
+        <li>尺码:&nbsp;&nbsp;&nbsp;</li>
+       <volist name="info.rule" id="vo">
+       <li class="sizeList"><{$vo}>
+       </li>
+       </volist>
+        <div class="clear"></div>
+     	</ul>
+      </div>
+       <!--- --->
+       <div class="shejishi">
+    	<ul>
+        <li>设计师:</li>
+        
+       <li class="shejishiList"><{$info.designer}>
+       </li>
+        
+        <div class="clear"></div>
+     	</ul>
+      </div>
+       <!--- --->
+       <div  class="pingfeng">
+       	<div class="biaoti">评分：</div>
+        <div class="pingfengAction">
+       		<div id="xzw_starSys">
+              <div id="xzw_starBox">
+                <ul class="star" id="star">
+                  <li><a href="javascript:void(0)" title="1" class="one-star">1</a></li>
+                  <li><a href="javascript:void(0)" title="2" class="two-stars">2</a></li>
+                  <li><a href="javascript:void(0)" title="3" class="three-stars">3</a></li>
+                  <li><a href="javascript:void(0)" title="4" class="four-stars">4</a></li>
+                  <li><a href="javascript:void(0)" title="5" class="five-stars">5</a></li>
+                </ul>
+                <div class="current-rating" id="showb"></div>
+              </div>
+            </div>
+           </div>
+           <div class="clear"></div>
+        </div>
+         <!--- --->
+         <div class="clear">&nbsp;</div>
+        <div class="productDefail"> 产品描述： </div>
+        <div class="huodongqijianv" style="overflow-x:hidden;"> <{$info.contents}> </div>
+       <!--  /////////////////// -->
+    </div>
+     
+    <!--cpxx end-->
+    <div class="clear"></div>
+  </div>
+  <!--  /////////////////// -->
+   <div class="serch_pro center" style="margin-top:10px;">
+    <div class="serch_pro_t">同批次产品：</div>
+    <div class="scrolllist" id="s1"> <a class="abtn aleft" href="#left" title="左移"></a>
+      <div class="imglist_w">
+        <ul class="imglist">
+          <volist name="tklist" id="vo">
+            <li> <a href="<{:U('Product/info',array('pcID'=>$vo['pcID'],'id'=>$vo['id'],'styleID'=>$vo['styleID']))}>" title=""><img width="120" height="150" alt="" src="/Upload/<{$vo.catalog}>/M_<{$vo.styleID}>-<{$vo['colorname']}>.jpg" onerror="this.src='__PUBLIC__/home/images/nopic.jpg';this.onerror=null"/></a>
+              <p><a href="<{:U('Product/info',array('pcID'=>$vo['pcID'],'id'=>$vo['id'],'styleID'=>$vo['styleID']))}>"><{$vo.pname}></a></p>
+            </li>
+          </volist>
+        </ul>
+        <!--imglist end--> 
+        
+      </div>
+      <a class="abtn aright" href="#right" title="右移"></a>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+   <!--  /////////////////// -->
+   <div class="serch_pro center" style="margin-top:10px;">
+    <div class="serch_pro_t">最近浏览记录：</div>
+    <div class="scrolllist" id="s1"> <a class="abtn aleft" href="#left" title="左移"></a>
+      <div class="imglist_w">
+        <ul class="imglist">
+          <volist name="record" id="vo">
+            <li> <a href="<{:U('Product/info',array('pcID'=>$vo['pcID'],'id'=>$vo['id'],'styleID'=>$vo['styleID']))}>" title=""><img width="120" height="150" alt="" src="/Upload/<{$vo.catalog}>/M_<{$vo.styleID}>-<{$vo['colorname']}>.jpg" onerror="this.src='__PUBLIC__/home/images/nopic.jpg';this.onerror=null"/></a>
+              <p><a href="<{:U('Product/info',array('pcID'=>$vo['pcID'],'id'=>$vo['id'],'styleID'=>$vo['styleID']))}>"><{$vo.pname}></a></p>
+            </li>
+          </volist>
+        </ul>
+        <!--imglist end--> 
+      </div>
+      <a class="abtn aright" href="#right" title="右移"></a>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<!---浏览记录----> 
+</div>
+<!---浏览记录----> 
+
+<!----ewm--->
+<div class="clear"></div>
+<script>
+$("#s1").xslider({
+	unitdisplayed:4,
+	movelength:1,
+	unitlen:176,
+	autoscroll:3000
+});
+$('.change_color a').click(function(){
+	//alert($(this).attr('title'))
+	$('.change_color a').removeClass('colorcheck');
+	$(this).addClass('colorcheck');
+	var colorcode=$(this).attr('title');
+	$("#imageMenu li").removeAttr("id");
+	$("#imageMenu li:first").attr("id", "onlickImg");
+	$('#imageMenu ul li').each(function(i,val){
+		var src=$(this).children().eq(0).attr('src');
+		var src_arr=new Array();
+		src_arr=src.split('-');
+		if(i==0){
+			if('<{$info.catalog}>'==''){
+				var newsrc='__PUBLIC__/home/images/nopic.jpg';
+				
+			}else{
+				src_arr[1]=colorcode+'.jpg';
+				var newsrc='/Upload/<{$info.catalog}>/S_<{$info.styleID}>-'+src_arr[1];
+			}
+			$(this).children().eq(0).attr("onerror","this.src='/Public/home/images/nopic.jpg'")
+			
+		}else{
+			src_arr[1]=colorcode;
+			var newsrc=src_arr[0]+'-'+src_arr[1]+'-'+src_arr[2];
+		}
+		$(this).children().eq(0).attr('src',newsrc);
+	})
+	if('<{$info.catalog}>'==''){
+		$('#vertical').children().eq(0).attr('src','__PUBLIC__/home/images/nopic.jpg');
+	}else{
+		$('#vertical').children().eq(0).attr('src','/Upload/<{$info.catalog}>/B_<{$info.styleID}>-'+colorcode+'.jpg');
+		$('#vertical').children().eq(0).attr("onerror","this.src='/Public/home/images/nopic.jpg'")
+	}
+	
+});
+
+/* 评分 */
+$(document).ready(function(){
+    var stepW = 24;
+    var stars = $("#star > li");
+    var descriptionTemp;
+    $("#showb").css("width",stepW*<{$score}>);
+    stars.each(function(i){
+        $(stars[i]).click(function(e){
+            var n = i+1;
+       		var w=$("#showb").css('width');
+       		if(w=='0px'){
+       			var url="<{:U('Product/p_score')}>";
+       			$.post(url,{styleID:<{$info.styleID}>,score:n});
+       			$("#showb").css({"width":stepW*n});
+                descriptionTemp = description[i];
+                $(this).find('a').blur();
+       		}
+
+        });
+    });
+});
+
+/* 赞 */
+
+$(document).ready(function(){
+	var zan=<{$zan}>;
+	if(zan==0){
+		$('.dzFunction').addClass('dzEnzan');
+		 
+		$('.dzFunction').one('click',function(){
+			var url="<{:U('Product/p_zan')}>";
+			$.post(url,{styleID:<{$info.styleID}>},function(msg){
+				if(msg!='失败'){
+					$('.dzFunction').removeClass('dzEnzan');
+					$('.dzFunction').addClass('dzZan');
+					$('.dzFunction span').html('('+msg+')');
+					
+				} 
+			})
+		})
+	}else{
+		$('.dzFunction').addClass('dzZan');
+	}
+})
+</script> 
+<include file="Public:foot"/>

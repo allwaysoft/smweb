@@ -1,0 +1,138 @@
+<include file="Public:head"/>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.dragsort-0.5.1.min.js"></script>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">新闻管理</a>><a href="index">新闻列表</a>><a href="add">添加新闻</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="#">
+    <input type="hidden" name="id" value="2">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th width="93">新闻名称：<font class="red">*</font></th>
+          <td colspan="3"><input name="title" maxlength="100" type="text" class="input" id="title" style="width:400px;" value="">&nbsp;&nbsp;<input type="checkbox" name="isnew" value="1" disabled="disabled" />最新&nbsp;&nbsp;<input type="checkbox" name="istop" value="1" disabled="disabled"/>置顶</td>
+        </tr>
+        <tr>
+          <th>文章分类：<font class="red">*</font></th>
+          <td colspan="3">
+          <select select id="type_id" name="type_id" class="valid">
+              <option value="">﹄ 请选择...</option>
+              <volist name="alist" id="vo">
+              <option value="<{$vo.id}>"><for start="1" end="$vo['level']">&nbsp;&nbsp;&nbsp;</for>﹄ <{$vo.name}></option>
+              </volist>
+            </select>
+			</td>
+        </tr>
+        <tr id="small_img"  style="display:none;"> 
+		    <th>上传图片：</th>
+		    <td colspan="3">
+		    <input name="image" maxlength="100" type="text" class="input" id="simage" style="width:400px;" value="" />      
+		     <span>新闻的形象缩略图，最佳尺寸比例为4:3</span> 
+
+		    <input id="image_upload" type="file" name="Filedata" /> 
+		    <span class="imgbox"><img src="" height="38" id="spic" style="margin-top:8px;" /></span> 
+		    </td>
+		</tr>
+        <tr>
+          <th>发布日期：<font class="red">*</font></th>
+          <td width="223"><input name="time" id="time" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  class="input" value="<{$time|date="Y-m-d H:i:s",###}>"></td>
+          <td width="96">截止日期：<font class="red">*</font></td>
+          <td width="631"><input name="endtime" id="endtime" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  class="input" value="<{$endtime|date="Y-m-d H:i:s",###}>"></td>
+        </tr>
+        <tr>
+          <th>作者：</th>
+          <td><input name="author" id="author" type="text" class="input" style="width:100px;" ></td>
+          <td>排序：<font class="red">*</font></td>
+          <td><input name="sort" type="text" class="input" value="0" id="sort" maxlength="5" style="width:50px;" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
+        </tr>
+        <!--<tr>
+          <th>关键字：</th>
+          <td colspan="3"><textarea style=" width:79%; height:50px;" name="keyword" class="input" id="keyword"></textarea>
+            <span>网页SEO优化，多个用","号隔开</span></td>
+        </tr>-->
+        <tr style="display:none;">
+          <th>简单描述：</th>
+          <td colspan="3"><textarea style=" width:79%; height:50px;" name="description" class="input" id="description"></textarea>
+            <span>网页SEO优化，文章的简单描述</span></td>
+        </tr>
+        <tr>
+          <th>文章描述：</th>
+          <td colspan="3">
+          <span>编辑框内上传的图片限制不能大于100k；如需要，可以下载图片处理工具：
+			<a href="/Public/admin/UploadModel/图片处理工具.rar">点击下载</a></span> 
+
+		<!-- <script id="editor" type="text/plain" style="width:90%;height:500px;" name="contents"></script> -->
+		<textarea name="contents" style="width:90%;height:500px;visibility:hidden;"></textarea>
+		</td>
+        </tr>
+        <tr>
+      <th></th>
+        <td colspan="3"><input name="btnSubmit" type="submit" id="btnSubmit" value="确定">
+          <input name="btnReset" type="reset" id="btnReset" value="清除">
+          <input name="btnBack" type="button" id="btnBack" value="返回"></td>
+      </tr>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			title: { required: true},
+			type_id:{ required: true},
+			time:{required:true},
+			endtime:{required:true}
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+})
+$(function() {
+		$('#image_upload').uploadify({
+		  'uploader'  : '__PUBLIC__/admin/uploadify/uploadify.swf',
+		  'script'    : '<{:U("Upload/upload")}>',
+		  'folder'	  : '',
+		  'cancelImg' : '__PUBLIC__/admin/uploadify/cancel.png',
+		  'removeCompleted' : true,
+		  'auto':true,
+		  'buttonText': 'SELECT IMAGE',
+		  'fileExt'     : '*.jpg; *.gif; *.png',
+		  'fileDesc'    : 'Select Files *.jpg; *.gif; *.png',
+		  'onCancel'    : function(event,ID,fileObj,data) {
+      		  $("#btnSubmit").attr("disabled",false);
+    	  },
+		  'onSelect':function(event,ID,fileObj) {
+			  $("#btnSubmit").attr("disabled",true);
+		  },
+		  'onComplete' :function(event,queueID,fileObj,response,data){
+			   $("#simage").val(response);
+			   $("#spic").attr("src",response);
+			   $("#btnSubmit").attr("disabled",false);
+		  }
+		});	
+
+	});
+/* if($("#contents").val()!=undefined){
+		var editor = CKEDITOR.replace( 'contents' );
+		CKFinder.setupCKEditor( editor, '__PUBLIC__/admin/js/ckfinder/' ) ;
+	} */
+	
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="contents"]', {
+			allowFileManager : true
+		});
+	});
+
+</script> 

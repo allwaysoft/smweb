@@ -1,0 +1,47 @@
+<header>
+  <nav class="navbar navbar-inverse  navbar-fixed-top">
+    <div class="container"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="#"><img src="/<{:c('VIEW_PATH')}>Loanpi/Admin/images/logow.png" width="120px"  alt="贷款申请管理"/></a> </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav pull-right">
+          <li 
+           class='dropdown <if condition="$url eq 'Register'">active</if>'
+          ><a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">贷款管理  <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+              <li><a href="<{:U('Register/index')}>">日常贷款</a></li>
+              <li><a href="<{:U('Register/special')}>">特殊贷款</a></li>
+            </ul>
+          </li>
+          <li class="dropdown <if condition="$url eq 'Repayment'"> active
+            </if>
+            " > <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">还款管理 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="<{:U('Repayment/index')}>">还款</a></li>
+              <li><a href="<{:U('Repayment/history')}>">还款纪录</a></li>
+            </ul>
+          </li>
+            <li 
+          <if condition="$url eq 'Statement'"> class='active' </if>
+          ><a href="<{:U('Statement/index')}>">对账函</a>
+          </li> 
+          <li 
+          <if condition="$url eq 'History'"> class='active' </if>
+          ><a href="<{:U('History/index')}>">历史数据</a>
+          </li> 
+          <p class="navbar-text">|</p>
+           <p class="navbar-text"><i class="fa fa-user" aria-hidden="true"></i> <!-- {$thisUser['user_name']}--> <{$thisUser['name']}></p>
+          <li >
+          <a href="<{:U('Login/loginout')}>"><i class="fa fa-lock" aria-hidden="true"></i> 安全退出</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </div>
+    <!-- /.container-fluid --> 
+  </nav>
+</header>

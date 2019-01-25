@@ -1,0 +1,293 @@
+<include file="Public:head"/>
+<!--banner -->
+<style>
+.subbanner{
+	height: 60px;
+	background: <{$sub.backgroundimg}>;
+	width: 1024px;
+	margin: 10px auto;
+	position:relative;
+}
+</style>
+<div class="banner_div">
+  <div class="banner">
+    <div class="adSlide" style="width:1024px">
+      <div class="hd">
+        <ul>
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          <volist name="banner" id="vo">
+            <li><a href="<{$vo.url}>"> <img src="<{$vo.image}>" width="1024px" height="250px" style="width:1024px; height:250px;" /></a></li>
+          </volist>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">jQuery(".adSlide").slide({ titCell: ".hd ul", mainCell: ".bd ul", autoPlay: true, effect:"leftLoop",autoPage: "<li></li>" });</script> 
+    <!-- <div  class="banner_R"> </div> --> 
+  </div>
+</div>
+<if condition="$sub.url neq ''">
+<a href="<{$sub.url}>">
+  <div class="subbanner">
+	  <div style="position:absolute;">
+	  	<if condition="$sub.image neq ''">
+	      <img src="<{$sub.image}>" style="width:1024px;height:60px;"/>
+	    </if>
+	  </div>
+	  <div style="position:absolute;width:100%;height:100%;">
+	  	   <{$sub.text}>
+	  </div>
+ </div>
+ </a>
+ </if>
+<!----banner---> 
+<!----home_con--->
+<div class="home_con"> 
+  <!----home_con_L--->
+  <div class="home_con_L"> 
+    <!-- start -->
+    <volist name="list" id="vo">
+      <div  class="home_con_1">
+        <div class="slideTxtBox">
+          <h2><a href="<{:U('Main/newcatgary',array('pid'=>$vo['id']))}>"><{$vo.name}></a></h2>
+          <div class="hd">
+            <ul>
+              <volist name="vo.new_c" id="v">
+                <li><a href="<{:U('Main/newslist',array('pid'=>$vo['id'],'tid'=>$v['id']))}>"><{$v.name}></a></li>
+              </volist>
+            </ul>
+          </div>
+        </div>
+        <div class="bd"> 
+          <!-- model 1 -->
+          <if condition="$vo.model eq 1">
+            <volist name="vo.new_c" id="v">
+              <div>
+                <volist name="v.newlist" id="nv" offset="0" length="1" >
+                  <div  class="zdyx_1_L f_l">
+                    <if condition="$nv.image neq  ''">
+                      <div  class="dyx_1_txt_1">
+                        <div  class="zdyx_1_img"><a href="<{:U('Main/newsdetail',array('nid'=>$nv['id']))}>"><img src="<{:U('Thumb/index',array('thumb'=>$nv['image'],'w'=>160,'h'=>120))}>" title="<{$nv.title}>" width="160" height="120" /></a></div>
+                        <div class="title"><a href="<{:U('Main/newsdetail',array('nid'=>$nv['id']))}>"  title="<{$nv.title}>" ><{$nv.title|msubstr=0,16,'utf-8',true}></a></div>
+                        <div class="info"><a href="<{:U('Main/newsdetail',array('nid'=>$nv['id']))}>" ><{$nv.description|msubstr=0,60,'utf-8',true}></a></div>
+                        <div class="time"><{$nv.time|date="Y-m-d H:i:s",###}></div>
+                      </div>
+                      <else/>
+                      <div  class="dyx_1_txt_1">
+                        <div class="title"><a href="<{:U('Main/newsdetail',array('nid'=>$nv['id']))}>"  title="<{$nv.title}>" ><{$nv.title|msubstr=0,32,'utf-8',true}></a></div>
+                        <div class="info"><a href="<{:U('Main/newsdetail',array('nid'=>$nv['id']))}>" ><{$nv.description|msubstr=0,100,'utf-8',true}></a></div>
+                        <div class="time"><{$nv.time|date="Y-m-d",###}></div>
+                      </div>
+                    </if>
+                  </div>
+                </volist>
+                <div  class="zdyx_1_R  f_r">
+                  <ul>
+                    <volist name="v.newlist" id="nv" offset="1" length="5" >
+                      <li>
+                        <{$i}><p><a href="<{:U('Main/newsdetail',array('nid'=>$nv['id']))}>" title="<{$nv.title}>"> &#8250; <{$nv.title|msubstr=0,17,'utf-8',true}></a></p>
+                        <span>
+                        <!-- <if condition="$nv.isnew eq 1 || $nv.istop eq 1">
+                          <if condition="$nv.isnew eq 1"><img src="__PUBLIC__/home/images/new.jpg" width="15"  /></if>
+                          <if condition="$nv.istop eq 1"><img src="__PUBLIC__/home/images/top.jpg" width="15"   /></if>
+                          <else/>
+                          <{$nv.time|date="m-d",###}> </if>
+                        -->
+                        <if condition="(($nowtime-$nv['time']) elt 259200)AND(($nowtime-$nv['time']) egt 0)">
+                          <img src="__PUBLIC__/home/images/new.jpg" width="15"  />
+                          <else/>
+                          <{$nv.time|date="m-d",###}> 
+                          </if>
+                        </span> </li>
+                    </volist>
+                  </ul>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </volist>
+            <else/>
+            <!-- model 2 --> 
+            <volist name="vo.new_c" id="v">
+             
+                <div class="dongtai_b">
+                  <div class="dongtainr">
+                    <ul>
+                      
+                      <volist name="v.newlist" id="nv" offset="0" length="8" mod="2" >
+                       
+                          <eq name="mod" value="0"> <li class="liLeft" ></eq>
+                          <eq name="mod" value="1"> <li class="liRight" ></eq>
+                          <p class="nr"><a href="<{:U('Main/newsdetail',array('nid'=>$nv['id']))}>" title="<{$nv.title}>">&#8250; <{$nv.title|msubstr=0,18,'utf-8',true}></a></p>
+                                                   
+                          <span>                          
+                          <if condition="(($nowtime-$nv['time']) elt 259200)AND(($nowtime-$nv['time']) egt 0)">
+                          <img src="__PUBLIC__/home/images/new.jpg" width="15"  /> <{$nv.time|date="m-d",###}> 
+                          <else/>
+                          <{$nv.time|date="m-d",###}> 
+                          </if>
+                          </span> </li>
+                      </volist>
+                    </ul>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+               
+               
+            </volist>
+             <!-- model 2 --> 
+          </if>
+          
+          <!--  --> 
+        </div>
+      </div>
+      <div class="h10"></div>
+    </volist>
+    <!-- end --> 
+    
+    <!-- <div class="xiao_banner"><img src="images/banneimwg.jpg" width="756" height="81" alt="0" /></div> --> 
+   <script type="text/javascript">
+	jQuery(".home_con_1").slide();
+	<if condition="$ggcenter != '' ">
+    	$('.home_con_1').eq(1).after('<div class="xiao_banner"><a href="<{$ggcenter.url}>"><img src="<{$ggcenter.image}>" width="756"   /></a></div>')
+	</if>
+    </script>
+    <div class="cuxiao"  style="display:block;">
+      <div class="dianpufengcai" style="">
+        <div class="title">
+          <h2><a href="<{:U('Gallery/index')}>">店铺风采</a></h2>
+          <p><a href="<{:U('Gallery/index')}>">更多店铺...</a></p>
+        </div>
+      </div>
+      <div class="dianpfendl">
+      <ul>
+      <volist name="gallery" id="vo">
+        <li>
+          <div class="img"><a  target="_blank" href="<{:U('Gallery/storeInfo',array('nid'=>$vo['id']))}>"><img src="<{:U('Thumb/index',array('thumb'=>$vo['cover_image'],'w'=>160,'h'=>120))}>"   title="<{$vo.title}>"/></a></div>
+          <div class="titlefont"><a  target="_blank" href="<{:U('Gallery/storeInfo',array('nid'=>$vo['id']))}>"><{$vo.title|msubstr=0,16,'utf-8',true}></a></div>
+        </li>
+       </volist>
+        <div class="clear"></div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="in_right">
+  
+  <if condition="$area_check != '' ">
+    <div class="zhongdianzhanshig">
+      <p class="yc_title">最新款展示</p>
+      <div>
+        <div class="picScroll-top" >
+          <div class="bd">
+            <ul class="picList">
+              <volist name="listProducts" id="vo">
+                <li>
+                  <div class=" ">
+                    <div class="proImg"><a target="_blank" href="<{:U('Product/info',array('pcID'=>$vo['pcID'],'id'=>$vo['id'],'styleID'=>$vo['styleID']))}>"><img src="/index.php/Thumb/pimg/p/<{$vo.catalog}>-<{$vo.styleID}>-<{$vo.colorname}>-40-50.html" width="40" height="50" onerror="this.src='__PUBLIC__/home/images/nopic.jpg';this.onerror=null"/></a></div>
+                    <div class="proInfo">
+                      <div class="proInfoTitle"><a target="_blank" href="<{:U('Product/info',array('pcID'=>$vo['pcID'],'id'=>$vo['id'],'styleID'=>$vo['styleID']))}>"><{$vo.pname}></a></div>
+                      <div class="pjg">价格：<span style=" color:#900;">￥<{$vo.price}></span> </div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </li>
+              </volist>
+            </ul>
+          </div>
+        </div>
+        <script type="text/jscript">
+			jQuery(".picScroll-top").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:5,interTime:50,trigger:"click"});
+        </script> 
+        <!-----滚动------->
+        <div class="clear"></div>
+      </div>
+          <div class="clear"></div>
+    </div>
+     
+    <div class="kuncueng">
+     <div class="h10"></div>
+      <p class="yc_title">最新产品批次</p>
+      <ul >
+         <!-- pici --> 
+     <volist name="piciList" id="vo">
+        <li >
+        <a href="<{:U('Product/index',array('pcid'=>$vo['id']))}>" title="<{$vo.title}>"><{$vo.title|msubstr=0,16,'utf-8',true}></a> 
+         
+         </li>
+      </volist>
+    
+    <!-- pici -->
+      </ul>
+     
+      <div class="clear"></div>
+    </div>
+     <div class="h10"></div>
+      <div class="h10"></div>
+    </if>
+    <if condition="$gg.image != '' ">
+    <div class="in_yc_banner"><a href="<{$gg.url}>" 
+                <if condition="$gg.isin eq 0"> target="_blank"</if>
+                ><img src="<{$gg.image}>" width="220"  /></a>
+                
+                </div>
+    </if>
+    <div class="shiyonggju"  >
+      <p class="yc_title">实用工具</p>
+      <div class="shiyonggju_b">
+        <ul>
+          <volist name="tools" id="vo">
+            <if condition="$vo.ispic eq 1">
+              <li><a href="<{$vo.url}>" 
+                <if condition="$vo.isin eq 0"> target="_blank"</if>
+                ><img src="<{$vo.image}>"></a></li>
+              <else />
+              <li>
+                <if condition="$vo.image neq ''">
+                <div class="img" style="background: url(<{$vo.image}>)0 50% no-repeat;">
+                <else/>
+                <div style="">
+                </if>
+                <a href="<{$vo.url}>" 
+                <if condition="$vo.isin eq 0"> target="_blank"</if>
+                ><{$vo.name}></a></li>
+              </a> </if>
+          </volist>
+        </ul>
+      </div>
+    </div>
+    <div>
+	<style>
+	.homeRightLinks img{width:200px}
+	</style>
+    <div class="homeRightLinks">
+      <ul>
+        <volist name="riglist" id="vo">
+          <if condition="$vo.ispic eq 1">
+            <li>
+            <div><a href="<{$vo.url}>" 
+              <if condition="$vo.isin eq 0"> target="_blank"</if>
+              ><img src="<{$vo.image}>"></a></div>
+              </li>
+            <else />
+            <li>
+            <div><a href="<{$vo.url}>" 
+              <if condition="$vo.isin eq 0"> target="_blank"</if>
+              ><img src="<{$vo.image}>"></a></div>
+                <span class="font">
+              <a href="<{$vo.url}>" 
+              <if condition="$vo.isin eq 0"> target="_blank"</if>
+              ><{$vo.name}></a>
+              </span>
+              </li>
+          </if>
+        </volist>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!----home_con_R---> 
+<include file="Public:foot"/>

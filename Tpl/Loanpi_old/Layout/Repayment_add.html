@@ -1,0 +1,174 @@
+
+<script type="text/javascript" src="/<{:c('VIEW_PATH')}>Loanpi/public/js/bootstrap-validator/bootstrapValidator.js"></script>
+<script type="text/javascript" src="/<{:c('VIEW_PATH')}>Loanpi/public/jquery.form.js"></script><!-- up file blug --> 
+<script type="text/javascript">
+    $(document).ready(function(){
+ 
+	////
+     $('#subForm').bootstrapValidator({
+       message: 'This value is not valid',
+         feedbackIcons: {
+           valid: 'glyphicon glyphicon-ok fui-check',
+            invalid: 'glyphicon glyphicon-remove fui-cross',
+            validating: 'glyphicon glyphicon-refresh'
+        }, 
+        fields: {
+            rep_amount: {
+                message: '金额不能为空',
+                validators: {
+                    notEmpty: {message:  '金额不能为空'},
+					//Digits:{integer:1, fraction:2,message:"ssss"},
+					number: { message:  ' 金额必须为数字'},
+                    greaterThan: {
+                        value: 1, message:  ' 还款金额大于1元'
+                    },
+                    lessThan: {
+                        value: '<{$jsVail}>', message:  '还款金额不能大于余额 <{$jsVail}>'
+                    },
+					regexp: {
+						regexp: /^[0-9]+(.[0-9]{0,2})?$/,
+						message: '金额小数不能超过2位'
+					}
+                }
+            }
+		}
+    }).on('success.form.bv', function(e) {
+		
+		 var post_data = $("#subForm").serializeArray();
+		 		var post_url;
+				//alert($("input[name=id]").val());
+                 post_url = "/loanpi.php/Repayment/repay_add_do"; 
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    cache:false,
+                    data: post_data,
+                    success: function(msg){
+ 					//	alert(msg);
+                        if(msg == 101){
+							$.each(BootstrapDialog.dialogs, function(id, dialog){
+								 dialog.close();
+							 });
+                            // $("#editbox").html("");
+							BootstrapDialog.show({
+								type:BootstrapDialog.TYPE_SUCCESS,
+								title: '还款成功',
+								message: '还款成功，正在刷新页面，请稍后。。。!!' 
+							});     
+                             
+                             setTimeout(function(){
+                               window.location.reload();
+                            },1000);
+                            //  Alert(msg);
+                        }else{
+							//$("#rep_amount").val('');
+                            BootstrapDialog.show({
+								type:"type-danger",
+								title: '还款错误',
+								message: msg,
+								buttons: [{
+									label: 'Close',
+									action: function(dialogRef) {
+										dialogRef.close();
+									}
+								}]
+							});     
+                        }
+                    },
+                    error:function(){
+                       BootstrapDialog.show({
+								type:"type-danger",
+								title: '还款错误：',
+								message: msg,
+								buttons: [{
+									label: 'Close',
+									action: function(dialogRef) {
+										dialogRef.close();
+									}
+								}]
+							});     
+						
+                    }
+                });
+                return false;
+	});
+	  ////////////////////
+	   
+	  ////////////// 
+	 <if  condition="$jsVail eq 0 " >
+	 $.each(BootstrapDialog.dialogs, function(id, dialog){
+					 dialog.close();
+				 });
+	  BootstrapDialog.show({
+								type:"type-danger",
+								title: '错误',
+								message: "余额不足，无法还款！",
+								closable: false,
+								buttons: [{
+									label: 'Close',
+									action: function(dialog) {
+										dialog.close();
+										// You can also use BootstrapDialog.closeAll() to close all dialogs.
+										
+									}
+								}]
+							});
+	</if>
+	
+	
+});
+</script>
+ 
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="" role="form">
+       <input type="hidden" name="TOKEN" value="<{:session('TOKEN')}>"> 
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="">还款人</label>
+            <div class="col-sm-8 ">
+              <p  class="form-control-static"> <strong><{$thisUser['user_name']}> / <{$thisUser['name']}></strong> </p>
+            </div>
+          </div>
+          <!--item -->
+          <hr />
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_start_time">贷款信息</label>
+            <div class="col-sm-9">
+            <p  class="form-control-static">
+             贷款SAP编号： <{$loan['sap_code']}> 
+               <input type="hidden" name="sap_code" id="sap_code" value="<{$loan['sap_code']}>" />
+              , 贷款日期:<{$loan['sap_start_time']}> ~ <{$loan['sap_end_time']}>(<{$loan['sap_cycle']}>天)</p>
+             <p  class="form-control-static">贷款金额: <{$loan['reg_amount']}> 元, 已经还款: <{$repTotal}> 元, 需还: <{$loan['reg_amount']-$repTotal}> 元</p>
+            </div>
+          </div>
+           <!--item -->
+              <!--item -->
+          <hr />
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_start_time">账户余额</label>
+            <div class="col-sm-9">
+              <p  class="form-control-static"><{$sapBalance}> 元</p> 
+            </div>
+             
+          </div>
+           <!--item -->
+          <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="rep_amount">本次还款金额</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="rep_amount"  id="rep_amount" placeholder="请输入还款金额..." value="">
+            </div>
+             <div class="col-sm-5">
+             <p  class="form-control-static"><span class="rightMsg">1 ~ <{$jsVail}></span></p>
+            </div>
+          </div>
+           <!--item -->
+           
+           <!--item -->
+        </div>
+        
+      </form>
+    </div>
+  </div> 

@@ -1,0 +1,84 @@
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/down.css"  />
+<!--banner -->
+
+<div class="banner_div_send">
+  <div class="banner_send">
+    <if condition="$tinfo.image neq  ''"> <img src="__ROOT__/<{$tinfo.image}>" /> </if>
+  </div>
+</div>
+<!----banner---> 
+<!-- page link -->
+<div class="page_link"> 
+	<a href="<{:U('Main/index')}>">首页</a> &raquo; 
+    <a href="<{:U('Down/index')}>">下载中心</a> &raquo;  
+    <{$tinfo.name}>
+    </div>
+<!-- page link end --> 
+<!----home_con--->
+<div class="home_con"> 
+  <!----home_con_L--->
+  <div class="home_con_L"> 
+    <!-- start -->
+     <div class="newsPageNav">
+        <div class="newsInfo">
+         <h2><{$download.name}></h2>
+         <div class="newsInfoTime">更新时间：<{$download.addtime|date="Y-m-d",###}> </div>
+          <div class="newsInfoContents">
+       		 <{$download.description}>
+        </div>
+        <div class="downDizhi">
+        <div class="fontTitle" >下载地址</div>
+        
+        <div class="dizhiList">
+        	<ul>
+					<volist name="url" id="vo">
+					<li><a href="<{$vo.url}>">下载地址<{$vo.name}></a></li>
+					</volist>
+                    <div class="clear"></div>
+            </ul>
+		 </div>
+        
+        </div>
+          
+        </div>
+      </div>
+    <!-- end --> 
+  </div>
+  <div class="in_right"> 
+    <!-- news categary-->
+    <div class="newRightNav">
+      <p class="title">下载中心</p>
+      <ul>
+        <volist name="cateList" id="vo">
+          <li>
+          	<a href="<{:U('Down/downlist',array('pid'=>$vo['id']))}>">
+            <!-- <if condition="$tinfo.id eq  $vo['id']">
+             class ="curren"
+            </if> -->
+            &raquo; <{$vo.name}></a>
+          </li>
+        </volist>
+      </ul>
+    </div>
+    <!-- news categary-->
+   
+    <div class="shiyonggju">
+      <p class="yc_title">实用工具</p>
+      <div class="shiyonggju_b">
+        <ul>
+            <volist name="tools" id="vo">
+			<if condition="$vo.ispic eq 1">
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><img src="<{$vo.image}>"></a></li>
+			<else />
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><{$vo.name}></a></li>
+			</if>
+			</volist>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!----home_con_R--->
+<include file="Public:foot"/>

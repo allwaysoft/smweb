@@ -1,0 +1,274 @@
+/*
+*wx html5 css
+*20151017
+///
+*/
+body {
+	padding-top: 50px;
+}
+a {
+	color: #F60;
+	text-decoration: none;
+}
+a:hover, a:focus {
+	color: #666;
+	text-decoration: none;
+}
+
+p{
+	font-size:14px;
+}
+h5 {
+	margin-bottom: 5px;
+	font-size: 1.2em;
+}
+.logo {
+	padding: 5px 0;
+	text-align: center;
+}
+
+.scrollUp {
+	position: fixed;
+	padding: 0;
+	right: 10px;
+	bottom: 20px;
+}
+.scrollUp a {
+	display: block;
+	padding: 2px 5px;
+	background: #F90 none repeat scroll 0 0;
+	border-radius: 20px;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	color: #FFF;
+	font-size:16px;
+}
+.scrollUp a:hover {
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	opacity: 1;
+}
+.navbarWx {
+	min-height: 30px;
+	margin-bottom: 0px;
+	border: medium none;
+	border-radius: 0px;
+	background: #FCF8E3;
+	min-height: 30px;
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.176);
+}
+.btnWx {
+	border-radius: 0px;
+	padding: 10px 15px;
+	line-height: 1.4;
+}
+.topNav {
+	text-align:center;
+	padding-top:5px;
+}
+
+.topBtn{
+	padding:5px 10px;
+	background: #FCF8E3;
+	border:0;
+	color:#F60;
+	}
+.topBtn:hover{
+	background:#F60;
+	border:0;
+	color:#FFF;
+	}
+.dropdown{
+	padding-top:0px;
+}
+.dropdown span{
+	font-size:16px;
+}
+.dropdown-menu {
+	z-index: 1000;
+	min-width: 220px;
+	padding: 8px 0 10px 0px;
+	margin-top: 0px;
+	top: 100%;
+	font-size: 14px;
+	background-color: rgba(236, 240, 241, 0.95);
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0px;
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+}
+.userInfo{
+	padding:0 0 0 20px;
+	font-size:1em;
+	}
+.userInfo >.userIco{
+	margin-top:6px;
+	display:block;
+	font-size:1.5em;
+	color:#999
+	}
+.userInfo >.info{ 
+	font-size:0.8em;
+	padding-left:30px;
+	color:#999
+	}
+.btnWx:active, .btnWx.active, .open > .dropdown-toggle btnWx {
+	background: #A1A6A9 none repeat scroll 0% 0%;
+}
+.btnWx:hover, .btnWx.hover, .btnWx:focus, .btnWx:active, .btnWx.active, .open > .dropdown-toggle.btnWx {
+	color: #FFF;
+	background-color: #CACFD2;
+	border-color: #CACFD2;
+}
+/*.btn:hover, .btn:focus {
+	color: #FFF;
+	outline: medium none;
+}*/
+.btnWx:hover, .btnWx:focus, .btnWx:active, .btnWx.active, .open > .dropdown-toggle.btnWx {
+	color: #333;
+	background-color: #E6E6E6;
+	border-color: #ADADAD;
+}
+.navbarWx .ative {
+	color: #333;
+	background-color: #E6E6E6;
+	border-color: #ADADAD;
+}
+/*.btn:hover, .btn:focus {
+	color: #333;
+	text-decoration: none;
+}*/
+.newsList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.newsList li {
+	border-bottom: 1px solid #E6E6E6;
+}
+.newsList li small {
+	color: #666;
+}
+.newsList li a {
+	display: block;
+	padding: 8px 0 2px 2px;
+	line-height: 18px;
+	font-size: 1em;
+}
+.newsList li a:hover {
+	background: #F5F5F5;
+}
+.newsList li a:visited{
+	color: #666; 
+}
+.newsinfo {
+	font-size:1em;
+}
+.newsinfo img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.newsinfo small {
+	font-size: 0.8em;
+	line-height: 10px;
+}
+.newstime {
+	font-size: 0.6em;
+	color: #666;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #EFEFEF;
+}
+.topUl {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border: 1px #CCCCCC solid;
+}
+.pagination {
+	display: inline-block;
+	margin: 15px 0 30px 0px;
+	border-radius: 4px;
+}
+.pagination > ul {
+	padding: 0 5px;
+	overflow: auto;
+	white-space: nowrap;
+	border-radius: 6px;
+}
+@media (max-width: 768px) {
+.pagination > ul {
+	padding: 0 5px;
+	overflow: auto;
+	white-space: nowrap;
+	border-radius: 6px;
+}
+.pagination ul > li > a {
+	border-radius: 50px;
+}
+.pagination li > a, .pagination li > span {
+	background: #FFF none repeat scroll 0% 0%;
+	border: 0px solid #D6DBDF;
+	color: #999;
+	line-height: 17px;
+	min-height: 22px;
+	min-width: 25px;
+	outline: medium none;
+	padding: 3px 5px;
+	margin: 7px 4px 6px;
+	text-align: center;
+	border-radius: 50px;
+	transition: background 0.2s ease-out 0s, border-color 0s ease-out 0s, color 0.2s ease-out 0s;
+}
+.pagination li {
+	margin-right: 0px;
+}
+.pagination li > a:hover, .pagination li > span:hover, .pagination li > a:focus, .pagination li > span:focus {
+	color: #FFF;
+	background-color: #F90;
+	border: 0px solid #F90;
+}
+.pagination li:first-child > a, .pagination li:first-child > span {
+	border-left: medium none;
+	border-radius: 50px;
+}
+.pagination li:last-child > a {
+	border-radius: 50px;
+}
+.pagination li:last-child > a, .pagination li:last-child > span, .pagination li:last-child > a:hover, .pagination li:last-child > span:hover, .pagination li:last-child > a:focus, .pagination li:last-child > span:focus {
+	border-radius: 50px;
+}
+}
+.pagination li > a, .pagination li > span {
+	background: #FFF none repeat scroll 0% 0%;
+	border: 0px solid #D6DBDF;
+	color: #999;
+	line-height: 17px;
+	min-height: 22px;
+	min-width: 25px;
+	outline: medium none;
+	padding: 3px 5px;
+	margin: 7px 4px 6px;
+	text-align: center;
+	border-radius: 50px;
+	transition: background 0.2s ease-out 0s, border-color 0s ease-out 0s, color 0.2s ease-out 0s;
+}
+.pagination li {
+	margin-right: 0px;
+}
+.pagination li > a:hover, .pagination li > span:hover, .pagination li > a:focus, .pagination li > span:focus {
+	color: #FFF;
+	background-color: #F90;
+	border: 0px solid #F90;
+}
+.pagination li:first-child > a, .pagination li:first-child > span {
+	border-left: medium none;
+	border-radius: 50px;
+}
+.pagination li:last-child > a {
+	border-radius: 50px;
+}
+.pagination li:last-child > a, .pagination li:last-child > span, .pagination li:last-child > a:hover, .pagination li:last-child > span:hover, .pagination li:last-child > a:focus, .pagination li:last-child > span:focus {
+	border-radius: 50px;
+}

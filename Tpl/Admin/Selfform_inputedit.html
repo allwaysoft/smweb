@@ -1,0 +1,81 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<style>
+#troptions{display:none;}
+</style>
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">问卷调查</a>><a href="<{:U('Selfform/index')}>">问卷列表</a>><a href="<{:U('Selfform/input',array('id'=>$forminfo['id']))}>"><{$forminfo.title}></a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="#">
+    <input type="hidden" name="formid" value="<{$forminfo.id}>">
+    <input type="hidden" name="id" value="<{$thisinfos.id}>">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th>显示名称：<font class="red">*</font></th>
+          <td><input name="displayname" maxlength="100" type="text" class="input" id="displayname" style="width:400px;" value="<{$thisinfos.displayname}>"></td>
+        </tr>
+        <tr>
+          <th>字段名称：<font class="red">*</font></th>
+          <td><input name="fieldname" maxlength="30" type="text" class="input" id="fieldname" style="width:400px;" value="<{$thisinfos.fieldname}>">
+          <span style="color:red">同一问卷所填的字段名称不能重复</span>
+          </td>
+        </tr>
+        <tr>
+          <th>输入类型：<font class="red">*</font></th>
+          <td>
+          		<select class="inputtype" name="inputtype">
+          			<{$inputTypeOptions}>
+          		</select>
+		  </td>
+        </tr>
+        <tr id="troptions" <if condition="($thisinfos.inputtype eq 'radio')||($thisinfos.inputtype eq 'checkbox')">style="display:table-row"</if>>
+        	<th>选项：</th>
+        	<td><input class="options" name="options" type="text" class="input" style="width:400px" value="<{$thisinfos.options}>"/>
+        	<span>单选/多选各个选项，多个选项用“|”隔开</span>
+        	</td>
+        </tr>
+        <tr>
+          <th>排序：<font class="red">*</font></th>
+          <td><input name="sort" type="text" class="input" value="<{$thisinfos.sort}>" id="sort" maxlength="5" style="width:50px;" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
+        </tr>
+        <tr>
+      <th></th>
+        <td><input type="submit" id="btnSubmit" value="确定">
+          <input name="btnReset" type="reset" id="btnReset" value="清除">
+          <input name="btnBack" type="button" id="btnBack" value="返回"></td>
+      </tr>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			displayname: { required: true},
+			fieldname:{ required: true},
+			inputtype:{required:true},
+			sort:{required:true}
+		}
+	});
+})
+$('.inputtype').change(function(){
+	var val=$(this).val();
+	//alert($('#troptions').css('display'))
+	if(val=='radio'||val=='checkbox'){
+		$('#troptions').css("display","table-row");
+	}else{
+		$('#troptions').css("display","none");
+	}
+})
+
+</script> 

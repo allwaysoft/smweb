@@ -1,0 +1,111 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie">
+	<a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a>
+	<img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>>
+	<a href="javascript:void(0)">新员工</a>>
+	<a href="articlelist">信息管理</a>>
+	<eq name="Think.ACTION_NAME" value="articleadd">
+	<a href="">添加信息</a>
+	</eq>
+	<eq name="Think.ACTION_NAME" value="articleedit">
+	<a href="">修改信息</a>
+	</eq>
+	</div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="<{:U('articlecommit')}>">
+    <input type="hidden" name="Id" value="<{$info.Id}>">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th width="93">标题：<font class="red">*</font></th>
+          <td colspan="3"><input name="Title" maxlength="100" type="text" class="input" id="Title" style="width:90%;" value="<{$info.Title}>"></td>
+        </tr>
+        <tr> 
+		    <th>上传图片：</th>
+		    <td colspan="3">
+		    <input name="Image" maxlength="100" type="hidden" class="input" id="Image" style="width:400px;" value="<{$info.Image}>" />      
+		    <input id="image_upload" type="file" name="Filedata" /> 
+		    <span class="imgbox">
+		    <img src="<{$info.Image}>" height="38" id="spic" style="margin-top:8px;" />
+		    </empty>
+		    </span> 
+		    </td>
+		</tr>
+        <tr>
+          <th>描述：</th>
+          <td colspan="3"><textarea style=" width:90%; height:50px;" name="Description" class="input" id="description"><{$info.Description}></textarea></td>
+        </tr>
+        <tr>
+          <th>文章内容：</th>
+          <td colspan="3">
+          <span>编辑框内上传的图片限制不能大于100k；如需要，可以下载图片处理工具：
+			<a href="/Public/admin/UploadModel/图片处理工具.rar">点击下载</a></span>
+		<textarea name="Contents" style="width:90%;height:500px;visibility:hidden;"><{$info.Contents}></textarea>
+		</td>
+        </tr>
+        <tr>
+      <th></th>
+        <td colspan="3"><input name="btnSubmit" type="submit" id="btnSubmit" value="确定">
+          <input name="btnReset" type="reset" id="btnReset" value="清除">
+          <input name="btnBack" type="button" id="btnBack" value="返回"></td>
+      </tr>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			Title: { required: true}
+		}
+	});
+})
+$(function() {
+		$('#image_upload').uploadify({
+		  'uploader'  : '__PUBLIC__/admin/uploadify/uploadify.swf',
+		  'script'    : '<{:U("Upload/upload")}>',
+		  'folder'	  : '',
+		  'cancelImg' : '__PUBLIC__/admin/uploadify/cancel.png',
+		  'removeCompleted' : true,
+		  'auto':true,
+		  'buttonText': 'SELECT IMAGE',
+		  'fileExt'     : '*.jpg; *.gif; *.png',
+		  'fileDesc'    : 'Select Files *.jpg; *.gif; *.png',
+		  'onCancel'    : function(event,ID,fileObj,data) {
+      		  $("#btnSubmit").attr("disabled",false);
+    	  },
+		  'onSelect':function(event,ID,fileObj) {
+			  $("#btnSubmit").attr("disabled",true);
+		  },
+		  'onComplete' :function(event,queueID,fileObj,response,data){
+			   $("#Image").val(response);
+			   $("#spic").attr("src",response);
+			   $("#btnSubmit").attr("disabled",false);
+		  }
+		});	
+
+	});
+/* if($("#contents").val()!=undefined){
+		var editor = CKEDITOR.replace( 'contents' );
+		CKFinder.setupCKEditor( editor, '__PUBLIC__/admin/js/ckfinder/' ) ;
+	} */
+	
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="Contents"]', {
+			allowFileManager : true
+		});
+	});
+
+</script> 

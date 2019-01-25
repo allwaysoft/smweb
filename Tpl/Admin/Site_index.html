@@ -1,0 +1,74 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">系统设置</a>><a href="javascript:void(0)">站点设置</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="<{:U('Site/insert')}>">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th>网站名称：<font class="red">*</font></th>
+          <td><input name="site_name" maxlength="100" type="text" class="input" id="title" style="width:400px;" value="<{:C('site_name')}>"></td>
+        </tr>
+        <tr>
+          <th>网站标题：<font class="red">*</font></th>
+          <td><input name="site_title" maxlength="100" type="text" class="input" id="title" style="width:400px;" value="<{:C('site_title')}>"></td>
+        </tr>
+        <tr>
+          <th>网站地址：<font class="red">*</font></th>
+          <td><input name="site_url" maxlength="100" type="text" class="input" id="title" style="width:400px;" value="<{:C('site_url')}>"><span>&nbsp;&nbsp;例:http://pigcms.cn</span></td>
+        </tr>
+        <tr>
+          <th>网站备案：<font class="red">*</font></th>
+          <td><input name="ipc" maxlength="100" type="text" class="input" id="title" style="width:400px;" value="<{:C('ipc')}>"></td>
+        </tr>
+        <tr>
+          <th>客服QQ：<font class="red">*</font></th>
+          <td><input name="site_qq" maxlength="100" type="text" class="input" id="title" style="width:400px;" value="<{:C('site_qq')}>"></td>
+        </tr>
+        <tr>
+          <th>网站关键字：</th>
+          <td><textarea style=" width:79%; height:50px;" name="keyword" class="input" id="keyword"><{:C('keyword')}></textarea>
+            <span>网页SEO优化，多个用","号隔开</span></td>
+        </tr>
+        <tr>
+          <th>网站描述：</th>
+          <td><textarea style=" width:79%; height:50px;" name="description" class="input" id="description"><{:C('description')}></textarea>
+            <span>网页SEO优化，文章的简单描述</span></td>
+        </tr>
+        <tr>
+          <th>网站版权：<font class="red">*</font></th>
+          <td><input name="copyright" maxlength="100" type="text" class="input" id="title" style="width:400px;" value="<{:C('copyright')}>"></td>
+        </tr>
+        <input type="hidden" name="files" value="site.php"/>
+        <tr>
+	      	<th></th>
+	        <td><input type="submit" id="btnSubmit" value="确定"></td>
+	      </tr>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			title: { required: true},
+			type_id:{ required: true},
+			time:{required:true},
+			endtime:{required:true}
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+})
+</script> 

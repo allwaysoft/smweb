@@ -1,0 +1,60 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" style="padding-left:0px;"><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>">首页</a>><a href="javascript:void(0)">新闻管理</a>><a href="<{:U('News/manager')}>">子管理员列表</a>><a>模块分配</a></div>
+  <div class="bloc">
+ <dl  class="t_1_h">
+
+    <div class="wrap">
+    <form id="form1" name="form1" method="post" action="">
+    	<input type="hidden" name="uid" value="<{$tadm.id}>"/>
+      <table class="add">
+        <tbody>
+          <tr>
+            <th>子管理员账号：</th>
+            <td><{$tadm.user_id}></td>
+          </tr>
+          <tr>
+            <th>新闻模块选择：</th>
+            <td>
+            <volist name="list" id="vo">
+            	<input name="node[]" <if condition="in_array($vo['id'],$newstype)">checked="checked"</if> type="checkbox" value="<{$vo.id}>"/><{$vo.name}><br/>
+            </volist>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input name="btnSubmit" id="btnSubmit" value="确定" type="submit">
+              <input name="btnReset" id="btnReset" value="清除" type="reset">
+              <input name="btnBack" id="btnBack" value="返回" type="button">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			user_id: { required: true,minlength:5 },
+			upwd:{required:true,minlength:5},
+			confirmpassword:{required:true,equalTo: "#password"},
+			username:{required:true},
+			email:{required:true,email:true},
+			mobile:{required:true,isMobile:true},
+			role_id:{required:true},
+			state_id:{required:true}
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+})
+
+</script> 

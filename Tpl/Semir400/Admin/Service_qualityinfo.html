@@ -1,0 +1,162 @@
+ <link rel="stylesheet" type="text/css" href="<{:RES}>/public/upload/css/css.css?<{:time()}>" /> 
+  <link rel="stylesheet"  href="<{:RES}>/public/zoom/css/zoom.css" media="all" />
+ <script type="text/javascript">
+    $(document).ready(function(){
+    
+ 
+});
+</script>
+<style>
+li{list-style-type:none;float:left;}
+.zoomed > .container{-webkit-filter:blur(3px);filter:blur(3px);} 
+.gallery{list-style-type:none;float:left;background:#ffffff;padding:20px 20px 10px 20px;margin:0;-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+.gallery li{float:left;padding:0 10px 10px 0;}
+.gallery li:nth-child(6n){padding-right:0;}
+.gallery li a,.gallery li img{float:left;}
+</style>
+<div class="row">
+<!-- modal body start -->
+<div class="col-sm-12" id="info">
+ <!-- base -->
+  <div class="col-sm-2" >
+    <p class="lead">基本信息</p>
+  </div>
+  <div class="col-sm-10" > 
+    <!-- item -->
+    <p class="pull-right small"><{$info.add_time|date="Y-m-d H:i:s",###}></p>
+    <p >投诉编号：<{$info.com_code}> </p>
+    <p >投 诉 人：<{$info.agent_code}>  / <{$info.agent_storename}>  /   <{$info.agent_name}>  / <{$info.agent_province}> / <{$info.agent_area}></p>
+    <p >联 系 人：<{$info.agent_person}>  /  <{$info.agent_tel}></p>
+    <hr>
+    <div class="row"> 
+      <!-- item -->
+      <div class="col-sm-4" >
+        <p >款 号：<{$info.style_id}></p>
+        <p > 色号：<{$info.color_id}> </p>
+        <p > 次品数量：<{$info.number}></p>
+        <p > 购买时间：<{$info.sale_time}></p>
+        <p > 销售类型：
+          <eq name="info.sale_type" value="0">未销售</eq>
+          <eq name="info.sale_type" value="1">已销售</eq>
+        </p>
+      </div>
+      <!-- item --> 
+      <!-- item -->
+      <div class="col-sm-8" >
+        <p class="text-danger">投诉类别：
+          <eq name="info.com_type" value="1">照片鉴定</eq>
+          <eq name="info.com_type" value="2">实物鉴定</eq>
+        </p>
+        <eq name="info.com_type" value="1">
+         
+         <div class="gallery" >
+	      <ul>
+          <volist name="info.com_pic" id="vp">
+            <li class="uploadResult"> 
+            	<a href="<{$vp}>"><img src="<{$vp}>" class="previewImage"/> </a>
+            </li>
+          </volist>
+          </ul>
+        </div>
+        </eq>
+        <eq name="info.com_type" value="2">
+          <p > 快递公司：<{$info.com_express}></p>
+          <p > 快递单号：<{$info.com_express_number}></p>
+          <p > 回寄地址：<{$info.com_express_address}></p>
+        </eq>
+      </div>
+      <!-- item --> 
+    </div>
+    <!-- item -->
+    <hr />
+    <!-- item -->
+    <p >投诉描述：</p>
+    <p class=""><{$info.com_contents}></p>
+    <!-- item --> 
+    
+  </div>
+ <!-- base -->
+  <!-- base -->
+ 
+<notempty name="follow">
+ <div class="col-sm-2" >
+    <p class="lead">信息追加</p>
+  </div>
+  <div class="col-sm-10" > 
+    <volist name="follow" id="vo">
+    <hr/>
+    <div class="row">
+    <div class="col-sm-4" >
+    <{$vo.add_time|date="Y-m-d H:i:s",###}>
+    </div>
+         <div class="col-sm-10" >
+        <p class="text-danger">投诉类别：
+          <eq name="vo.com_type" value="1">照片鉴定</eq>
+          <eq name="vo.com_type" value="2">实物鉴定</eq>
+        </p>
+        <eq name="vo.com_type" value="1">
+        <div class="gallery" >
+	      <ul>
+          <volist name="vo.fol_pic" id="v">
+            <li class="uploadResult"> 
+            	<a href="<{$v}>"><img src="<{$v}>" class="previewImage"/> </a>
+            </li>
+          </volist>
+          </ul>
+        </div>
+        </eq>
+        <eq name="vo.com_type" value="2">
+          <p > 快递公司：<{$vo.fol_express}></p>
+          <p > 快递单号：<{$vo.fol_express_number}></p>
+          <p > 回寄地址：<{$vo.fol_express_address}></p>
+        </eq>
+      </div>
+      </div>
+      <hr />
+    <!-- item -->
+    <p >投诉描述：</p>
+    <p class=""><{$vo.fol_contents}></p>
+    <!-- item --> 
+      </volist>
+      </div> 
+</notempty>
+
+ <!--tracklist --> 
+ <!--tracklist --> 
+<notempty name="tracklist">
+  <div class="col-sm-12" id="track" >
+    <hr>
+    <div class="col-sm-2" >
+      <p class="lead">客服回复 <i class="fa fa-comments-o" aria-hidden="true"></i></p>
+    </div>
+    <div class="col-sm-10" >
+      <volist name="tracklist" id="vo">
+        <blockquote>
+         <p class="blockquote_title text-primary">
+         投诉主题：<{$vo.com_title}>  
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;季度：<{$vo.com_quarter}>   
+         
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;保质期内： <eq name="vo.com_deadline" value="1">是</eq>
+                 <eq name="vo.com_deadline" value="2">否</eq>
+         
+         </p>
+          <p><{$vo.tra_contents}></p>
+          <footer> <span class="text-danger">
+              <eq name="vo.tra_type" value="1">不接收</eq>
+                <eq name="vo.tra_type" value="2">启动OA</eq>
+                <eq name="vo.tra_type" value="3">图片鉴定</eq>
+                <eq name="vo.tra_type" value="4">实物鉴定</eq>
+                <eq name="vo.tra_type" value="5">接收</eq>
+                 <eq name="vo.tra_type" value="99">废弃</eq>
+            </span> <cite title="Source Title "><{$vo.com_user}> / <{$vo.add_time|date="Y-m-d H:i:s",###}></cite> </footer>
+        </blockquote>
+      </volist>
+    </div>
+  </div>
+</notempty>
+  <!--tracklist --> 
+ 
+  <!-- modal body start -->
+   
+  
+</div>

@@ -1,0 +1,48 @@
+
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+ <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">大爆款模块</a>>产品季管理</div>
+  <div class="bloc">
+    <div class="content">
+        <dl class="dl_line">
+			<dt><a href="season_add" class="xz">新增</a> </dt>
+			 
+        </dl>
+	    <form method="post" action="<{:U('HotSales/season_del')}>" id="form1">
+		<table id="alist" border="0" cellpadding="0" cellspacing="0" width="100%" class="list" style="float:left" >  
+			<tbody>
+			<tr>
+			<th style="width:116px"><input type="checkbox" id="all" class="checkall"/></th>
+			<th>序号</th>
+			<th >名称</th>  
+			</tr>
+			<volist name="list" id="vo">
+			  <tr>
+				<td><input type="checkbox" name="id[]" value="<{$vo.id}>"/></td>
+				<td><{$i}></td>
+				<td><{$vo.name}></td>
+			 
+				 
+			  </tr>
+			</volist>        
+			</tbody>
+		</table>
+		<div class="page">
+			<dl class="dl_line">
+				<dt><input type="submit" class="schu" style="width: 64px; text-align: right; height: 32px; position: absolute; top: 66px; left: 100px; " value="删除" onclick="return listDelete(this.form.name);" id="btnDelete" /></dt>
+			</dl>
+			<div class="pagination"><{$page}></div>
+        </div>
+	    </form>
+	</div>
+</div>
+</body>
+<script>
+$('#type_id').change(function(){
+	var type_id=$(this).val();
+	var url="<{:U('Banner/index')}>";
+	window.location.href = url + "?type_id=" + type_id;
+})
+</script>
+</html>

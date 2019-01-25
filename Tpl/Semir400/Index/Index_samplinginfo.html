@@ -1,0 +1,92 @@
+<include file="Public:head"/><include file="Public:navbar"/>
+<link rel="stylesheet" type="text/css" href="<{:RES}>/public/upload/css/css.css?<{:time()}>" />
+<link rel="stylesheet"  href="<{:RES}>/public/zoom/css/zoom.css" media="all" />
+
+<div class="container">
+  <div id="msgShow"></div>
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="topRightBut pull-right"> <a href="<{:U('Index/sampling')}>" class=" "><i class="fa fa-mail-reply" aria-hidden="true"></i> 返回</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="<{:U('Index/sampling_apply')}>" class="btn btn-success  btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> 终端抽检申请</a> </div>
+      <h1><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 终端抽检 <small>>> 详细信息</small> </h1>
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row"> 
+    <!--item -->
+    <div class="col-sm-12" id="info">
+      <div class="col-sm-2" >
+        <p class="lead">基本信息</p>
+      </div>
+      <div class="col-sm-10" >
+        <p class="pull-right small"><{$info.add_time|date="Y-m-d H:i:s",###}></p>
+        <p >投诉编号：<{$info.com_code}> </p>
+        <p >投 诉 人：<{$info.agent_code}>  /  <{$info.agent_storename}>  /  <{$info.agent_name}>  / <{$info.agent_province}> / <{$info.agent_area}></p>
+        <p >联 系 人：<{$info.agent_person}>  /  <{$info.agent_tel}></p>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4" >
+            <p >款 号：<{$info.style_id}></p>
+            <p > 色号：<{$info.color_id}> </p>
+            <p > 抽检数量：<{$info.number}></p>
+          </div>
+          <notempty name="info.com_pic">
+            <div class="col-sm-8" >
+              <div class="uploadResult gallery">
+                <ul>
+                  <li> <a href="<{$info.com_pic}>"><img src="<{$info.com_pic}>" class="previewImage"/> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </notempty>
+        </div>
+        <hr>
+        <p >处理状态：
+          <eq name="info.com_status" value="1">待处理</eq>
+          <eq name="info.com_status" value="2">处理中...</eq>
+          <eq name="info.com_status" value="3">处理结束</eq>
+        </p>
+      </div>
+      <!--item -->
+      <div class="col-sm-12" >
+        <hr />
+      </div>
+      <!--item --> 
+      
+      <!--item -->
+      
+      <eq name="info.com_status" value="3">
+        <div class="col-sm-12" id="track" >
+          <div class="col-sm-2" >
+            <p class="lead">客服回复  <i class="fa fa-comments-o" aria-hidden="true"></i></p>
+          </div>
+          <div class="col-sm-10" >
+            <volist name="feedback" id="vo">
+              <blockquote>
+                <div class="row">
+                  <div  class="col-sm-2"> <span class="text-danger">
+                    <eq name="vo.tra_type" value="1">拒收/驳回</eq>
+                    <eq name="vo.tra_type" value="2">处理中</eq>
+                    <eq name="vo.tra_type" value="3">接收回复</eq>
+                     <eq name="vo.tra_type" value="99">废弃</eq>
+                    </span> </div>
+                  <div  class="col-sm-10"> <{$vo.tra_contents}> </div>
+                </div>
+                <div class="row">
+                  <footer class="col-sm-10 col-md-offset-2"> <cite title="Source Title ">客服： <{$vo.com_user}> / <{$vo.add_time|date="Y-m-d H:i:s",###}></cite> </footer>
+                </div>
+              </blockquote>
+            </volist>
+          </div>
+        </div>
+      </eq>
+      
+      <!--item --> 
+      
+    </div>
+  </div>
+</div> 
+<script type="text/javascript" src="<{:RES}>/public/zoom/js/zoom.min.js"></script> 
+<include file="Public:foot"/>

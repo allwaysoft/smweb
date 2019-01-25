@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+header{
+	height:70px;
+}
+h1{
+	margin:0;
+	padding:10px 5px;
+	font-size:1.5em;
+	border-bottom:2px solid #ccc;
+}
+.h20{
+	height:20px;
+}
+.topRightBut{
+	padding:5px 15px 0 0 ;
+}
+/*form stlye*/
+.navbar-inverse {
+    background-color: #4CAF50;
+    border-color: none;
+	 color: #fff;
+}
+.navbar-inverse .navbar-text {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a{
+    color: #fff;
+    background-color: transparent;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #80ce26;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #d88208;
+}
+
+
+/*form stlye*/
+#subForm .rightFont{
+	font-weight:bold;
+	color:#333;
+	}
+#subForm .rightMsg{ 
+	font-size:12px;
+	color:#666;
+}
+#subForm .control-label{ 
+	color:#666;
+	}
+/*tableDate stlye*/
+ 
+.tableDate{
+	font-size:10px;
+}
+td{
+	font-size:12px;
+}
+.sorting_desc,.sorting_asc{
+	background:#C8E3E3;
+}
+.sorting_1{
+	background:#E1F0F0;
+} 
+.table-striped > tbody > tr:nth-of-type(2n+1):hover{
+    background-color: #FFF3EE;
+}
+.even:hover{
+	background:#FFF3EE;
+}
+/*message stlye*/
+#msgShow{
+	
+}
+#msgShow .boxinfo{
+	padding:15px;	
+}
+
+/*footer stlye*/
+footer{
+	
+	
+}
+.footer{
+	padding-top:20px;
+	border-top:2px solid #CCC;
+	font-size:12px;
+	text-align:center;
+}
+

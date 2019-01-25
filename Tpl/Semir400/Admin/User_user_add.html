@@ -1,0 +1,194 @@
+<script type="text/javascript" src="<{:RES}>/public/js/bootstrap-validator/bootstrapValidator.js"></script>
+<script type="text/javascript" src="<{:RES}>/public/jquery.form.js"></script> 
+<script type="text/javascript">
+    $(document).ready(function(){
+     $('#subForm').bootstrapValidator({
+       message: 'This value is not valid',
+         feedbackIcons: {
+           valid: 'glyphicon glyphicon-ok fui-check',
+            invalid: 'glyphicon glyphicon-remove fui-cross',
+            validating: 'glyphicon glyphicon-refresh'
+        }, 
+        fields: {
+			 user_number: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  '客服编号必填'
+                    }
+                }
+            },
+            user_name: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  '用户名必填'
+                    }
+                }
+            },
+			c_name: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  '中文名称必填'
+                    }
+                }
+            },
+			upwd: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  ' 密码必填'
+                    }
+                }
+            },
+			email: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  'Email必填'
+                    }
+                }
+            },
+			mobile: {
+                message: 'This is not valid',
+                validators: {
+                    notEmpty: {
+                        message:  '手机必填'
+                    }
+                }
+            }
+		}
+    }).on('success.form.bv', function(e) {
+		$.each(BootstrapDialog.dialogs, function(id, dialog){
+					 dialog.close();
+				 });
+		 var post_data = $("#subForm").serializeArray();
+		 		var post_url;
+				//alert($("input[name=id]").val());
+                 post_url = "/semir400admin.php/User/user_add_do"; 
+                 //  post_url = "{%site_url('admin/homepage/edit')%}"; 
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    cache:false,
+                    data: post_data,
+                    success: function(msg){ 
+                        if(msg==0){
+                            // $("#editbox").html("");
+							BootstrapDialog.show({
+								type:BootstrapDialog.TYPE_SUCCESS,
+								title: '添加用户成功',
+								message: '正在刷新页面，请稍后!!' 
+							});     
+                             
+                             setTimeout(function(){
+                                 window.location.reload();
+                            },1000);
+                            //  Alert(msg);
+                        }else{
+                            BootstrapDialog.show({
+								type:"type-danger",
+								title: '操作错误',
+								message: msg,
+								buttons: [{
+									label: 'Close',
+									action: function(dialogRef) {
+										dialogRef.close();
+									}
+								}]
+							});     
+                        }
+                    },
+                    error:function(){
+                        BootstrapDialog.show({
+								type:"type-danger",
+								title: '操作错误',
+								message: "请联系开发人员！！",
+								closable: false,
+								buttons: [{
+									label: 'Close',
+									action: function(dialog) {
+										dialog.close();
+										// You can also use BootstrapDialog.closeAll() to close all dialogs.
+										
+									}
+								}]
+							});
+						
+                    }
+                });
+                return false;
+	});
+	  
+	  //////////////
+});
+</script>
+ 
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="" role="form">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+            <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="user_number">客服编号</label>
+            <div class="col-sm-6 ">
+              <input type="text" class="form-control" name="user_number"  id="user_number" placeholder="请输入客服编号" value="">
+            </div>
+          </div>
+          <!--item --> 
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="user_name">客服账号</label>
+            <div class="col-sm-6 ">
+              <input type="text" class="form-control" name="user_name"  id="user_name" placeholder="请输入登陆账号" value="">
+            </div>
+          </div>
+          <!--item --> 
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="c_name">中文名称</label>
+            <div class="col-sm-6">
+             <input type="text" class="form-control" name="c_name"  id="c_name" placeholder="请输入中文名称" value="">
+            </div>
+          </div>
+           <!--item --> 
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="upwd">登陆密码</label>
+            <div class="col-sm-6">
+             <input type="text" class="form-control" name="upwd"  id="upwd" placeholder="请输入密码" value=""> 
+            </div> 
+          </div>
+           <!--item -->
+          <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="email">Email</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="email"  id="email" placeholder="请输入Email地址" value="">
+            </div> 
+          </div>
+           <!--item -->
+            <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="mobile">手机</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="mobile"  id="mobile" placeholder="请输入手机号码" value="">
+            </div> 
+          </div>
+           <!--item -->
+            <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="status">状态</label>
+            <div class="col-sm-6">
+              <label class="radio-inline">
+              <input name="status" type="radio" id="status" value="1" checked="checked"> 启用
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="status" id="status" value="2"> 锁定
+            </label> 
+                 
+            </div> 
+          </div>
+           <!--item -->
+        </div>
+       </form>
+    </div>
+  </div> 

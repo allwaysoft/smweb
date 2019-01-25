@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+.container {
+  /*  width: 800px;*/
+}
+.info{
+	text-indent:2em;
+	padding-bottom:15px;
+}
+th {
+    text-align:center;
+}
+.bottom{
+	 text-align:center;
+}
+.h20{
+	height:20px;
+}
+.b_1,.b_2,.b_3{
+	text-align:left;
+}
+.b_2{
+	padding:20px 0;
+}
+
+.b_4{
+	text-align:right;
+	padding:10px 60px 0 0;
+}

@@ -1,0 +1,39 @@
+ <!-- foot nav -->
+   <!--  <nav class="navbar navbar-default navbarWx navbar-fixed-bottom">
+      <div class="container-full">
+      <div class=" col-xs-8">link1</div>
+      <div class=" col-xs-4">link2</div>
+      </div>
+    </nav>-->
+  <!-- foot nav -->
+ </div>
+</div>
+<div id="scrollUp" class="scrollUp" style="display:none">  
+<a id="aa"  href="#top"  >
+<span class="glyphicon glyphicon-menu-up"></span>
+</a>
+</div>
+ 
+<script type="text/javascript">	
+ $(document).ready(function($){
+	 
+	 // $('#topbar').scrollupbar();
+	  $(window).scroll(function () {
+	  var sTop=$(document).scrollTop();
+	//console.log(sTop);
+		if(sTop>=30){
+		  // $('#nav2013').css("display","block");
+		   $('#scrollUp').css("display","block");
+		}else{
+			 $('#scrollUp').css("display","none");
+			 
+		}
+		});
+	$("#scrollUp").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 300);
+		return false;
+	});
+});	
+
+</script>
+</body></html>

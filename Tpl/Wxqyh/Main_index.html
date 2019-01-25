@@ -1,0 +1,26 @@
+<include file="Public:head"/>
+<!-- news categary-->
+<include file="Public:newnav"/>
+<div class="col-xs-12 " >
+<ul class="newsList">
+  <volist name="newslist" id="v">
+    <li>
+       <a href="<{:U('Main/newsdetail',array('nid'=>$v['id']))}>"><{$v.title}>
+          <if condition="$v.isnew eq 1"><img src="__PUBLIC__/home/images/new.jpg" width="20" /></if>
+          &nbsp;
+          <if condition="$v.istop eq 1"><img src="__PUBLIC__/home/images/top.jpg" width="20"  /></if>
+        <br />
+        <small><{$v.description|msubstr=0,110,'utf-8',true}></small>
+        <small> <{$v.time|date="Y-m-d--H:i:s",###}> </small>
+     </a>
+    </li>
+  </volist>
+</ul>
+
+<!-- end -->
+<nav class=" col-xs-12">
+ <{$page}>
+</nav>
+</div>
+<include file="Public:foot"/>
+

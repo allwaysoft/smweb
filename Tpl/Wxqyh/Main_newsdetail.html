@@ -1,0 +1,42 @@
+<include file="Public:head"/>
+ <!-- news categary-->
+<nav class="navbar navbar-default navbarWx navbar-fixed-top">
+  <div class="container-full ">
+  <div class="dropdown pull-left">
+      <button class="topBtn " type="button" id=" " data-toggle=" " onclick="javascript:history.go(-1);" aria-haspopup="true" aria-expanded="true"> <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> </button>
+      
+    </div>
+  <div class="dropdown pull-right">
+      <button class="topBtn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span> </button>
+      <ul class="dropdown-menu " aria-labelledby="dropdownMenu2">
+        <li>
+        <div class="userInfo">
+          <span class="glyphicon glyphicon-info-sign pull-left userIco"></span>
+          <div class="info"><{$thisUser.name}><br />
+          <{$thisUser.deptname}>
+          </div>
+        </div>  
+          </li>
+        <li role="separator" class="divider"></li>
+        <li><a href="<{:U('Main/loginout')}>" class=" "><span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;安全退出</a></li>
+      </ul>
+    </div>
+  
+   <div class="topNav"> <{$pinfo.name}></div>
+  
+     
+  </div>
+  
+</nav> 
+ 
+<div class="col-xs-12 newsinfo" >
+        <h5><{$newsinfo.title}></h5>
+        <div class="newstime"><{$newsinfo.author}> &nbsp;&nbsp;<{$newsinfo.time|date="Y年m月d日 H:i:s",###}> &nbsp;&nbsp;点击:<{$newsinfo.count}></div>
+        <if condition="$newsinfo.image neq  ''">
+         <p> <img src="<{$newsinfo.image}>"   /></p>
+        </if> 
+      
+       <{$newsinfo.contents}>
+ </div> 
+<!----home_con_R--->
+<include file="Public:foot"/>

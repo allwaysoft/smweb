@@ -1,0 +1,164 @@
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/down.css"  />
+<!--banner -->
+
+<div class="banner_div_send">
+  <div class="banner_send">
+    <if condition="$tinfo.image neq  ''"> <img src="__ROOT__/<{$tinfo.image}>" /> </if>
+  </div>
+</div>
+<!----banner---> 
+<!-- page link -->
+<div class="page_link"> 
+	<a href="<{:U('Main/index')}>">首页</a> &raquo; 
+    <a href="<{:U('Down/index')}>">下载中心</a>
+    </div>
+<!-- page link end --> 
+<!----home_con--->
+<div class="home_con"> 
+  <!----home_con_L--->
+  <div class="home_con_L"> 
+     
+      <div  class="newsPageNav">
+     <!--- nav1 --->
+        <div class="moreLink"><a href="<{:U('Down/downlist',array('pid'=>1))}>">&#8226;&#8226;&#8226;更多信息</a></div>
+          <h2><a href="<{:U('Down/downlist',array('pid'=>1))}>">图片下载</a></h2>
+        <div class="newsNav">
+          <ul  >
+          <if condition="$plist eq ''">
+          	<div class="info"> 暂无内容 </div>
+          <else />
+          <volist name="plist" id="vo">
+            <li>
+              <div class="list">
+                <div class="title">
+              		<a href="<{:U('Down/downdetail',array('pid'=>1,'tid'=>$vo['id']))}>"><{$vo.name}></a>
+				</div>
+				
+                <div class="info"><{$vo.description}></div> 
+                 <div class="time"><{$vo.addtime|date="Y-m-d H:i:s",###}></div>
+             </div>             
+            </li>
+            </volist>
+            </if> 
+          </ul>
+        </div>
+        <!--- nav1 --->
+        <div class="clear">&nbsp;</div>
+         
+         <!--- nav2 --->
+         <div class="moreLink"><a href="<{:U('Down/downlist',array('pid'=>2))}>">&#8226;&#8226;&#8226;更多信息</a></div>
+          <h2><a href="<{:U('Down/downlist',array('pid'=>2))}>">视频下载</a></h2>
+        <div class="newsNav">
+          <ul  >
+          <if condition="$vlist eq ''">
+          	<div class="info"> 暂无内容 </div>
+          <else />
+          <volist name="vlist" id="vo">
+            <li>
+              <div class="list">
+                <div class="title">
+              		<a href="<{:U('Down/downdetail',array('pid'=>1,'tid'=>$vo['id']))}>"><{$vo.name}></a>
+				</div>
+				
+                <div class="info"><{$vo.description}></div> 
+                 <div class="time"><{$vo.addtime|date="Y-m-d H:i:s",###}></div>
+             </div>             
+            </li>
+            </volist>
+            </if> 
+          </ul>
+        </div>
+        <!--- nav2 --->
+         <div class="clear">&nbsp;</div>
+         <!--- nav3 --->
+         <div class="moreLink"><a href="<{:U('Down/downlist',array('pid'=>3))}>">&#8226;&#8226;&#8226;更多信息</a></div>
+          <h2><a href="<{:U('Down/downlist',array('pid'=>3))}>">音乐下载</a></h2>
+        <div class="newsNav">
+          <ul  >
+          <if condition="$mlist eq ''">
+          	<div class="info"> 暂无内容 </div>
+          <else />
+          <volist name="mlist" id="vo">
+            <li>
+              <div class="list">
+                <div class="title">
+              		<a href="<{:U('Down/downdetail',array('pid'=>1,'tid'=>$vo['id']))}>"><{$vo.name}></a>
+				</div>
+				
+                <div class="info"><{$vo.description}></div> 
+                 <div class="time"><{$vo.addtime|date="Y-m-d H:i:s",###}></div>
+             </div>             
+            </li>
+            </volist>
+            </if> 
+          </ul>
+        </div>
+        <!--- nav3 --->
+         <div class="clear">&nbsp;</div>
+         <!--- nav4 --->
+         <div class="moreLink"><a href="<{:U('Down/downlist',array('pid'=>4))}>">&#8226;&#8226;&#8226;更多信息</a></div>
+          <h2><a href="<{:U('Down/downlist',array('pid'=>4))}>">个人下载</a></h2>
+        <div class="newsNav">
+          <ul  >
+          <if condition="$gelist eq ''">
+          	<div class="info"> 暂无内容 </div>
+          <else />
+          <volist name="gelist" id="vo">
+            <li>
+              <div class="list">
+                <div class="title">
+              		<a href="<{:U('Down/downdetail',array('pid'=>1,'tid'=>$vo['id']))}>"><{$vo.name}></a>
+				</div>
+				
+                <div class="info"><{$vo.description}></div> 
+                 <div class="time"><{$vo.addtime|date="Y-m-d H:i:s",###}></div>
+             </div>             
+            </li>
+            </volist>
+            </if> 
+          </ul>
+        </div>
+        <!--- nav4 --->
+      </div>
+      <div class="h10"></div> 
+    <!-- end --> 
+    
+  </div>
+  <div class="in_right"> 
+    <!-- news categary-->
+    <div class="newRightNav">
+      <p class="title">下载中心</p>
+      <ul>
+        <volist name="cateList" id="vo">
+          <li>
+          	<a href="<{:U('Down/downlist',array('pid'=>$vo['id']))}>">
+            <!-- <if condition="$tinfo.id eq  $vo['id']">
+             class ="curren"
+            </if> -->
+            &raquo; <{$vo.name}></a>
+          </li>
+        </volist>
+      </ul>
+    </div>
+    <!-- news categary-->
+     
+    <div class="shiyonggju">
+      <p class="yc_title">实用工具</p>
+      <div class="shiyonggju_b">
+        <ul>
+            <volist name="tools" id="vo">
+			<if condition="$vo.ispic eq 1">
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><img src="<{$vo.image}>"></a></li>
+			<else />
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><{$vo.name}></a></li>
+			</if>
+			</volist>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!----home_con_R---> 
+<include file="Public:foot"/>

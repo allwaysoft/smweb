@@ -1,0 +1,33 @@
+<include file="Public:head"/>
+	
+<!--   CONTENT  ---->
+<div id="content" class="white">
+ <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">系统设置</a>><a href="<{:U('Banner/index')}>">首页子Banner设置</a></div>
+  <div class="bloc">
+    <div class="content">
+		<table id="alist" border="0" cellpadding="0" cellspacing="0" width="100%" class="list" style="float:left" >  
+			<tbody>
+			<tr>
+			<th>名称</th>
+			<th>显示方式</th>
+			<th>文字</th>
+			<th>图片</th>
+			<th>背景图片</th>
+			<th>外链</th>
+			<th >操作</th>
+			</tr>
+			<tr>
+			  	<td>首页子Banner</td>
+				<td><{$sub.type}></td>
+				<td><{$sub.text}></td>
+				<td><img src="<{$sub.image}>" width="100" height="33"></td>
+				<td><img src="<{$sub.backgroundimg}>" width="100" height="33"></td>
+				<td><{$sub.url|default=""}></td>
+				<td class="actions" style="text-align:center; margin-left:10px;"><a href = "<{:U('Admin/Banner/subset_edit',array('id'=>$vo['id']))}>" >修改</a> <!-- | <a href="<{:U('Admin/Download/viddel',array('id'=>$vo['id']))}>" title="删除">删除</a> --></td>
+			 </tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>

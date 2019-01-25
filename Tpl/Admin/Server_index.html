@@ -1,0 +1,58 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">系统设置</a>><a href="index">服务器信息</a></div>
+  <div class="bloc">
+    <div class="wrap ">
+    <form action="<{:U('del')}>" method="get">
+      <dl class="dl_line">
+        <dt>
+	        <dl class="dl_line">
+	        <dt><a href="add" class="xz">新增</a>
+	        <input type="submit" class="schu" value="批量删除" onclick="return listDelete(this.form.name);" id="btnDelete" />
+	        </dt>
+	      </dl>
+        </dt>
+        <dd style="width:500px; float:right; margin-top:10px;  text-align:right;">
+          <input type="text" name="keyword" id="keyword" value="<{$_REQUEST['keyword']}>" title="产品款号搜索" onfocus="this.value='';" style="width:150px; display:inline-block;"/>
+          <input type="submit" name="button" id="btnSearch" value=" 搜 索 " />
+        </dd>
+      </dl>
+      <table width="100%" cellpadding="0" cellspacing="0" class="list">
+        <thead>
+          <tr>
+            <th style="width:50px;"><input type="checkbox" id="all" /></th>
+            <th>序号</th>
+            <th class="text-left">名称</th>
+            <th>服务器外网地址</th>
+            <th>服务器内网地址</th>
+            <th>数据库地址</th>
+            <th>日期</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+          <tr>
+            <td><input type="checkbox" name="Id[]" value="<{$vo.Id}>" /></td>
+             <td><{$i}></td>
+            <td style="text-align:left;"><{$vo.Name}></td>
+            <td>
+             <{$vo.ExtranetUrl}>
+            </td>
+            <td><{$vo.IntranetUrl}></td>
+            <td><{$vo.DatabaseUrl}></td >
+            <td><{$vo.CreateTime}></td>
+            <td><a href="<{:U('info',array('Id'=>$vo['Id']))}>" class="edit">查看</a><a href="<{:U('del',array('Id'=>$vo['Id']))}>" class="edit">删除</a></td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+      <div class="page">
+        <div class="pagination"><{$page}></div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

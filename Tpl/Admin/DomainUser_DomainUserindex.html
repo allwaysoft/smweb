@@ -1,0 +1,106 @@
+<include file="Public:head" />
+<!--   CONTENT  ---->
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.fbmodel.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/fbmodal.css" />
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">用户管理</a>><a href="<{:U('DomainUser/DomainUserindex')}>">网域用户</a></div>
+<div class="bloc">
+<!-- 代码 begin -->
+<div  class=" wrap">
+<form action="" method="get">
+  <dl class="dl_line">
+    <dd >
+    	<select name="condition">
+    		<option value=''></option>
+    		<option <eq name='condition' value='L_active'>selected="selected"</eq> value='L_active'>登陆活跃</option>
+    		<option <eq name='condition' value='L_free'>selected="selected"</eq> value='L_free'>登陆空闲</option>
+    		<option <eq name='condition' value='L_lock'>selected="selected"</eq> value='L_lock'>登陆锁定</option>
+    		<option <eq name='condition' value='S_open'>selected="selected"</eq> value='S_open'>账号启用</option>
+    		<option <eq name='condition' value='S_lock'>selected="selected"</eq> value='S_lock'>账号禁用</option>
+    	</select>
+      <input type="text" name="keyword" id="keyword" value="<{$keyword}>" onfocus="this.value='';" title="根据账号或者姓名搜索" />
+      <input type="submit" id="btnSearch" value=" 搜 索 " />
+    </dd>
+  </dl>
+  </form>
+  <form action="<{:U('DomainUser/DomainUserdel')}>" method="post">
+  <dl class="dl_line">
+    <dt><a href="DomainUseradd" class="xz" style="width:80px;">导入网域用户</a>&nbsp;&nbsp;<a href="DomainUserimport" class="daoru " style="width:50px" >批量导入</a>&nbsp;&nbsp;<a href="DomainUserExcel" class="daoru " style="width:50px" >区域导入</a>  <input type="submit" class="schu" value="删除" onclick="return listDelete(this.form.name);" id="btnDelete" /></dt>
+  </dl>
+  <div class="content">
+    <table class="list">
+      <thead>
+        <tr>
+          <th ><input type="checkbox" id="all" /></th>
+          <th>序号</th>
+          <th>账号</th>
+          <th>姓名</th>
+          <th>部门</th>
+          <th>省份</th>
+          <th>归属区域1</th>
+          <th>归属区域2</th>
+          <th>当前状态</th>
+          <th>ip状态</th>
+          <th>账号状态</th>
+          <th>属性</th>
+        </tr>
+      </thead>
+      <tbody>
+        <volist name="list" id="vo">
+          <tr>
+            <td><input type="checkbox" name="id[]" value="<{$vo.id}>" /></td>
+            <td><a href="#"><{$i}></a></td>
+            <td><a href="#"><{$vo.user_name}></a></td>
+            <td><a href="#"><{$vo.name}></a></td>
+            <td><a href="#"><{$vo.deptname}></a></td>
+            <td><a href="#"><{$vo.province}></a></td>
+            <td><a href="#"><{$vo.area1}></a></td>
+            <td><a href="#"><{$vo.area2}></a></td>
+            <td id="td_<{$vo.id}>"><if condition="$vo.login_state eq 0">活跃<elseif condition="$vo.login_state eq 1"/>空闲<elseif condition="$vo.login_state eq 2"/><a href="javascript:void()" onclick="ChangeLoginState(<{$vo.id}>)"><span style="color:red;">超时锁定</span></a></if></td>
+              <td><if condition="$vo.qure eq 0">IP正常<else/><span style="color:red;">IP异常</span></if></td>
+               <td><if condition="$vo.states eq 0">启用<else/>禁用</if></td>
+            <td><a href="<{:U('DomainUser/logs',array('id'=>$vo['id']))}>">查看</a><a href="<{:U('DomainUser/DomainUseredit',array('id'=>$vo['id']))}>" style="margin:0px 10px;">编辑</a><a  style="padding-left:10px;" href="<{:U('DomainUser/DomainUserdel',array('id'=>$vo['id']))}>">删除</a></td>
+          </tr>
+        </volist>
+    </table>
+  </div>
+  </form>
+</div>
+<div class="page">
+  <div class="pagination"><{$page}></div>
+</div>
+<div class="test">
+    <p style="line-height:2;text-indent:1.5em;"></p>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script>
+function ChangeLoginState(obj){
+	var url="<{:U('LocalUser/Getinfo')}>";
+	$.post(url,{id:obj},function(msg){
+		$(".test p").html('用户：'+msg+'因超时登陆被锁定，确定解锁，恢复至活跃状态吗？');
+		$(".test").fbmodal({
+	         modalwidth: "400"}
+	     	,function(callback){
+	          if(callback == 1){
+	        	 var url1="<{:U('LocalUser/ChangeLoginState')}>";
+	        	 $.post(url1,{id:obj},function(msg){
+	        		 if(msg=='1'){
+	        			 $('#td_'+obj).html('活跃');
+	        			 alert('修改成功');
+	        		 }else{
+	        			 alert('修改失败');
+	        		 }
+	        	 })
+	             
+	         }
+				if(callback == 2){
+	             alert("你点了取消按钮");
+	         }
+	     });  
+	})
+	 
+}
+</script>

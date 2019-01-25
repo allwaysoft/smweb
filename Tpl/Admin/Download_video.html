@@ -1,0 +1,44 @@
+
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+ <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">下载管理</a>><a href="<{:U('Download/video')}>">视频下载</a></div>
+  <div class="bloc">
+    <div class="content">
+        <dl class="dl_line">
+			<dt><a href="vidadd" class="xz" style="width:80px;">新增公共下载</a><!-- <a href="" class="schu">删除</a> --></dt>
+        </dl>
+	    <form method="post" action="<{:U('Download/viddel')}>" id="form1">
+		<table id="alist" border="0" cellpadding="0" cellspacing="0" width="100%" class="list" style="float:left" >  
+			<tbody>
+			<tr>
+			<th style="width:116px"><input type="checkbox" id="all" class="checkall"/></th>
+			<th>序号</th>
+			<th >名称</th>
+			<th >下载类型</th>
+			<th >上传时间</th>
+			<!-- <th >操作</th> -->
+			</tr>
+			<volist name="list" id="vo">
+			  <tr>
+				<td><input type="checkbox" name="id[]" value="<{$vo.id}>"/></td>
+				<td><{$i}></td>
+				<td><{$vo.name}></td>
+				<td><if condition="$vo.ispub eq 0">个人下载<else/>公共下载</if></td>
+				<td><{$vo.addtime|date="Y-m-d H:i:s",###}></td>
+				<!-- <td class="actions" style="text-align:center; margin-left:10px;"><a href = "<{:U('Admin/Download/videdit',array('id'=>$vo['id']))}>" >修改</a> | <a href="<{:U('Admin/Download/viddel',array('id'=>$vo['id']))}>" title="删除">删除</a></td> -->
+			  </tr>
+			</volist>        
+			</tbody>
+		</table>
+		<div class="page">
+			<dl class="dl_line">
+				<dt><input type="submit" class="schu" value="删除" onclick="return listDelete(this.form.name);" id="btnDelete" style="width: 64px; text-align: right; height: 32px; position: absolute; top: 66px; left: 145px; " /></dt>
+			</dl>
+			<div class="pagination"><{$page}></div>
+        </div>
+	    </form>
+	</div>
+</div>
+</body>
+</html>

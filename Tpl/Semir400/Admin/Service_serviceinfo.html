@@ -1,0 +1,51 @@
+<style></style>
+<script type="text/javascript" src="<{:RES}>/public/js/bootstrap-validator/bootstrapValidator.js"></script>
+<script type="text/javascript" src="<{:RES}>/public/jquery.form.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+	  //////////////
+});
+</script>
+
+<div class="row margin-null" >
+<div class="col-sm-12" id="info"> 
+    <!-- modal body start -->
+    <div class="col-sm-2" >
+      <p class="lead">基本信息</p>
+    </div>
+    <div class="col-sm-10" >
+      <p class="pull-right small"><{$info.add_time|date="Y-m-d H:i:s",###}></p>
+      <p >投诉编号：<{$info.com_code}> </p>
+      <p >投 诉 人：<{$info.agent_code}>  / <{$info.agent_storename}>  /   <{$info.agent_name}>  / <{$info.agent_province}> / <{$info.agent_area}></p>
+      <p >联 系 人：<{$info.agent_person}>  /  <{$info.agent_tel}></p>
+      <hr>
+      <p >投诉描述：</p>
+      <p class=""><{$info.com_contents}></p>
+    </div> 
+</div>
+  <!--item --> 
+<notempty name="tracklist">
+  <div class="col-sm-12" id="track" >
+    <hr>
+    <div class="col-sm-2" >
+      <p class="lead">客服回复</p>
+    </div>
+    <div class="col-sm-10" >
+      <volist name="tracklist" id="vo">
+        <blockquote>
+          <p><{$vo.tra_contents}></p>
+          <footer> <span class="text-danger">
+            <eq name="vo.tra_type" value="1">拒收/驳回</eq>
+            <eq name="vo.tra_type" value="2">启动OA</eq>
+            <eq name="vo.tra_type" value="3">接收回复</eq>
+             <eq name="vo.tra_type" value="99">废弃</eq>
+            </span> <cite title="Source Title "><{$vo.com_user}> / <{$vo.add_time|date="Y-m-d H:i:s",###}></cite> </footer>
+        </blockquote>
+      </volist>
+    </div>
+  </div>
+</notempty>
+  <!--item --> 
+ 
+    <!--item --> 
+</div>

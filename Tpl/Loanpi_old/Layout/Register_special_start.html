@@ -1,0 +1,232 @@
+<include file="Public:head"/><include file="Public:navbar"/>
+<script type="text/javascript" src="/<{:c('VIEW_PATH')}>Loanpi/public/js/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="/<{:c('VIEW_PATH')}>Loanpi/public/js/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+<link href="/<{:c('VIEW_PATH')}>Loanpi/public/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">  
+<script type="text/javascript">
+    $(document).ready(function(){
+     $('#subForm').bootstrapValidator({
+       message: 'This value is not valid',
+         feedbackIcons: {
+           valid: 'glyphicon glyphicon-ok fui-check',
+            invalid: 'glyphicon glyphicon-remove fui-cross',
+            validating: 'glyphicon glyphicon-refresh'
+        }, 
+        fields: {
+			 
+			reg_start_time: {
+                message: '正确的时间格式：YYYY-MM-DD',
+                validators: {
+					notEmpty: {
+                        message:  '正确的时间格式：YYYY-MM-DD'
+                    },
+                    date: {
+                        format: 'YYYY-MM-DD'
+                    }
+                }
+            } 
+		}
+    }).on('success.form.bv', function(e) {
+	 
+	});
+	///
+	 
+	  ////////////////////
+	  $('.form_date').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 1,
+        todayBtn: 1,
+		  autoclose: 1,
+		  todayHighlight: 1,
+		  startView: 2,
+		  minView: 2,
+		  forceParse: 0
+    });
+	  //////////////
+	    ///
+	$('#reg_start_time').change(function(){
+		  
+		  $.ajax({
+                    type: "POST",
+                    url:  "/loanpi.php/Register/reg_get_limit",
+                    cache:false,
+                    data: 'date='+$(this).val()+"&type=S",
+                    success: function(msg){ 
+                        if(msg.MESS_FLAG=='S'){ 
+						     $("#msgCycle").html("可贷款总天数："+msg.LOAN_CYCLE);
+                             $("#msgAmount").html("可贷款总金额："+msg.LOAN_LIMIT);
+							 var bootstrapValidator = $('#subForm').data('bootstrapValidator');
+							 // 添加验证
+							  bootstrapValidator.addField('reg_amount',{  
+												 validators: {
+														notEmpty: {
+															message:  '金额不能为空'
+														},
+														number: { message:  ' 请输入正确的金额'},
+														greaterThan: {
+															value: 1, message:  ' 金额必须大于1元'
+														},
+														regexp: {
+															 regexp: /^[0-9]+(.[0-9]{0,2})?$/,
+															 message: '金额小数不能超过2位'
+														  }
+													}
+											 }); 
+							 bootstrapValidator.addField('reg_cycle',{  
+												 message: '输入贷款天数',
+												validators: {
+													notEmpty: {
+														message:  '输入贷款天数'
+													},
+													notEmpty: {
+														message:  '输入贷款天数不能为空'
+													},
+													digits: { message:  ' 请输入正确的贷款天数'},
+													greaterThan: {
+														value: 1, message:  ' 贷款天数不能小于1'
+													}, 
+													lessThan: {
+															value: msg.LOAN_CYCLE, message:  '贷款天数不能小于可贷款总天数'
+													}
+												}
+											 });  
+							// 添加验证
+      					     inputShow     = (msg.MESS_FLAG == 'S'); 
+       						 inputShow ? $('#inputVal').find('.form-control').removeAttr('disabled')
+                      			            : $('#inputVal').find('.form-control').attr('disabled', 'disabled');
+      						  bootstrapValidator.enableFieldValidators('reg_amount', inputShow)
+                         	 					.enableFieldValidators('reg_cycle', inputShow);
+							
+                            //  Alert(msg);
+                        }else{
+                            BootstrapDialog.show({
+								type:"type-danger",
+								title: '错误：',
+								message: msg.MESSAGE,
+								buttons: [{
+									label: 'Close',
+									action: function(dialogRef) {
+										dialogRef.close();
+									}
+								}]
+							});     
+                        }
+                    },
+                    error:function(){
+						
+                        BootstrapDialog.show({
+								type:"type-danger",
+								title: '错误：',
+								message: "操作失败!!",
+								closable: false,
+								buttons: [{
+									label: 'Close',
+									action: function(dialog) {
+										// You can also use BootstrapDialog.closeAll() to close all dialogs.
+										 dialog.close();
+										
+									}
+								}]
+							});
+						
+                    }
+                });
+	 })
+	  ////////////////////
+});
+</script>
+
+<div class="container"> 
+<div id="msgShow"></div>
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+     
+      <h1><span class="glyphicon glyphicon-eye-open"></span> 贷款管理 <small>>> 特殊贷款申请</small>  </h1>
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="<{:U('Register/reg_add_do/t/S')}>" role="form">
+      <input type="hidden" name="TOKEN" value="<{:session('TOKEN')}>"> 
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="">贷款人</label>
+            <div class="col-sm-8 "> 
+               <p class="form-control-static rightFont"><{$thisUser['user_name']}> / <{$thisUser['name']}></p>
+            </div>
+          </div>
+          <!--item -->
+            <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="type">贷款类型</label>
+            <div class="col-sm-4">
+              <p class="form-control-static rightFont"> 特殊贷款 </p>
+              <input type="hidden" class="form-control" name="type"  id="type" placeholder="type" value="S">
+            
+            
+            </div>
+            
+          </div>
+           <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_start_time">贷款日期</label>
+            <div class="col-sm-4">
+              
+              <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="reg_start_time" data-link-format="yyyy-mm-dd">
+                  <span class="input-group-addon"><a href="javascript:;" ><span class="glyphicon glyphicon-calendar"></span></a></span>
+                  <input type="text" class="form-control" name="reg_start_time"  id="reg_start_time" placeholder="reg_start_time" value="">
+                  
+        </div>
+            </div>
+             <div class="col-sm-4">
+            <span class="rightMsg"></span>
+            </div>
+          </div>
+           <!--item -->
+            <div id="inputVal">
+             <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_amount">贷款金额</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="reg_amount"  id="reg_amount" placeholder="请输入贷款金额" value="" disabled >
+            </div>
+             <div class="col-sm-5">
+            <span class="rightMsg" id="msgAmount"></span>
+            </div>
+          </div>
+           <!--item -->
+           <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_cycle">贷款周期</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="reg_cycle"  id="reg_cycle" placeholder="请输入贷款周期(天)" value="" disabled>
+            </div>
+            <div class="col-sm-5">
+            <span class="rightMsg" id="msgCycle"></span>
+            </div>
+          </div>
+           <!--item -->
+            </div>
+           
+           <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for=""></label>
+            <div class="col-sm-4">
+             <button  class="btn btn-success btn-sm" type="submit" disabled="disabled"> 
+            <span class='glyphicon glyphicon-ok-circle'></span> 提交贷款申请 
+            </button>
+            
+            </div>
+          </div>
+           <!--item -->
+        </div>
+      
+      </form>
+    </div>
+  </div> 
+  </div> 
+  <include file="Public:foot"/>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>森马管理后台</title>
+<!-- jQuery AND jQueryUI -->
+<script type="text/javascript" src="__PUBLIC__/admin/js/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/admin/css/min.css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/min.js"></script>
+<style type="text/css">
+html { overflow-x: hidden; overflow-y: auto; } 
+</style>
+<script type="text/javascript">
+$(function(){
+	//$(".nav li ul li").addClass("selected");
+	$("#sidebar li").toggle(
+		function(){
+			$(this).find("ul").animate({height: 'toggle', opacity: 'toggle'}, { duration: 200 })	
+		},
+		function(){
+			$(this).find("ul").animate({height: 'toggle', opacity: 'toggle'}, { duration: 200 })	
+		}
+	)
+	
+	$("#sidebar li").hover(
+		function(){
+			$(this).find("a[class=top_item]").animate({paddingRight: "25px" }, { duration: 200 })	
+		},
+		function(){
+			$(this).find("a[class=top_item]").animate({paddingRight: "15px" }, { duration: 200 })	
+		}
+	)
+	
+	$("#sidebar li ul li a").click(
+		function () {
+			parent.main.location.href=(this.href);
+			$("#sidebar li ul li a").removeClass('selected_1');
+			$(this).addClass("selected_1");
+			return false;
+		}
+	); 
+})
+</script>
+</head>
+<body>
+<!--  SIDEBAR  -->
+<div id="sidebar" >
+  <ul>
+  <volist name="menu" id="vo">
+  	<li><a href="javascript:void(0)"><{$vo.name}></a>
+  		<ul>
+  		<volist name="vo.menu_c" id="v">
+  			<li ><a href="<{:U('Admin/'.$v['controller'].'/'.$v['action'])}>" ><{$v.name}></a></li>
+  		</volist>
+	    </ul>
+  	</li>
+  </volist>
+    
+  </ul>
+</div>
+</body>
+</html>

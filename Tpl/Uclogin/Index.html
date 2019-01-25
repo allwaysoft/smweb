@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible"content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<!-- <link href="__PUBLIC__/home/css/global.css" rel="stylesheet" type="text/css"/> -->
+<link href="__PUBLIC__/home/css/style.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/lrtk.css" />
+<script type="text/javascript" src="__PUBLIC__/home/js/jquery-1.4.2.min.js"></script>
+<style>
+.msgShow{
+	padding:40px 20px;
+}
+.suc{
+	font-size:22px;
+	color:#060;
+}
+.sucBox{
+	font-size:14px;
+	color:#060;
+	margin-top:20px;
+	border:1px solid #060;
+	background:#F4FFFA;
+	padding:5px;
+}
+.ero{
+	font-size:22px;
+	color:#900;
+	
+}
+.eroBox{
+	font-size:14px;
+	color:#900;
+	margin-top:20px;
+	border:1px solid #900;
+	background:#FFF0F0;
+	padding:5px;
+}
+</style>
+<!--[if lt IE 9]>
+<script src="http://www.artll.com/wp-content/themes/d-simple/js/html5.js"></script>
+<script src="http://www.artll.com/wp-content/themes/d-simple/js/css3-mediaqueries.js"></script>
+<![endif]-->
+<!--[if lt IE 8]>
+<script src="http://www.artll.com/wp-content/themes/d-simple/js/ie7.js"></script>
+<![endif]-->
+<title>森马商务网</title>
+</head>
+<body>
+ 
+<div class="login_box " style="padding:40px 0;">
+  <div class="login_hottel" >商务网用户验证中心</div>
+  <div class="login_h">
+    <img src="__PUBLIC__/home/images/logo.png"  alt="森马"/>  
+   </div>
+   
+  <div class="clear"></div>
+  <div class="login_main ">
+    <div id="" style=" " > 
+    
+      <div class=" ">
+      	<!--<{$data.ret_code}>-->
+          <if condition="$data.ret_code eq 0">
+          	<div class="suc"> 登录成功!!</div>
+            <div class="sucBox">
+             <if condition="$pnumber neq 0">
+             稍等，正在访问产品信息。。。
+          	 		<script type="text/javascript">
+					setInterval(function(){
+						 location.href ="/index.php/Product/ucShow/p/<{$pnumber}>";
+						
+						},500);	
+							
+ 					</script>
+              <else/>
+              稍等，正在登录商务网首页。。
+              	<script type="text/javascript">
+					setInterval(function(){
+						location.href ="/index.php/Main/index.html";
+						
+						},500);	
+							
+ 					</script>
+             </if>
+             </div>
+          </if>
+          <if condition="$data.ret_code gt 0">
+          <div class="ero">登录失败!!</div>
+          <div class="eroBox">
+          	<{$data.ret_code}> // <{$data.msg}> 
+            </div>
+            <div class="ero"><br /><br /><a href="/index.php">登录商务网</a></div>
+          </if>
+      </div>
+      
+     <div class="clear"></div>
+    </div>
+    
+  
+    <div class="clear"></div>
+  </div>
+  
+  <div class="clear"></div>
+  <div class="loginBottom"><{:C('copyright')}> &nbsp;&nbsp;&nbsp;&nbsp; 商品售后服务热线：400-8877-588，技术支持专线：0577-85789999</div>
+  <div class="clear"></div>
+</div>
+
+
+
+</body>
+</html> 

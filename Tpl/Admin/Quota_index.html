@@ -1,0 +1,141 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie">
+  	<a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a>
+  	<img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>>
+  	<a href="javascript:void(0)">商品管理</a>>
+  	<a href="<{:U('Quota/index')}>">配额管理</a>
+  </div>
+  <div class="bloc">
+  <form action="<{:U('Quota/addarea')}>" method="post" id="searchForm">
+    <div class="wrap " style="display:none;">
+      <dl class="dl_line">
+        <dd style="width:500px; float:left; margin-top:10px;  ">
+          手动添加区域：<input type="text" name="areaname" id="areaname"  style="width:150px; "  />
+          <input type="submit" id="areaadd" style="width:50px; background:#16c9cf; border:0px; height:25px; color:#fff;cursor: pointer;"  id="qwe" value="添加 " />
+        </dd>
+      </dl>
+      <script>
+      $('#areaadd').click(function(){
+    	  if($('#areaname').val()==''){
+    		  return false;
+    	  }
+      })
+      </script>
+    </div>
+    </form>
+  <form action="" method="get" id="searchForm">
+    <div class="wrap ">
+      <dl class="dl_line">
+        <dd style="width:500px; float:right; margin-top:10px;  ">
+          <input type="text" name="keyword" id="keyword" value="<{$keyword}>" title="" onfocus="this.value='';" style="width:150px; display:inline-block;"  />
+          <input type="submit" name="button" id="btnSearch" value=" 搜 索 " />
+        </dd>
+      </dl>
+    </div>
+    </form>
+  </div>
+  <div class="wrap" style="width:40%; float:left;">
+    <form method="get" action="<{:U('Quota/import')}>" id="form1">
+    <table>
+    <tr>
+    <td>
+	    <dl class="dl_line" style="width:50%">
+	        <dt><input type="submit" class="save" value="批量导入" onclick="return listImport(this.form.name);" id="btnDelete" style="width:110px" /></dt>
+	    </dl>
+    </td>
+    </tr>
+    </table>
+    	
+      <table width="50%" cellpadding="0" cellspacing="0" class="list">
+        <thead>
+          <tr>
+            <th style="width:50px;"><input type="checkbox" id="all" /></th>
+            <th width="50">序号</th>
+            <th width="150" class="text-left">区域名称</th>
+            <th width="80">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+          <tr>
+            <td><input type="checkbox" name="areaname[]" value="<{$vo.areaname}>" /></td>
+             <td><{$i}></td>
+            <td><{$vo.areaname}></td>
+            <td>
+            	<a href="<{:U('Quota/delarea',array('areaname'=>$vo['areaname']))}>" onclick="return confirm('确定删除吗？删除后不可恢复')">删除</a>
+            	<a href="<{:U('Quota/import',array('areaname'=>$vo['areaname']))}>">导入</a>
+            	<a href="javascript:void(0)" onclick="piciInfos('<{$vo.areaname}>');">查看</a>
+            </td>
+          	
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+     <div class="page">
+        <div class="pagination"><{$page}></div>
+    </div>
+    </form>
+  </div>
+  <div class="wrap" style="width:50%; float:left; height:350px; margin-left:30px; overflow:auto; background:#ddd;">
+  	<table id="piciInfos" width="100%" cellpadding="0" cellspacing="0" class="list">
+  	<thead>
+		<tr>
+			<th width="100">日期</th><th width="150">标题</th><th width="80">上传人</th><th width="150">上传时间</th><th>操作</th>
+		</tr>
+	</thead>
+		<tbody>
+		</tbody>
+	</table>
+  </div>
+</div>
+</body>
+</html>
+<script>
+function piciInfos(obj){
+	var url="<{:U('Quota/piciInfos')}>";
+	$.post(url,{areaname:obj},function(data){
+		var str="<tbody>";
+		if(data!=null){
+			$.each(data,function(idx,item){
+				str+="<tr id='tr"+item.id+"'><td>"+item.quotatime+"</td><td id='"+item.id+"' ondblclick='updatetitle(this);'>"+item.title+"</td><td>"+item.author+"</td><td>"+item.time+"</td><td><a href='<{:U('Quota/listinfo/id/"+item.id+"')}>'>查看</a> <a href='javascript:void(0)' onclick=\"infodel("+item.id+")\">删除<a/></td></tr>"
+				//str+="<tr><td>"+item.quotatime+"</td><td>"+item.title+"</td><td>"+item.author+"</td><td>"+item.time+"</td><td><a href='<{:U('Quota/listinfo/id/"+item.id+"')}>'>查看</a> <a href='<{:U('Quota/infodel/id/"+item.id+"')}>' onclick=\"return confirm('确定删除吗？')\">删除<a/></td></tr>"
+			})
+		}
+		
+		str+="</tbody>";
+		$('#piciInfos tbody').remove();
+		$('#piciInfos thead').after(str)
+	})
+}
+function infodel(obj){
+	if(confirm('确定删除吗？')){
+		var url="<{:U('Quota/infodel')}>"
+		$.post(url,{id:obj},function(msg){
+			if(msg=='1'){
+				$('#tr'+obj).remove();
+			}else{
+				alert('删除失败')
+			}
+		})
+	}
+}
+function updatetitle(obj){
+	var td_val=$(obj).html();
+	var id=$(obj).attr('id');
+	var new_val="<input onblur='changeval(this)' type='text' value='"+td_val+"' />"
+	$(obj).html(new_val)
+	//alert($(obj).attr('id'));
+}
+function changeval(obj){
+	var tx_val=$(obj).val();
+	var id=$(obj).parent().attr('id');
+	var url="<{:U('Quota/edititle')}>";
+	$.post(url,{title:tx_val,id:id},function(msg){
+		$(obj).parent().html(msg);
+	})
+	//alert($(obj).parent().attr('id'))
+}
+
+</script>

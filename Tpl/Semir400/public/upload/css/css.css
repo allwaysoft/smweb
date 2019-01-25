@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {font-family: "iconfont";
+  src: url('fonts/iconfont.eot'); /* IE9*/
+  src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.upload-image {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: 35px;
+    color: #888;
+    cursor: pointer;
+}
+.x6 {
+    font-size: 34px;
+}
+.icon {
+    font-family: "iconfont" !important;
+    font-size: 32px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-camerafill::before {
+    content: "\e664";
+}
+.icon-roundclose::before{
+	content:"\e659";
+}
+.uploadResult {
+    position: relative;
+    height: 88px;
+    width: 88px;
+    float: left;
+    margin: 1px 2px 0 2px;
+    border: 1px solid #1ca166;
+}
+.info {
+    display: block;
+    line-height: 18px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: #1ca166;
+    z-index: 13;
+    text-align: center;
+    filter: alpha(Opacity=80);
+    opacity: 0.8;
+}
+.previewImage {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 12;
+    display: inline;
+}
+.delPic {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    z-index: 12;
+}
+.x2 {
+    font-size: 18px;
+}
+
+

@@ -1,0 +1,173 @@
+<include file="Public:head"/>
+
+<style type="text/css">
+.table_a {
+	padding-top: 20px;
+	height: 300px; width:430px;
+}
+.table_a  a{ text-decoration:none;  width:600px; height:300px; overflow-y:auto;}
+.wrap_c{ background:#FFF;}
+.btn0{ padding:0px 10px;  margin:0px 10px 10px 10px;}
+.btn3{margin:0px 10px 10px 10px;}
+.oListboxFrom{ position:relative;}
+</style>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">下载管理</a>><a href="picture">图片下载</a>><a href="priadd">添加个人文件</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="#">
+    <input type="hidden" name="id" value="2">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th>文件名称：<font class="red">*</font></th>
+          <td><input name="name" maxlength="100" type="text" class="input" id="title" style="width:400px;" value=""></td>
+        </tr>
+        <tr>
+          <th>所属服务器：</th>
+          <td>
+		  <volist name="serverlist" id="vo">
+            <input type="checkbox" name="server[]" value="<{$vo.url}>"/><{$vo.name}>
+		  </volist>
+		  </td>
+        </tr>
+        <tr id="small_img"> 
+		    <th>文件路径：<font class="red">*</font></th>
+		    <td>
+		    <input name="urlb" maxlength="100" type="text" class="input" id="simage" style="width:400px;" value="" />
+		    <td>
+		</tr>
+        <tr> 
+		    <th>选择用户：<font class="red">*</font></th>
+		    <td>
+				<table border="0"   class="table_a"  >
+					<tr>
+						<td colspan="2">模糊查询：<input type="text" id="search" name="search" /></td>
+						<td><input type="button" onclick="searchtj();" value="查询"></td>
+					</tr>
+					<tr>
+						<td width="200">
+						  <select  name="oListboxFrom" id="oListboxFrom"  multiple="true" size="4" MULTIPLE width=200 style="width: 200px; height:300px; text-align:center; padding-top:5px;">
+							</select>
+						</td>
+						<td align="center">
+							<input type="button" class="btn0" value=" >> " onclick="ListUtil.moveMuti(oListboxFrom, oListboxTo);" />
+							<br/>
+							<!-- <input type="button" class="btn0" value=" << " onclick="ListUtil.moveMuti(oListboxTo, oListboxFrom);" />
+							<br/> -->
+							<input type="button" class="btn3" value=" >>> " onclick="ListUtil.moveAll(oListboxFrom, oListboxTo);" />
+							<br/>
+							<input type="button" class="btn3" value=" <<< " onclick="ListUtil.moveAll(oListboxTo, oListboxFrom);" />
+						</td>
+						<td width="200">
+							<select name="oListboxTo[]" id="oListboxTo"  multiple="true" size="4" MULTIPLE width=200 style="width: 200px;height:300px;text-align:center; padding-top:5px;" onclick="selectall();">
+							  
+							</select>
+						</td>
+					</tr>
+				</table>
+		    <td>
+		</tr>
+        <tr>
+          <th>发布日期：</th>
+          <td><input name="time" id="time" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  class="input"></td>
+        </tr>
+        <tr>
+          <th>排序：<font class="red">*</font></th>
+          <td><input name="sort" type="text" class="input" value="0" id="sort" maxlength="5" style="width:50px;" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
+        </tr>
+        <tr>
+          <th>简单描述：<font class="red">*</font></th>
+          <td><textarea style=" width:79%; height:50px;" name="description" class="input" id="description"></textarea>
+            <span>网页SEO优化，文章的简单描述</span></td>
+        </tr>
+      <th></th>
+        <td><input name="btnSubmit" type="submit" id="btnSubmit" value="确定">
+          <input name="btnReset" type="reset" id="btnReset" value="清除">
+          <input name="btnBack" type="button" id="btnBack" value="返回"></td>
+      </tr>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+	$(document).ready(function() {
+		$("#form1").validate({
+			rules: {
+				name: { required: true},
+				type_id:{ required: true},
+				urlb:{required:true},
+				description:{required:true}
+			}
+		});
+	})
+	// 获取用户信息
+	function searchtj(){
+		var sear = document.getElementById('search').value;
+		jQuery("#oListboxFrom").empty();
+		//alert(search);
+		$.ajax({
+		　　type:"get",//可选post
+		　　url:"<{:U('Admin/Download/search')}>",//这里是接收数据的PHP程序
+		　　data:'search='+sear,//传给PHP的数据，多个参数用&连接
+		　　dataType:'text',//服务器返回的数据类型 可选XML ,Json jsonp script html text等
+		　　success:function(msg){
+		　　	jQuery("#oListboxFrom").append(msg); //这里是ajax提交成功后，PHP程序返回的数据处理函数。msg是返回的数据，数据类型在dataType参数里定义!
+		　　},
+		　　error:function(){
+		　　	alert("提交失败");//ajax提交失败的处理函数!
+		　　}
+	　　})
+	}
+	function selectall(){
+		$("#oListboxTo").find("option").attr("selected",true);
+	}
+
+<!--  echo "<option value='Value'>Text</option><option value='Value'>Text</option><option value='Value'>Text</option><option value='Value'>Text</option>";
+  
+    var ListUtil = new Object();  
+  
+    //全部移动  
+  
+    ListUtil.moveAll = function moveAll(oListboxFrom,oListboxTo){  
+  
+        var options = oListboxFrom.options;  
+  
+        for(var i = 0; i < options.length; i++){  
+  
+            oListboxTo.appendChild(options[i]); //???  
+  
+            i -= 1;  //???每删除一个选项后，每个选项的index会被重置  
+  
+        }  
+  
+    }  
+  
+    //单个或多个移动  
+  
+    ListUtil.moveMuti = function moveMuti(oListboxFrom,oListboxTo){  
+  
+        var options = oListboxFrom.options;  
+  
+        for(var i = 0; i < options.length; i++){  
+  
+            if(options[i].selected){  
+  
+                oListboxTo.appendChild(options[i]);  
+  
+                i -= 1;  
+  
+            }  
+  
+        }  
+  
+    }
+    //-->
+</script> 

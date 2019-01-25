@@ -1,0 +1,116 @@
+ <include file="Public:head"/><include file="Public:navbar"/>
+
+<div class="container"> 
+<div id="msgShow"></div>
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+     
+      <h1><span class="glyphicon glyphicon-eye-open"></span> 贷款管理 <small>>> 贷款申请</small>  </h1>
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="<{:U('Register/reg_add_do/t/N')}>" role="form">
+        <div class="my-form form-horizontal"> 
+        
+         <!-- item --> 
+        <if  condition="$reData['MESS_FLAG'] eq 'S' " >
+          	<div class="alert alert-success" role="alert">
+              <div class="media">
+                <div class="media-left lead"><i class="fa fa-bell-o " aria-hidden="true"></i> </div>
+                <div class="media-body">
+                <p> <strong>申请成功: </strong></p>
+                 
+                 <p>SAP编号：<{$data['sap_code']}>，审批流程已经开始，请耐心等候审批结果！</p>
+                   
+                  <p>可在 贷款管理> 日常管理 查看具体信息。</p>
+                
+                </div>
+              </div>
+            </div>
+          <else/>
+         	 <div class="alert alert-warning" role="alert">
+              <div class="media">
+                <div class="media-left lead"><i class="fa fa-bell-o " aria-hidden="true"></i> </div>
+                <div class="media-body">
+                <p> <strong>申请失败:</strong>
+                 <p> <strong>  <{$reData['MESSAGE']}>  </strong></p>
+                </div>
+              </div>
+           	 </div>
+          </if>
+         
+          <!--item -->
+          <!-- item -->
+          
+          <!--item -->
+          
+          <hr />
+          <!-- modal body start -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="">贷款人</label>
+            <div class="col-sm-8 "> 
+               <p class="form-control-static rightFont"><{$thisUser['user_name']}> / <{$thisUser['name']}></p>
+            </div>
+          </div>
+          <!--item -->
+            <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="type">贷款类型</label>
+            <div class="col-sm-4">
+             <if  condition="$data['reg_type'] eq 'N' " >
+              <p class="form-control-static rightFont"> 日常贷款 </p>
+              <else/>
+               <p class="form-control-static rightFont"> 特殊贷款 </p>
+              </if>
+            </div>
+            
+          </div>
+           <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_start_time">贷款日期</label>
+            <div class="col-sm-4">
+               <p class="form-control-static rightFont"> <{$data['reg_start_time']}> </p> 
+            </div>
+            
+          </div>
+           <!--item -->
+            <div id="inputVal">
+             <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_amount">贷款金额</label>
+            <div class="col-sm-4">
+              <p class="form-control-static rightFont"> <{$data['reg_amount']}> </p>
+            </div>
+             <div class="col-sm-5">
+            <span class="rightMsg" id="msgAmount"></span>
+            </div>
+          </div>
+           <!--item -->
+           <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_cycle">贷款周期</label>
+            <div class="col-sm-4">
+              <p class="form-control-static rightFont"> <{$data['reg_cycle']}> </p>
+            </div>
+            <div class="col-sm-5">
+            <span class="rightMsg" id="msgCycle"></span>
+            </div>
+          </div>
+           <!--item -->
+            </div>
+           
+           <!--item -->
+          
+           <!--item -->
+        </div>
+      
+      </form>
+    </div>
+  </div> 
+  </div> 
+  <include file="Public:foot"/>

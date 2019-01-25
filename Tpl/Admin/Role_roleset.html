@@ -1,0 +1,66 @@
+<include file="Public:head" />
+<div id="content" class="white">
+  <div class="mbxie"><a href="" style="padding-left:0px;"><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>">首页</a>><a href="javascript:void(0)">管理员管理</a>><a href="<{:U('Role/roleindex')}>">权限管理组</a>><a href="">权限设置</a></div>
+  <div class="bloc">
+  <style>
+.list1  td{border:1px  solid #e1e1e1; padding-left:5px;}
+.list1 ul li{width:140px; float:left}
+</style>
+ <dl  class="t_1_h"></dl>
+
+    <div class="wrap">
+    <form action="" method="post">
+		<input type="hidden" name="roleid" value="<{$Think.get.roleid}>" />
+		<!-- <table id="tree" width="100%" border="0" cellpadding="4" cellspacing="1" class="table"> -->
+		<table id="tree" width="90%" border="0"  cellpadding="4" cellspacing="1" class="list1">
+			<{$html_tree}>
+			<tr class="tr lt">
+				<td colspan="3">
+					<input class="bginput" type="submit" name="dosubmit" value="提 交" ></td>
+			</tr>
+		</table>
+	</form>
+  </div>
+</div>
+</div>
+	
+</body>
+	<script type="text/javascript">
+  $(document).ready(function() {
+  	//树配置
+    $("#tree").treeTable({
+    	expandable: true,
+    });
+
+   });
+
+function checknode(obj)
+  {
+      var chk = $("input[type='checkbox']");
+      var count = chk.length;
+      var num = chk.index(obj);
+      var level_top = level_bottom =  chk.eq(num).attr('level')
+      for (var i=num; i>=0; i--)
+      {
+              var le = chk.eq(i).attr('level');
+              if(eval(le) < eval(level_top)) 
+              {
+                  chk.eq(i).attr("checked",'checked');
+                  var level_top = level_top-1;
+              }
+      }
+      for (var j=num+1; j<count; j++)
+      {
+              var le = chk.eq(j).attr('level');
+              if(chk.eq(num).attr("checked")=='checked') {
+                  if(eval(le) > eval(level_bottom)) chk.eq(j).attr("checked",'checked');
+                  else if(eval(le) == eval(level_bottom)) break;
+              }
+              else {
+                  if(eval(le) > eval(level_bottom)) chk.eq(j).attr("checked",false);
+                  else if(eval(le) == eval(level_bottom)) break;
+              }
+      }
+  }
+</script>
+</html>

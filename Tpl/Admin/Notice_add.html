@@ -1,0 +1,88 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">网站运营</a>><a href="index">网站公告</a>><a href="add">添加公告</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="#">
+    <input type="hidden" name="id" value="2">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th>公告名称：<font class="red">*</font></th>
+          <td><input name="title" maxlength="100" type="text" class="input" id="title" style="width:400px;" value=""></td>
+        </tr>
+        <tr>
+          <th>上传图片：</th>
+          <td><input name="image" maxlength="100" type="text" class="input" id="image" style="width:400px;" value="">
+            <input type="checkbox" id="autoSimg" onclick="showSmallImg(this.checked);" checked="checked">
+            自动生成商品缩略图 <br>
+            <input id="image_upload" type="file" name="Filedata"  width="120" height="30">
+            <div id="image_uploadQueue" class="uploadifyQueue"></div>
+            <span class="imgbox"><img src="14029020526462.jpg" height="38" id="pic" style="margin-top:8px;"></span></td>
+        </tr>
+        <tr id="small_img" style="display: none; ">
+          <th>上传缩略图片：</th>
+          <td><input name="simage" maxlength="100" type="text" class="input" id="simage" style="width:400px;" value="">
+            <br>
+            <input id="simage_upload" type="file" name="Filedata" style="display: none; ">
+            <div id="simage_uploadQueue" class="uploadifyQueue"><img src="images/images/photo_1_03.jpg" width="29" height="27" /></div>
+            <span class="imgbox"><img src="14029020526462_s.jpg" height="38" id="spic" style="margin-top:8px;"></span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>发布日期：<font class="red">*</font></th>
+          <td><input name="time" id="time" type="text" onclick="WdatePicker()"  class="input"></td>
+        </tr>
+        <tr>
+          <th>排序：<font class="red">*</font></th>
+          <td><input name="sort" type="text" class="input" value="0" id="sort" maxlength="5" style="width:50px;" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
+        </tr>
+        <tr>
+          <th>关键字：</th>
+          <td><textarea style=" width:79%; height:50px;" name="keyword" class="input" id="keyword"></textarea>
+            <span>网页SEO优化，多个用","号隔开</span></td>
+        </tr>
+        <tr>
+          <th>简单描述：</th>
+          <td><textarea style=" width:79%; height:50px;" name="description" class="input" id="description"></textarea>
+            <span>网页SEO优化，文章的简单描述</span></td>
+        </tr>
+        <tr>
+          <th>文章描述：</th>
+          <td><textarea id="contents" name="contents" rows="5"  style="width:90%;">
+</textarea></td>
+        </tr>
+      <th></th>
+        <td><input name="btnSubmit" type="submit" id="btnSubmit" value="确定">
+          <input name="btnReset" type="reset" id="btnReset" value="清除">
+          <input name="btnBack" type="button" id="btnBack" value="返回"></td>
+      </tr>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			title: { required: true},
+			time:{required:true}
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+})
+if($("#contents").val()!=undefined){
+		var editor = CKEDITOR.replace( 'contents' );
+		CKFinder.setupCKEditor( editor, '__PUBLIC__/admin/js/ckfinder/' ) ;
+	}
+</script> 

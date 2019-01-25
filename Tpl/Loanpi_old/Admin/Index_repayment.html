@@ -1,0 +1,90 @@
+<include file="Public:head"/><include file="Public:navbar"/>
+<!--  container  -->
+
+<div class="container"> 
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+      <h1><i class="fa fa-history" aria-hidden="true"></i> 还款记录 </h1>
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row">
+    <div class="col-xs-12">
+      <form action="" method=" ">
+        <table  id="listTable" class="table table-striped table-bordered "  cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th width="15%">还款日期 <span class="sr-only">还款日期</span></th>
+              <th>代理商编号<span class="sr-only">代理商编号</span></th>
+              <th>贷款SAP单号<span class="sr-only">SAP单号</span></th>
+              <th>还款SAP单号<span class="sr-only">还款单号</span></th>  
+              <th>还款金额(元)<span class="sr-only">还款金额(元)</span></th>  
+             
+            </tr>
+          </thead>
+        </table>
+      </form>
+    </div>
+  </div>
+  <!-- main --> 
+</div>
+<!--  container  --> 
+<script type="text/javascript">
+ // JavaScript Document 
+$(document).ready(function(){ 
+	 /////load 
+	  $('#listTable').dataTable().fnDestroy(); 
+			 $('#listTable').dataTable( { 
+				      "processing": true,
+				 	  "serverSide": false,
+					  "fixedHeader": true,
+					   "responsive": true,
+					 "ajax":{
+						  "url": "/loanpiadmin.php/Index/repayment_list",
+					  },
+					 "order": [[ 0, "desc" ]],
+					 "columns": [
+							{"data": "rep_date"},
+							{"data": "dl_code"},
+							{"data": "sap_code"},
+							{"data": "sap_rep_code"},
+							{"data": "rep_amount"} 
+						],
+						"language": {
+						 "lengthMenu": "每页 _MENU_ 条记录",
+						 "zeroRecords": "没有找到记录",
+						 "info": " 记录_MAX_ 条,  第 _PAGE_ 页 ( 总共 _PAGES_ 页 )",
+						 "infoEmpty": "无记录",
+						 "infoFiltered": "(从 _MAX_ 条记录过滤)",
+						 "sSearch": "搜索:", 
+						 "sEmptyTable": "表中数据为空",
+						 "sLoadingRecords": "载入中...",
+						 "sInfoThousands": ",",
+						 "oPaginate": {
+							   "sFirst": "首页",
+							   "sPrevious": "上页",
+							   "sNext": "下页",
+							   "sLast": "末页"
+						   }
+						},  
+					"fnRowCallback":function(nRow,aData,iDataIndex){
+						$('td:eq(0)',nRow).addClass("tableDate");
+						 
+						//return nRow;
+					},
+          		 "deferRender": true
+			   });
+			   
+			   ///////////////
+	  
+	// add and edit gallery end
+	 
+	//  //////////////////////////////////
+	 
+});
+/////////////////////////
+</script> 
+<include file="Public:foot"/>

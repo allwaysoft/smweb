@@ -1,0 +1,187 @@
+<include file="Public:head" />
+<!-- <script type="text/javascript" src="__PUBLIC__/admin/js/jquery-1.2.6.pack.js"></script> -->
+<script type="text/javascript"
+	src="__PUBLIC__/admin/js/jquery.imagePreview.1.0.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("a.preview").preview();
+	});
+</script>
+<style>
+.photo_list li {
+	list-style: none;
+	float: left;
+}
+
+th {
+	font-weight: 800;
+}
+</style>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+	<div class="mbxie">
+		<a href="" class="first_a"><img
+			src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img
+			src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a
+			href="<{:U('Admin/Main/main')}>" style="padding-left: 3px;">首页</a>><a
+			href="javascript:void(0)">商品管理</a>><a href="<{:U('Product/index')}>">商品列表</a>><a
+			href="<{:U('Product/edit',array('id'=>$thisInfo['id']))}>">修改商品</a>
+	</div>
+	<div class="bloc">
+		<div class="wrap "></div>
+	</div>
+	<div class="wrap">
+		<table class="add">
+			<tbody>
+				<tr>
+					<th colspan="4" style="font-size: 14px; text-align: left;"><font
+						class="red">*</font>举报人的信息</th>
+				</tr>
+				<tr>
+					<th>投诉人：</th>
+					<td width="150"><{$info.ReportName}></td>
+					<th>投诉人类型：</th>
+					<td><eq name="info.ReportObjectId" value="1">员工</eq> <eq
+							name="info.ReportObjectId" value="2">供应商</eq> <eq
+							name="info.ReportObjectId" value="3">代理商</eq> <eq
+							name="info.ReportObjectId" value="4">合作伙伴/其他</eq></td>
+				</tr>
+				<tr>
+					<th>联系电话：</th>
+					<td><{$info.Mobile}></td>
+					<th>联系邮箱：</th>
+					<td><{$info.Email|default='--'}></td>
+				</tr>
+				<tr>
+					<th colspan="4" style="font-size: 14px; text-align: left;"><font
+						class="red">*</font>被举报人的信息</th>
+				</tr>
+				<tr>
+					<th>姓名：</th>
+					<td><{$info.Name}></td>
+					<th>所在部门：</th>
+					<td><{$info.Department}></td>
+				</tr>
+				<tr>
+					<th>职位：</th>
+					<td><{$info.Position}></td>
+					<th></th>
+					<td></td>
+				</tr>
+				<tr>
+					<th>举报内容：</th>
+					<td colspan="3"><textarea style="width: 79%; height: 80px;"
+							readonly="readonly" class="input" id="description"><{$info.Content}></textarea></td>
+				</tr>
+				<notempty name="info.FilesUrl">
+				<tr>
+					<th>举报材料：</th>
+					<td colspan="3">
+						<table cellpadding="0" cellspacing="0"
+							style="width: 80%; border: 1px solid #CCC">
+
+							<tr>
+								<td>
+									<ul class="photo_list" style="text-align: center">
+										<volist name="info.FilesUrl" id="vo">
+										<li style="margin: 0 15px;"><a class="preview"
+											href="<{$vo}>" title="<{$vo}>"> <img src="<{$vo}>"
+												width="80" height="100" />
+										</a></li>
+										</volist>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				</notempty>
+			</tbody>
+		</table>
+		<table class="add">
+			<tbody>
+				<notempty name="info.Result">
+				<tr>
+					<th style="font-size: 14px; text-align: left;"><font
+						class="red">*</font>处理结果</th>
+				</tr>
+				<volist name="info.Result" id="vo">
+				<tr>
+					<td>
+						<div style="border: 1px solid #ccc; width: 70%; margin: 0 13%">
+							<table>
+								<tr>
+									<th>处理人：</th>
+									<td width="100"><{$vo.HandleUser}></td>
+									<th>处理状态：</th>
+									<td width="100"><eq name="vo.ReportStatus" value="1">处理中</eq>
+										<eq name="vo.ReportStatus" value="2">完结</eq></td>
+									<th>处理时间：</th>
+									<td><{$vo.HandleTime}></td>
+								</tr>
+								<tr>
+									<th>处理意见：</th>
+									<td colspan="5"><{$vo.HandleResult}></td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+
+				</volist> </notempty>
+			</tbody>
+		</table>
+		<eq name="info.Status" value="2">
+		<table class="add">
+			<tbody>
+				<tr>
+					<th></th>
+					<td><input name="btnBack" type="button" id="btnBack"
+						value="返回"></td>
+				</tr>
+			</tbody>
+		</table>
+		<else/>
+		<form id="form1" name="form1" method="post" action="<{:U('edit')}>">
+			<table class="add">
+				<tbody>
+					<input type="hidden" name="Id" value="<{$info.Id}>">
+					<tr>
+						<th colspan="4" style="font-size: 14px; text-align: left;"><font
+							class="red">*</font>处理操作</th>
+					</tr>
+					<tr>
+						<th>处理状态：</th>
+						<td colspan="3"><input type="radio" name="Status" value="1"
+							checked="checked">处理中&nbsp;&nbsp; <input type="radio"
+							name="Status" value="2">完结&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<th>处理意见：</th>
+						<td colspan="3"><textarea style="width: 79%; height: 80px;"
+								name="HandleResult" class="input" id="HandleResult"><{$info.HandleResult}></textarea></td>
+					</tr>
+					<tr>
+						<th></th>
+						<td><input name="btnSubmit" type="submit" id="btnSubmit"
+							value="确定"> <input name="btnBack" type="button"
+							id="btnBack" value="返回"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		</eq>
+	</div>
+	</body>
+	</html>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#form1").validate({
+				rules : {
+					HandleResult : {
+						required : true
+					}
+				}
+			});
+		})
+	</script>

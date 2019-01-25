@@ -1,0 +1,120 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">大爆款模块</a>> HANA 数据列表</div>
+  <div class="bloc"> 
+    <div class="wrap ">
+    <div class="content" style="padding:10px; margin-top:10px; border:1px solid #CCC;">
+      <form method="post" action="hnImport" id="formh">
+         <div style="font-size:14px; padding-bottom:5px;">获取HANA数据：</div>
+          <div style=" padding-bottom:10px;"><font class="red">*</font>开始日期：
+         <input name="time" id="time" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})"  class="input" value="<{$time|date="Y-m-d",###}>">
+          ~ 截止日期：
+          <input name="endtime" id="endtime" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})"  class="input" value="<{$endtime|date="Y-m-d",###}>"> <font class="red">*</font>
+          </div>
+           <div style=" padding-bottom:5px;">&nbsp;&nbsp;&nbsp;<font class="red">*</font>产品季：
+           	<volist name="pq" id="vo">
+         	<input name="pq[]" id="<{$vo.name}>" type="checkbox" value="<{$vo.name}>" /> <{$vo.name}>
+            </volist>        
+         	 
+          </div>
+            <div style=" padding:5px 0 0 60px;">
+          <input type="submit" value="导入HANA数据" />     
+          <a href="http://w.semir.cn/index.php/HotSales/index_hana"  style="width:120px;" target="_blank">前台浏览</a>
+          </div>
+       
+          </form>
+     </div>    
+       
+       
+    <form action="" method="get" id="searchForm">
+      <dl class="dl_line">
+        <dd style="margin-top:10px;  ">
+        共 <{$total}> 条记录
+          <select id="type_id" name="type_id" style="display:inline-block;">
+            <option value="">﹄ 请选择...</option>
+             <foreach name="kind" item="kd">
+              <option value="<{$kd.kind}>"><{$kd.kind}></option>
+             </foreach>
+          </select>
+          <input type="submit" name="button" id="btnSearch" value=" 搜 索 " />
+        </dd>
+      </dl>
+      </form>
+      <form method="post" action="<{:U('News/del')}>" id="form1">
+      
+      <div class="content">
+      	<table width="100%" cellpadding="0" cellspacing="0" class="list">
+        <thead>
+          <tr>
+            <th style="width:50px;"><input type="checkbox" id="all" /></th>
+            <th>款号</th>
+            <th class="text-left">区域</th>
+            <th>性别</th>
+            <th>类别</th>
+            <th>排名</th>
+            <th>库存</th>
+            <th>颜色</th>
+            <th>导入日期</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        <volist name="datas" id="vo">
+          <tr>
+            <td><input type="checkbox" name="styleID[]" value="<{$vo.styleID}>" /></td>
+             <td><{$vo.styleID}></td>
+            <td style="text-align:left;"><{$vo.areaname}></td>
+            <td><{$vo.gender}></td>
+            <td><{$vo.kind}></td>
+            <td><{$vo.rank}></td>
+            <td><{$vo.stock}></td>
+            <td><{$vo.bestcolor}></td>
+            <td><{$vo.createtime|date="Y-m-d H:i:s",###}></td> 
+            <td><a href="<{:U('1/1',array('id'=>$vo['id']))}>" class="edit">修改</a><a href="<{:U('1/1',array('id'=>$vo['id']))}>" class="edit">删除</a></td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+      </div>
+      </form>
+    </div>
+    <div class="page">
+        <div class="pagination"><{$page}></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#formh").validate({
+		rules: { 
+			'pq[]':{ required: true},
+			time:{required:true},
+			endtime:{required:true}
+		},
+    errorPlacement: function (error, element) { //指定错误信息位置
+      if (element.is(':radio') || element.is(':checkbox')) { //如果是radio或checkbox
+       var eid = element.attr('name'); //获取元素的name属性
+       error.appendTo(element.parent()); //将错误信息添加当前元素的父结点后面
+     } else {
+       error.insertAfter(element);
+     }
+   },
+		submitHandler:function(form){
+			var mymessage=confirm("你确定要导入HANA数据并更新本地数据？");  
+			if(mymessage==true)  
+			{  
+				form.submit();
+			}  
+			else 
+			{  
+			  return false;
+			}  
+			 
+			
+		} 
+	});
+})
+</script>
+</body>
+</html>

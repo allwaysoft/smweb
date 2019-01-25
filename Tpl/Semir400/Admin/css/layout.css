@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+header{
+	height:70px;
+}
+h1{
+	margin:0;
+	padding:10px 5px;
+	font-size:1.5em;
+	border-bottom:2px solid #ccc;
+}
+.h20{
+	height:20px;
+}
+.h10{
+	height:10px;
+}
+.topRightBut{
+	padding:5px 15px 0 0 ;
+}
+/*form stlye*/
+#subForm .rightFont{
+	font-size:16px;
+	color:#333;
+	}
+#subForm .rightMsg{
+	padding-top:8px;
+	display:inline-block;
+	font-size:12px;
+	color:#666;
+}
+#subForm .control-label{ 
+	color:#666;
+	}
+/*navbar stlye */
+.navbar-inverse {
+    background-color: #4C9ED9;
+    border-color: #4C9ED9;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF;
+}
+.navbar-inverse .navbar-text {
+    color: #FFF;
+}
+/*tableDate stlye*/
+.tableDate{
+	font-size:10px;
+}
+td{
+	font-size:12px;
+}
+.sorting_desc,.sorting_asc{
+	background:#C8E3E3;
+}
+.sorting_1{
+	background:#E1F0F0;
+} 
+.table-striped > tbody > tr:nth-of-type(2n+1):hover{
+    background-color: #FFF3EE;
+}
+.even:hover{
+	background:#FFF3EE;
+}
+/*message stlye*/
+#msgShow{
+	
+}
+#msgShow .boxinfo{
+	padding:15px;	
+}
+
+/*modal stlye*/
+.margin-null{ 
+} 
+.blockquote_title{
+	font-size:14px; 
+	margin-bottom:10px;
+}
+
+/*nav-pills searchTop stlye*/
+.searchTop > li > a { 
+    padding: 5px 15px;
+}
+.view-show{
+	position:absolute;
+	color:#F30;
+	font-size:22px;
+	margin-top:-15px;
+}
+/*footer stlye*/
+/*footer stlye*/
+footer{
+	
+	
+}
+.footer{
+	padding-top:20px;
+	border-top:2px solid #CCC;
+	font-size:12px;
+	text-align:center;
+}
+

@@ -1,0 +1,109 @@
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/news.css"  />
+<script type="text/javascript" src="__PUBLIC__/home/js/jquery.validate.js"></script>
+
+<!--banner -->
+<style>
+.newsInfo table{width:100%;margin-top:40px;}
+.newsInfo table th{width:220px;height:30px;padding:10px;text-align:right;}
+.newsInfo table td input[type="password"]{width:260px;height:30px;}
+.sub{width:100px;height:35px;border:0; background:#78CAF4; color:#FFF;margin-top:40px;cursor:pointer}
+.error {
+	color: Red;
+}
+</style>
+<div class="banner_div_send">
+  <div class="banner_send"> </div>
+</div>
+<!----banner---> 
+<!-- page link -->
+<div class="page_link"> <a href="<{:U('Main/index')}>">首页</a> &raquo; 
+  修改密码 </div>
+<!-- page link end --> 
+<!----home_con--->
+<div class="home_con"> 
+  <!----home_con_L--->
+  <div class="home_con_L"> 
+    <!-- start -->
+    
+    <div  class="newsPageNav">
+      <div class="newsInfo">
+      <form id="form1" action="" method="post">
+      	<table cellspacing="0" cellpadding="0">
+      	 	<tr>
+      	 		<th>原始密码：</th>
+      	 		<td><input type="password" name="password" id="password"/></td>
+      	 	</tr>
+      	 	<tr>
+      	 		<th>新密码：</th>
+      	 		<td><input type="password" name="newpassword" /></td>
+      	 	</tr>
+      	 	<tr>
+      	 	<td colspan="2">
+      	 		<center><input type="submit" class="sub" value="确认修改"/></center>
+      	 	</td>
+      	 	</tr>
+      	</table>
+      </form>
+      </div>
+    </div>
+    <div class="h10"></div>
+    
+    <!-- end --> 
+  </div>
+  <div class="in_right"> 
+    <!-- news categary-->
+    <div class="in_yc_banner"><img src="<{$gg.image}>" width="220" /></div>
+    <div class="shiyonggju">
+      <p class="yc_title">实用工具</p>
+      <div class="shiyonggju_b">
+        <ul>
+			<volist name="tools" id="vo">
+			<if condition="$vo.ispic eq 1">
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><img src="<{$vo.image}>"></a></li>
+			<else />
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><{$vo.name}></a></li>
+			</if>
+			</volist>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!----home_con_R--->
+<include file="Public:foot"/>
+<script>
+$("#form1").validate({
+	rules: {
+		password: {
+            required: true,
+            remote: {
+                url: "<{:U('Infos/pwdcheck')}>",
+                type: "post",
+                dataType: "json",
+                data: {
+                	password: function () {
+                        return $("#password").val();　　　　//这个是取要验证的密码
+                    }
+                }
+            }
+        },
+        newpassword: {
+            required: true,
+            rangelength: [5, 16]
+        }
+    },
+    messages: {
+    	password: {
+            required: "请填写原始密码！",
+            remote: "原始密码不正确,请重新填写！"　　　　//这个地方如果不写的话，是自带的提示内容，加上就是这个内容。
+        },
+        newpassword: {
+            required: "请填写新密码",
+            minlength: jQuery.format("登录名长度在5-12位之间！")
+        }
+    }
+	
+})
+</script>

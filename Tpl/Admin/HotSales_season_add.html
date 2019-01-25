@@ -1,0 +1,45 @@
+<include file="Public:head"/>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			name: { required: true} 
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+}) 
+
+</script> 
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">大爆款模块</a>><a href="HotSales_season">产品季管理</a>>添加</div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="#">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th>名称：<font class="red">*</font></th>
+          <td><input name="name" maxlength="100" type="text" class="input" id="name" style="width:400px;" value=""></td>
+        </tr>
+        <tr>
+          
+        <th></th>
+			<td>
+			  <input name="btnSubmit" type="submit" id="btnSubmit" value="确定">
+			  <input name="btnReset" type="reset" id="btnReset" value="清除">
+			  <input name="btnBack" type="button" id="btnBack" value="返回">
+			</td>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</body>
+</html>

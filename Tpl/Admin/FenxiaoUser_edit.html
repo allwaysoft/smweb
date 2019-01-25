@@ -1,0 +1,139 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" style="padding-left:0px;"><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>">首页</a>><a href="javascript:void(0)">用户管理</a>><a href="<{:U('FenxiaoUser/edit',array('id'=>$user['id']))}>">分销用户修改</a></div>
+  <div class="bloc">
+ <dl  class="t_1_h">
+
+    <div class="wrap">
+    <form id="form1" name="form1" method="post" action="">
+    <input type="hidden" name="id" value="<{$user.id}>"/>
+      <table class="add">
+        <tbody>
+          <tr>
+            <th>登录用户名：<font class="red">*</font></th>
+            <td><input name="username" maxlength="20" readonly="readonly" class="input" id="username" style="width:200px;" type="text" value="<{$user.user_name}>" />
+              <span> 登录用户名不能重复</span> </td>
+          </tr>
+          <tr>
+            <th>姓名：<font class="red">*</font></th>
+            <td><input name="name" maxlength="20" class="input" id="name" style="width:200px;" type="text" value="<{$user.name}>" readonly="readonly"/>
+            </td>
+          </tr>
+           <tr>
+            <th>邮箱：<font class="red">*</font></th>
+            <td><input name="email" maxlength="50" class="input" id="email" style="width:200px;" type="text" readonly="readonly"  value="<{$user.email}>"/>
+              <span> 找回密码时使用</span> </td>
+          </tr>
+          <tr>
+            <th>部门：<font class="red">*</font></th>
+            <td><input name="deptname" maxlength="20" class="input" id="deptname"  value="<{$user.deptname}>" style="width:200px;" type="text" readonly="readonly" />
+            </td>
+          </tr>
+           <tr>
+            <th>省份：<font class="red">*</font></th>
+            <td>
+            <select name="province" id="province">
+             <volist name="listPro" id="vo">
+            <option  value="<{$vo.province}>"   <if condition="$vo['province'] eq $user['province']"> selected="selected" </if> ><{$vo.province}></option>
+             </volist>
+             <option value="1">其它</option>
+            </select>
+            <input name="p1" id="p1" maxlength="50" class="input"   type="text" style="display:none;"/>
+            </td>
+          </tr>
+            <tr>
+            <th>归属区域1：<font class="red">*</font></th>
+            <td>
+             <select name="area1">
+             <volist name="listA1" id="vo">
+            <option value="<{$vo.area1}>" <if condition="$vo['area1'] eq $user['area1']"> selected="selected" </if>  ><{$vo.area1}></option>
+             </volist>
+             <option value="1">其它</option>
+            </select>
+             <input name="a1" id="a1" maxlength="50" class="input"   type="text" style="display:none;"/>
+            </td>
+          </tr>
+          <tr>
+            <th>归属区域2：<font class="red">*</font></th>
+            <td>
+              <select name="area2">
+             <volist name="listA2" id="vo">
+            <option value="<{$vo.area2}>"  <if condition="$vo['area2'] eq $user['area2']"> selected="selected" </if>><{$vo.area2}></option>
+             </volist>
+             <option value="1">其它</option>
+            </select>
+             <input name="a2" id="a2" maxlength="50" class="input"  type="text"  style="display:none;"/>
+            </td>
+          </tr>
+          
+          <tr>
+            <th>手机：<font class="red"> </font></th>
+            <td><input name="mobile" maxlength="50" class="input" id="mobile" style="width:200px;" type="text" value="<{$user.phone}>"/>
+              <span> 获取验证码时使用</span> </td>
+          </tr>
+          <tr>
+            <th>所属状态：<font class="red">*</font></th>
+            <td> <select id="state" name="state" style="width:210px;">
+                <option value="">﹄ 请选择</option>
+                <option <if condition="$user.states eq 1">selected="selected"</if> value="1">﹄ 禁止</option>
+                <option  <if condition="$user.states eq 0">selected="selected"</if> value="0">﹄ 启用</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input name="btnSubmit" id="btnSubmit" value="确定" type="submit">
+              <input name="btnReset" id="btnReset" value="清除" type="reset">
+              <input name="btnBack" id="btnBack" value="返回" type="button">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</dl>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			 state:{required:true}
+		}/* ,
+		submitHandler:function(form){
+			$("#btnSubmit").attr("disabled",true);
+			form.submit();
+		} */
+	});
+	///////////////////
+	/////////////////////
+	$("#province").click(function(){
+		var val = $(this).val();
+		if (val == 1){
+			$("#p1").show();
+		}else{
+			$("#p1").hide();
+		}
+	});
+	$("select[name=area1]").click(function(){
+		var v1 = $(this).val();
+		if (v1 == 1){
+			$("#a1").show();
+		}else{
+			$("#a1").hide();
+		}
+	});
+	$("select[name=area2]").click(function(){
+		var v2 = $(this).val();
+		if (v2 == 1){
+			$("#a2").show();
+		}else{
+			$("#a2").hide();
+		}
+	});
+	///////////////////////
+})
+
+</script> 

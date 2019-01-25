@@ -1,0 +1,67 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+<div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">下载管理</a>><a href="<{:U('Download/picture')}>">图片下载</a>><a href="picadd">添加公共文件</a></div>
+<div class="bloc">
+  <div class="wrap ">
+  </div>
+</div>
+<div class="wrap">
+  <form id="form1" name="form1" method="post" action="#">
+    <input type="hidden" name="id" value="2">
+    <table class="add">
+      <tbody>
+        <tr>
+          <th>文件名称：<font class="red">*</font></th>
+          <td><input name="name" maxlength="100" type="text" class="input" id="title" style="width:400px;" value=""></td>
+        </tr>
+        <tr>
+          <th>所属服务器：</th>
+          <td>
+		  <volist name="serverlist" id="vo">
+            <input type="checkbox" name="server[]" value="<{$vo.url}>"/><{$vo.name}>
+		  </volist>
+		  </td>
+        </tr>
+        <tr id="small_img"> 
+		    <th>文件路径：<font class="red">*</font></th>
+		    <td>
+		    <input name="urlb" maxlength="100" type="text" class="input" id="simage" style="width:400px;" value="" />
+		    <td>
+		</tr>
+        <tr>
+          <th>发布日期：</th>
+          <td><input name="time" id="time" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  class="input"></td>
+        </tr>
+        <tr>
+          <th>排序：<font class="red">*</font></th>
+          <td><input name="sort" type="text" class="input" value="0" id="sort" maxlength="5" style="width:50px;" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></td>
+        </tr>
+        <tr>
+          <th>简单描述：</th>
+          <td><textarea style=" width:79%; height:50px;" name="description" class="input" id="description"></textarea>
+            <span>网页SEO优化，文章的简单描述</span></td>
+        </tr>
+      <th></th>
+        <td><input name="btnSubmit" type="submit" id="btnSubmit" value="确定">
+          <input name="btnReset" type="reset" id="btnReset" value="清除">
+          <input name="btnBack" type="button" id="btnBack" value="返回"></td>
+      </tr>
+        </tbody>
+      
+    </table>
+  </form>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$("#form1").validate({
+		rules: {
+			name: { required: true},
+			type_id:{ required: true},
+			urlb:{required:true}
+		}
+	});
+})
+</script> 

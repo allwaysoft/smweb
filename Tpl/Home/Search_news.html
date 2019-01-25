@@ -1,0 +1,112 @@
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/search.css"  />
+<!--banner -->
+
+
+<!----banner---> 
+<!-- page link -->
+<div class="page_link"> 
+<a href="<{:U('Main/index')}>">首页</a> &raquo;<a href="<{:U('Main/newsindex')}>">新闻中心</a> &raquo;
+	搜索结果
+    </div>
+<!-- page link end --> 
+<!----home_con--->
+<div class="home_con"> 
+  <!----home_con_L--->
+  <div class="home_con_L"> 
+    <!-- start -->
+     
+      <div  class="newsPageNav">
+          
+          <h2><{$tinfo.name}></h2>
+           <div class="page">
+        <div class="pagination"><{$page}></div>
+      </div>
+       <div class="clear"></div>
+          <div class="newsNav">
+            <ul>
+              <volist name="newslist" id="v" empty="$empty">
+                <li>
+                 <if condition="$v.image neq  ''">
+                 <div class="img"><a href="<{:U('Main/newsdetail',array('nid'=>$v['id']))}>"><img src="<{:U('Thumb/index',array('thumb'=>$v['image'],'w'=>120,'h'=>90))}>" /></a></div>
+                 <div class="list">
+                 	<div class="title"><a href="<{:U('Main/newsdetail',array('nid'=>$v['id']))}>"><{$v.title}></a>&nbsp;&nbsp;<if condition="$v.isnew eq 1"><img src="__PUBLIC__/home/images/new.jpg" width="20"  /></if>&nbsp;<if condition="$v.istop eq 1"><img src="__PUBLIC__/home/images/top.jpg" width="20"  /></if></div>
+                    <div class="info"><a href="<{:U('Main/newsdetail',array('nid'=>$v['id']))}>"><{$v.description}></a></div>
+                    <div class="time"><{$v.time|date="Y-m-d H:i:s",###}></div>
+                 </div>
+                 <else />
+                   <div class="listOnly">
+                 	<div class="title"><a href="<{:U('Main/newsdetail',array('nid'=>$v['id']))}>"><{$v.title}></a>&nbsp;&nbsp;<if condition="$v.isnew eq 1"><img src="__PUBLIC__/home/images/new.jpg" width="20"  /></if>&nbsp;<if condition="$v.istop eq 1"><img src="__PUBLIC__/home/images/top.jpg" width="20"  /></if></div>
+                    <div class="info"><a href="<{:U('Main/newsdetail',array('nid'=>$v['id']))}>"><{$v.description}></a></div>
+                    <div class="time"><{$v.time|date="Y-m-d H:i:s",###}></div>
+                 </div>
+                 </if>
+                 
+                 
+                 </li>
+              </volist>
+            </ul>
+          </div>
+       
+      </div>
+      
+    <!-- end --> 
+    <div class="page">
+        <div class="pagination"><{$page}></div>
+      </div>
+       <div class="clear"></div>
+  </div>
+  <div class="in_right"> 
+    <!-- news categary-->
+    <div class="newRightNav">
+      <p class="title">新闻中心</p>
+      <ul>
+        <volist name="cateList" id="vo">
+          <li>
+          	<a href="<{:U('Main/newcatgary',array('pid'=>$vo['id']))}>" 
+            <if condition="$tinfo.id eq  $vo['id']">
+             class ="curren"
+            </if>
+            >&raquo; <{$vo.name}></a>
+          </li>
+        </volist>
+      </ul>
+    </div>
+	<div class="zhongdianzhanshig">
+      <p class="yc_title">最新资讯</p>
+      <div>
+        <volist name="newnews" id="vo">
+        <div class="dongtainrdl">
+		  <if condition="$vo.image neq  ''">
+          <div class="dongtainrdd"><a href="<{:U('Main/newsdetail',array('nid'=>$vo['id']))}>"><img src="<{$vo.image}>" title="<{$vo.title}>" width="71" height="71" /></a></div>
+		  </if>
+          <div class="dongtainrdt"><a href="<{:U('Main/newsdetail',array('nid'=>$vo['id']))}>" title="<{$vo.title}>"><{$vo.title|msubstr=0,36,'utf-8',true}></a>
+            <p class="p_2">发布日期:  <{$vo.time|date="Y-m-d",###}> </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+        </volist>
+      </div>
+    </div>
+    <!-- news categary-->
+<!--     <div class="in_yc_banner"><img src="<{$gg.image}>" width="228" height="237" /></div>
+    <div class="shiyonggju">
+      <p class="yc_title">实用工具</p>
+      <div class="shiyonggju_b">
+        <ul>
+			<volist name="tools" id="vo">
+			<if condition="$vo.ispic eq 1">
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><img src="<{$vo.image}>"></a></li>
+			<else />
+			<li><a href="<{$vo.url}>" <if condition="$vo.isin eq 0"> target="_blank"</if>><{$vo.name}></a></li>
+			</if>
+			</volist>
+        </ul>
+      </div>
+    </div> -->
+  </div>
+  <div class="clear"></div>
+    
+</div>
+<!----home_con_R---> 
+<include file="Public:foot"/>

@@ -1,0 +1,55 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">问卷管理</a>><a href="<{:U('Selfform/index')}>">问卷列表</a>><a href="<{:U('Selfform/input',array('id'=>$forminfo['id']))}>"><{$forminfo.title}></a></div>
+  <div class="bloc"> 
+    <div class="wrap ">
+      <dl class="dl_line">
+        <dd style="width:500px; float:right; margin-top:10px;  ">
+        	“<{$forminfo.title}>”提交项管理
+        </dd>
+      </dl>
+      <form method="post" action="<{:U('Selfform/valuesdel')}>" id="form1">
+      <dl class="dl_line">
+        <dt>
+        <input type="submit" class="schu" value="批量删除" onclick="return listDelete(this.form.name);" id="btnDelete" />
+        </dt>
+      </dl>
+      <div class="content">
+      	<table width="100%" cellpadding="0" cellspacing="0" class="list">
+        <thead>
+          <tr>
+            <th style="width:50px;"><input type="checkbox" id="all" /></th>
+            <th width="50">序号</th>
+            <th width="100">提交人</th>
+            <th width="150">提交日期</th>
+            <volist name="inputs" id="vo">
+            	<th><{$vo.displayname}></th>
+            </volist>
+            <th width="60">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        <volist name="values" id="vo">
+          <tr>
+            <td><input type="checkbox" name="id[]" value="<{$vo.id}>" /></td>
+             <volist name="vo" id="v">
+            <td><{$v}></td>
+            </volist>
+            <td>
+            <a href="<{:U('Selfform/valuesdel',array('id'=>$vo['id']))}>" onclick="return confirm('确定删除吗？')">删除</a>
+            </td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+      </div>
+      </form>
+    </div>
+    <div class="page">
+        <div class="pagination"><{$page}></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

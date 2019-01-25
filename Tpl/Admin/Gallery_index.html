@@ -1,0 +1,65 @@
+<include file="Public:head"/>
+<!--   CONTENT  ---->
+<div id="content" class="white">
+  <div class="mbxie"><a href="" class="first_a" ><img src="__PUBLIC__/admin/images/back.jpg" width="25" height="12" />返回上一页</a><img src="__PUBLIC__/admin/images/home1.jpg" width="20" height="12" /><a href="<{:U('Admin/Main/main')}>"  style=" padding-left:3px;">首页</a>><a href="javascript:void(0)">图库管理</a>><a href="<{:U('Gallery/index')}>">店铺列表</a></div>
+  <div class="bloc"> 
+    <div class="wrap ">
+    <form action="" method="get" id="searchForm">
+      <dl class="dl_line">
+        <dd style="width:500px; float:right; margin-top:10px;  ">
+          <select id="type_id" name="type_id" style="display:inline-block;">
+            <option value="">﹄ 请选择...</option>
+              <volist name="alist" id="vo">
+              <option value="<{$vo.id}>"><for start="1" end="$vo['level']">&nbsp;&nbsp;&nbsp;</for>﹄ <{$vo.name}></option>
+              </volist>
+          </select>
+          <input type="text" name="keyword" id="keyword" value="<{$keyword}>" title="根据文章店铺名称搜索" onfocus="this.value='';" style="width:150px; display:inline-block;"  />
+          <input type="submit" name="button" id="btnSearch" value=" 搜 索 " />
+        </dd>
+      </dl>
+      </form>
+      <form method="post" action="<{:U('Galery/del')}>" id="form1">
+      <dl class="dl_line">
+        <dt><a href="<{:U('Gallery/add')}>" class="xz">新增</a>
+        <input type="submit" class="schu" value="批量删除" onclick="return listDelete(this.form.name);" id="btnDelete" />
+        </dt>
+      </dl>
+      <div class="content">
+      	<table width="100%" cellpadding="0" cellspacing="0" class="list">
+        <thead>
+          <tr>
+            <th style="width:50px;"><input type="checkbox" id="all" /></th>
+            <th>序号</th>
+            <th class="text-left">店铺名称</th>
+            <th>区域</th>
+            <th>排序</th>
+            <th>点击率</th>
+            <th>添加日期</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+          <tr>
+            <td><input type="checkbox" name="id[]" value="<{$vo.id}>" /></td>
+             <td><{$i}></td>
+            <td style="text-align:left;"><{$vo.title}></td>
+            <td><{$vo.type_name}></td>
+            <td><{$vo.sort}></td>
+            <td><{$vo.count}></td>
+            <td><{$vo.addtime|date="Y-m-d H:i:s",###}></td>
+            <td><a href="<{:U('Gallery/edit',array('id'=>$vo['id']))}>" class="edit">修改</a><a href="<{:U('Gallery/del',array('id'=>$vo['id']))}>" class="edit">删除</a></td>
+          </tr>
+          </volist>
+        </tbody>
+      </table>
+      </div>
+      </form>
+    </div>
+    <div class="page">
+        <div class="pagination"><{$page}></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

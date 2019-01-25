@@ -1,0 +1,216 @@
+<include file="Public:head"/><include file="Public:navbar"/>
+<script type="text/javascript" src="/<{:c('VIEW_PATH')}>Loanpi/public/js/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="/<{:c('VIEW_PATH')}>Loanpi/public/js/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+<link href="/<{:c('VIEW_PATH')}>Loanpi/public/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">  
+
+ <div class="container"> 
+<div id="msgShow"></div>
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12">
+     
+      <h1><span class="glyphicon glyphicon-eye-open"></span> 贷款管理 <small> >> 贷款申请</small>  </h1>
+    </div>
+  </div>
+  <!-- top ----->
+  <div class="h20"></div>
+  <!-- main ----->
+  <div class="row">
+    <div class="col-sm-12">
+      <form name="subForm" id="subForm"  class="form-horizontal"  method="post"   enctype='multipart/form-data' action="" role="form">
+        <div class="my-form form-horizontal"> 
+          <!-- modal body start -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="">Name</label>
+            <div class="col-sm-8 ">
+              <p class="form-control-static rightFont"> <{$thisUser['user_name']}> / <{$thisUser['name']}> </p>
+            </div>
+          </div>
+          <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="type">贷款类型</label>
+            <div class="col-sm-4">
+             <p class="form-control-static rightFont">
+            <if condition="$type eq 'N'">日常贷款</if>
+            <if condition="$type eq 'S'">特殊贷款</if>
+            </p>
+              <input type="hidden" class="form-control" name="type"  id="type" placeholder="type" value="<%$reg_start_time%>">
+            </div>
+             <div class="col-sm-5">
+            <span class="rightMsg" id="msgAmount"></span>
+            </div>
+          </div>
+           <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_start_time">贷款日期</label>
+            <div class="col-sm-4">
+              <p class="form-control-static rightFont">  <{$reg_start_time}></p>
+                   <input type="hidden" class="form-control" name="reg_start_time"  id="reg_start_time" placeholder="reg_start_time" value="<%$reg_start_time%>"> 
+                   
+            </div>
+             <div class="col-sm-4">
+            <span class="rightMsg"></span>
+            </div>
+          </div>
+           <!--item -->
+          <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_amount">RegAmount</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="reg_amount"  id="reg_amount" placeholder="reg_amount" value="">
+            </div>
+             <div class="col-sm-5">
+            <span class="rightMsg" id="msgAmount"></span>
+            </div>
+          </div>
+           <!--item -->
+           <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="reg_cycle">RegCycle</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="reg_cycle"  id="reg_cycle" placeholder="reg_cycle" value="">
+            </div>
+            <div class="col-sm-5">
+            <span class="rightMsg" id="msgCycle"></span>
+            </div>
+          </div>
+           <!--item -->
+               <!--item -->
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for=""></label>
+            <div class="col-sm-4">
+             <a href="<{:U('Register/reg_start/t/N')}>" class="btn  btn-info btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> 上一步</a>  
+            <button  class="btn btn-success btn-sm" type="submit"> 
+            提交贷款申请 <span class='glyphicon glyphicon-ok-circle'></span>
+            </button>
+            </div>
+          </div>
+           <!--item -->
+        </div>
+      
+      </form>
+    </div>
+  </div> 
+  </div>
+<!--  container  --> 
+<script type="text/javascript">
+    $(document).ready(function(){
+     $('#subForm').bootstrapValidator({
+       message: 'This value is not valid',
+         feedbackIcons: {
+           valid: 'glyphicon glyphicon-ok fui-check',
+            invalid: 'glyphicon glyphicon-remove fui-cross',
+            validating: 'glyphicon glyphicon-refresh'
+        }, 
+        fields: {
+			reg_start_time: {
+                message: '正确的时间格式：YYYY-DD-MM',
+                validators: {
+					 notEmpty: {
+                        message:  '正确的时间格式：YYYY-DD-MM'
+                    },
+                    date: {
+                        format: 'YYYY-DD-MM'
+                    }
+                }
+            },			
+            reg_amount: {
+                message: '金额不能为空！',
+                validators: {
+                    notEmpty: {
+                        message:  '金额不能为空'
+                    },
+					number: { message:  ' 请输入正确的金额'},
+                    greaterThan: {
+                        value: 1, message:  ' 请输入正确的金额'
+                    },
+					regexp: {
+                         regexp: /^[0-9]+(.[0-9]{0,2})?$/,
+                         message: 'The username can only consist of alphabetical, number, dot and underscore'
+                      }
+                }
+            },
+			 reg_cycle: {
+                message: '申请天数不能为空！',
+                validators: {
+                    notEmpty: {
+                        message: '申请天数不能为空！'
+                    },
+					digits: { message:  ' 请输入正确的申请天数'},
+                    greaterThan: {
+                        value: 1, message:  ' 请输入正确的申请天数'
+                    } 
+                }
+            } 
+		}
+    }).on('success.form.bv', function(e) {
+	
+		 var post_data = $("#subForm").serializeArray();
+		 		var post_url;
+				//alert($("input[name=id]").val());
+                 
+               post_url = "/loanpi.php/Register/reg_add_do"; 
+                
+                  //  post_url = "{%site_url('admin/homepage/edit')%}"; 
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    cache:false,
+                    data: post_data,
+                    success: function(msg){ 
+                        if(msg==0){
+							 $.each(BootstrapDialog.dialogs, function(id, dialog){
+								 dialog.close();
+							 });
+                            // $("#editbox").html("");
+							BootstrapDialog.show({
+								type:BootstrapDialog.TYPE_SUCCESS,
+								title: 'Add  Success! ',
+								message: 'current page is being refreshed!!' 
+							});      
+                            setTimeout(function(){
+                                 window.location.reload();
+                            },1000);
+                            //  Alert(msg);
+                        }else{
+                            BootstrapDialog.show({
+								type:"type-danger",
+								title: 'Add AD banner  Error!',
+								message: msg,
+								buttons: [{
+									label: 'Close',
+									action: function(dialogRef) {
+										dialogRef.close();
+									}
+								}]
+							});     
+                        }
+                    },
+                    error:function(){
+                        BootstrapDialog.show({
+								type:"type-danger",
+								title: 'Add nav Error!',
+								message: "Please contact us!!",
+								closable: false,
+								buttons: [{
+									label: 'Close',
+									action: function(dialog) {
+										// You can also use BootstrapDialog.closeAll() to close all dialogs.
+										 dialog.close();
+										
+									}
+								}]
+							});
+						
+                    }
+                });
+                return false;
+	});
+	 
+	  //////////////
+	
+	  
+});
+</script>
+<script type="text/javascript" src="/<{:c('VIEW_PATH')}>Loanpi/Layout/js/register.js"></script> 
+<include file="Public:foot"/>
