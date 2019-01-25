@@ -1,0 +1,10 @@
+[ 2016-11-03T14:45:58+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-03T14:45:58+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+

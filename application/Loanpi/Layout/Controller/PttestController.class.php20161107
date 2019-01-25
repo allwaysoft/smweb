@@ -1,0 +1,247 @@
+<?php
+
+/**
+  +----------------------------------------------------------
+ * 功能：PI 压力测试
+ * Url:  /loanpi.php/Pttest/pt_pisoap.html
+  +----------------------------------------------------------
+ */
+
+namespace Layout\Controller;
+
+//use Think\Controller;
+use Layout\Common\CheckUserController;
+
+class PttestController extends CheckUserController {
+
+    protected function _initialize() {
+        parent::_initialize();
+        $this->PI = D('Pi', 'Service');
+        $this->url = "Register";
+// 初始化数据& 更新审批状态
+// $this->get_pi_reg();  // 测试期间访问PI太频繁，暂时拿掉
+    }
+
+    public function index() {
+        
+    }
+
+    /**
+      +----------------------------------------------------------
+     * 功能：PI 压力测试
+      +----------------------------------------------------------
+     */
+    function pt_pisoap() {
+        $this->display('Pt_pisoap');
+    }
+
+    function pt_pisoap_do() {
+        header("Content-type: text/html; charset=utf-8");
+        $data = I('post.');
+        print_r($data);
+        echo '<br>---------------------<br>';
+        for ($i = 1; $i <= $data['pt']; $i++) {
+            $stime = microtime(true);
+            echo 'T_' . $i . '<br>';
+
+
+//            $data['dl_code'] = $this->thisUser['user_name'];
+//            $data['reg_type'] = I('post.type');
+//            $data['reg_date'] = I('post.reg_start_time');
+//            print_r($data);
+//            $reData = $this->PI->get_limit($data); //获取额度  
+//            print_r($reData);
+
+            /** // 保存   ///  // ** */
+			$data['dl_code'] = $this->thisUser['user_name'];
+            $upd['dl_code'] = $this->thisUser['user_name'];
+            $upd['reg_code'] = $this->thisUser['user_name'] . '-' . time();
+            $upd['reg_type'] = $data['type'];
+            $upd['reg_start_time'] = $data['reg_start_time'];
+            $upd['reg_amount'] = $data['reg_amount'];
+            $upd['reg_cycle'] = $data['reg_cycle'];
+			
+            $rePi = $this->reData = $this->PI->to_register($data);  // 提交申请
+            if ($rePi->MESS_FLAG == 'S') {
+                $upd['sap_code'] = $rePi->LOAN_NUM;
+//print_r($data);
+                $D = D('Register'); 
+                $reg = $D->regAddTest($upd);
+//   var_dump($reg);
+            }
+            $reData['MESS_FLAG'] = $rePi->MESS_FLAG;
+            $reData['MESSAGE'] = $rePi->MESSAGE;
+            print_r($reData);
+
+            $etime = microtime(true); //获取程序执行结束的时间
+            $total = $etime - $stime;   //计算差值
+
+            echo "<br />[执行时间：{$total} ]秒";
+            echo '<br>---------------------<br>';
+        }
+//print_r($data);
+    }
+
+    /**
+      +----------------------------------------------------------
+     * 贷款贷款期限及申请额度查询
+      +----------------------------------------------------------
+     */
+    public function reg_get_limit() {
+        $data['dl_code'] = $this->thisUser['user_name'];
+        $data['reg_type'] = I('post.type');
+        $data['reg_date'] = I('post.date');
+        $reData = $this->getLimit = $this->PI->get_limit($data); //获取额度  
+
+        $this->ajaxReturn($reData, 'JSON');
+    }
+
+    public function reg_add_do() {
+        $data = I('post.');
+        if (!checkToken($data['TOKEN'])) {
+            $this->error('1006: 请勿重复提交信息！！', U('Register/index'));
+            return;
+        }
+        $D = D('Register');
+        if ($data) {
+            $data['dl_code'] = $this->thisUser['user_name'];
+            $data['reg_code'] = $this->thisUser['user_name'] . '-' . time();
+            $data['reg_type'] = $data['type'];
+///////***/ 
+            $rePi = $this->reData = $this->PI->to_register($data);  // 提交申请
+            if ($rePi->MESS_FLAG == 'S') {
+                $data['sap_code'] = $rePi->LOAN_NUM;
+//print_r($data);
+                $reg = $D->regAdd($data);
+            }
+            $reData['MESS_FLAG'] = $rePi->MESS_FLAG;
+            $reData['MESSAGE'] = $rePi->MESSAGE;
+            $this->reData = $reData;
+            $this->data = $data;
+            $this->display('Register_add_do');
+// log 记录
+            $logs['user'] = $this->thisUser['user_name'];
+            $logs['title'] = '贷款申请';
+            $logs['status'] = $rePi->MESS_FLAG;
+            $logs['operating'] = json_encode($data);
+            D('Weblog')->logAdd($logs);
+        } else {
+            echo "1002: 请勿外部提交！！";
+        }
+    }
+
+    /**
+      +----------------------------------------------------------
+     * 功能：PI webservice testing 
+      +----------------------------------------------------------
+     */
+    function soaptest() {
+// testing soap service
+//        vendor('nusoap.nusoap');
+//        define('WSDL_URL', '/aa/');        //定义WSDL文件路径
+//        ini_set('soap.wsdl_cache_enabled', '0');    //关闭WSDL缓存
+//        //WSDL文件不存在时自动创建
+//        if (!file_exists(WSDL_URL)) {
+//            echo "sdfsdf";
+//            $disco = new \nusoap_server('adf', 'w.semir.cn');
+//            print_r($disco);
+//            $str = $disco->getWSDL();
+//            file_put_contents(WSDL_URL, $str);
+//        }
+//        echo '2222';
+//
+//        exit;
+/////////////////////////////////////////////////////////
+//testing  soap
+/////////////////////
+        $soapURL = "./MI_SW2SAP_Crd_Send.wsdl"; //"http://localhost:8082/MI_OA2SAP_Psc_Send.wsdl"; //
+        $soapParameters = Array('login' => "piappluser", 'password' => "vfr45tgb");
+// $soapParameters = Array('login' => "zhangtingt", 'password' => "900123456");
+
+
+        $soapClient = new \soapClient($soapURL, $soapParameters);
+
+//print_r($soapClient);
+//////
+        print_r($soapClient->__getFunctions());
+        print_r($soapClient->__getTypes());
+        $soapFunction = "MI_SW2SAP_Crd_Send"; // "MI_SW2SAP_Crd_Send";
+        $soapFunctionParameters = Array('AGENT_CODE' => "11CP1", 'LOAN_DATE_FROM' => "20161020", 'LOAN_CYCLE' => '30', 'LOAN_AMOUNT' => '300', 'LOAN_TYPE' => 'N', 'type' => '2'); //贷款申请
+//$soapFunctionParameters = Array('AGENT_CODE' => "11CP1A003", 'LOAN_DATE_FROM' => "20160919", 'LOAN_CYCLE' => '41', 'LOAN_AMOUNT' => '10000', 'LOAN_TYPE' => 'S', 'type' => '2'); // 日常贷款期限及申请额度查询
+// $soapFunctionParameters = Array('AGENT_CODE' => "22DG1", 'LOAN_DATE_FROM' => "20160920", 'LOAN_TYPE' => 'N', 'type' => '1');  // 贷款期限及申请额度查询
+        $soapFunctionParameters = Array('AGENT_CODE' => "22DG1", 'LOAN_NUM' => "0000000123", 'LOAN_TYPE' => 'N', 'type' => '3'); //贷款审核状态获取接口 
+//  $soapFunctionParameters = Array('AGENT_CODE' => "11CP1", 'LOAN_NUM' => "0000000031", 'REPAY_AMOUNT' => '300', 'LOAN_TYPE' => 'S', 'type' => '4'); // 还款申请
+        $soapFunctionParameters = Array('type' => '5', 'AGENT_CODE' => "22DG1"); //银行余额获取
+        $soapResult = $soapClient->$soapFunction($soapFunctionParameters);
+// $soapResult = $soapClient->__soapCall($soapFunction, $xml);
+
+        echo "<br>";
+        print_r($soapResult);
+        echo "//////////////<br>";
+        echo "Unexpected soapResult for {$soapFunction}: " . print_r($soapResult, TRUE);
+        exit;
+        if (is_array($soapResult) && isset($soapResult['MI_SW2SAP_Crd_Send'])) {
+// Process result.
+            print_r($soapResult);
+        } else {
+// Unexpected result
+            if (function_exists("debug_message")) {
+                debug_message("Unexpected soapResult for {$soapFunction}: " . print_r($soapResult, TRUE));
+            }
+        }
+//////////////////////// 
+        echo '<pre>';
+        print_r($soapClient->__getFunctions());
+// print_r($soapClient->__getTypes());  
+//  print_r($soapClient->__getFunctions()); // 获取webservice提供的函数
+        echo '</pre>';   /* */
+
+        exit;
+        echo '</pre>';   /* */
+        echo '<br><br><br><br><br><br><pre>';
+        print_r($result);
+        echo "end remote 。。。<br />";
+        echo '<pre>';
+        print_r($client->__getFunctions()); // 获取webservice提供的函数
+        echo '</pre>';   /* */
+    }
+
+    function soaptest1() {
+//testing  soap
+/////////////////////
+        $soapURL = "http://localhost:8082/MI_OA2SAP_Psc_Send.wsdl"; // "http://localhost:8082/MI_SW2SAP_Crd_Send.wsdl";
+        $soapParameters = Array('login' => "piappluser", 'password' => "vfr45tgb");
+// $soapParameters = Array('login' => "zhangtingt", 'password' => "900123456");
+        $soapFunction = "MI_OA2SAP_Psc_Send"; // "MI_SW2SAP_Crd_Send";
+        $soapFunctionParameters = Array('fd_hzsxe' => "1UHB1", 'fd_sqsj' => "2016-10-20", 'fd_zzbh' => 'N0001', 'fd_sxqx1' => '江苏区', 'fd_sxqx2' => "江苏区2", 'fd_sxms' => 'sdsdf', 'fd_sxqx1' => 'sdfsdfsdf');
+
+        $soapClient = new \soapClient($soapURL, $soapParameters);
+// print_r($soapClient->sdl);
+//$soapResult = $soapClient->MI_OA2SAP_Psc_Send($soapFunctionParameters);
+        $soapResult = $soapClient->__soapCall($soapFunction, $soapFunctionParameters);
+        print_r($soapResult);
+        if (is_array($soapResult) && isset($soapResult['MI_SW2SAP_Crd_Send'])) {
+// Process result.
+            print_r($soapResult);
+        } else {
+// Unexpected result
+            if (function_exists("debug_message")) {
+                debug_message("Unexpected soapResult for {$soapFunction}: " . print_r($soapResult, TRUE));
+            }
+        }
+//////////////////////// 
+        echo '<pre>';
+// print_r($soapClient->__getFunctions()); // 获取webservice提供的函数
+        echo '</pre>';   /* */
+
+        exit;
+        echo '</pre>';   /* */
+        echo '<br><br><br><br><br><br><pre>';
+        print_r($result);
+        echo "end remote 。。。<br />";
+        echo '<pre>';
+        print_r($client->__getFunctions()); // 获取webservice提供的函数
+        echo '</pre>';   /* */
+    }
+
+}

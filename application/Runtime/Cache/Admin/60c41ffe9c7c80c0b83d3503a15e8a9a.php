@@ -1,0 +1,93 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>森马管理后台</title>
+<!-- jQuery AND jQueryUI -->
+<script type="text/javascript" src="/Public/admin/js/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/admin/js/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/Public/admin/css/min.css" />
+<script type="text/javascript" src="/Public/admin/js/min.js"></script>
+</head>
+<body>
+
+<!--   CONTENT  ---->
+<div id="content" class="white" style="position: relative;"><!-- 
+  <div class="bloc left">
+    <div class="title">快捷菜单 </div>
+    <div class="content dashboard">
+      <div class="center" style="width:422px;"> <a href="#" class="shortcut"> <img src="/Public/admin/img/images/k_1_03.jpg" width="82" height="66" /> 添加商品 </a>
+       <a href="#" class="shortcut"> <img src="/Public/admin/img/images/k_2_05.jpg" width="89" height="66" /> 添加新闻 </a> <a href="#" class="shortcut"> <img src="/Public/admin/img/images/k_3_07.jpg" width="89" height="66" />资料上传 </a> <a href="#" class="shortcut last"> <img src="/Public/admin/img/images/k_4_12.jpg" width="82" height="66" /> 发起问卷 </a><a href="#" class="shortcut last"><img src="/Public/admin/img/images/k_5_03.jpg" width="71" height="66" /> 添加功能</a>
+        <div class="cb"></div>
+      </div>
+    </div>
+  </div>
+  <div class="bloc right">
+    <div class="title"> 数量统计 </div>
+    <div class="content">
+      <div class="left">
+        <table class="noalt">
+          <thead>
+            <tr>
+              <th colspan="2">站内数据</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>产品数量</td>
+              <td><h4>1000</h4></td>
+            </tr>
+            <tr>
+              <td>新闻数量</td>
+              <td><h4>1000
+                  </h4>
+                </td>
+            </tr>
+            <tr>
+              <td>会员数量</td>
+              <td><h4>100</h4></td>
+            </tr>
+            <tr>
+              <td>公告数量</td>
+              <td><h4>100</h4></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="right">
+        <table class="noalt">
+          <thead>
+            <tr>
+              <th colspan="2">流量数据</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h4>46 000</h4></td>
+              <td class="good" style="color:#6F9106;" >Comments</td>
+            </tr>
+            <tr>
+              <td><h4>5</h4></td>
+              <td class="neutral" style="color:#FF7400;;">Waiting for validation</td>
+            </tr>
+            <tr>
+              <td><h4>0</h4></td>
+              <td class="bad" style="color:#C21C1C;;">Spams</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cb"></div>
+    </div>
+    </div>
+  <div class="cb"></div>
+  -->
+  <div class="bloc">
+    <div class="title"> 常用工具 </div>
+    <div class="content"><a href="<?php echo U('Admin/Main/pmess',array('id'=>$aid));?>" class="shortcut"> <img src="/Public/admin/img/images/cygj_2.jpg" width="61" height="52" /> 个人信息<?php echo ($this); ?> </a> <a href="" class="shortcut"><img src="/Public/admin/img/images/cygj_5_18.jpg" width="61" height="52" /> 清除缓存 </a><a href="<?php echo U('Admin/Main/loginout');?>" target="_top" class="shortcut"><img src="/Public/admin/img/images/cygj_6.jpg" width="61" height="52" /> 退出 </a>
+      
+    </div>
+  </div>
+  </div>
+</body>
+</html>

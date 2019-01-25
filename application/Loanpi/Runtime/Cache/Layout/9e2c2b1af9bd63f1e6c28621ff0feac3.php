@@ -1,0 +1,141 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>巴拉--贷款管理系统</title>
+<meta http-equiv="semir" content="Yes" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/<?php echo c('VIEW_PATH');?>Loanpi/public/css/bootstrap.css" rel="stylesheet">
+<link href="/<?php echo c('VIEW_PATH');?>Loanpi/public/js/bootstrap-dialog/css/bootstrap-dialog.css" rel="stylesheet">
+ <!-- Loading Flat UI -->
+   
+<script type="text/javascript" src="/<?php echo c('VIEW_PATH');?>Loanpi/public/jquery.min1.11.3.js"></script>
+<!-- Loading Bootstrap -->
+<script type="text/javascript" src="/<?php echo c('VIEW_PATH');?>Loanpi/public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/<?php echo c('VIEW_PATH');?>Loanpi/public/jquery.PrintArea.js"></script>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/<?php echo c('VIEW_PATH');?>Loanpi/Layout/css/statement_print.css"  />
+</head>
+<body>
+
+<!--<div><input id="btnPrint" type="button" value="打印文本区域"></input> </div>-->
+<!--  container  -->
+<div class="container" id="printShow">  
+  <!-- top ----->
+  <div class="row">
+    <div class="col-xs-12"> 
+      <h3 class="text-center">巴拉巴拉往来账项核对函</h3>
+    </div>
+     <div class="col-xs-12"> 
+      <!--  ----->
+      <p class="top">
+      序号：<?php echo ($data['pi_id']); ?><br />
+      编号：<?php echo ($data['agent_kpt']); ?><br />
+      致：<?php echo ($data['agent_name']); ?>
+      </p>
+	   <p class="info">
+     下列信息出自本公司新分销系统往来账概况，如与贵公司记录相符，请在本函下端"信息证明无误" 处签章证明；如有不符，请在"信息不符"处列明不符项目。如存在与本公司有关的未列入本函的其他项 目，请在"信息不符"处列出这些项目的金额及详细资料。回函请寄至巴拉巴拉市场链各大区对应销售经理处 ，地址：浙江省温州市瓯海区娄桥上汇工业园南汇路98号
+
+
+      </p>
+       <!--  ----->
+      <h4>1. 期末余额 </h4>      
+      <div>
+      <table  id="listTable" class="table table-striped table-bordered "  cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th>截止日期 <span class="sr-only"></span></th>
+              <th>贵公司欠(应收)  <span class="sr-only"> </span></th>
+              <th>欠贵公司(预收) <span class="sr-only"> </span></th>
+              <th>本公司科目<span class="sr-only"> </span></th>
+            </tr>
+            <tr>
+              <th><?php echo (date("Y年m月d日",strtotime($data["date_to"]))); ?></th>
+              <th><?php echo ($data["agent_arar"]); ?></th>
+              <th><?php echo ($data["agent_arcr"]); ?></th>
+              <th>应收账款-应收</th>
+            </tr>
+            <tr>
+              <th><?php echo (date("Y年m月d日",strtotime($data["date_to"]))); ?></th>
+              <th><?php echo ($data["agent_dkar"]); ?></th>
+              <th><?php echo ($data["agent_dkcr"]); ?></th>
+              <th>应收账款-贷款<br /></th>
+            </tr>
+            <tr>
+              <th><?php echo (date("Y年m月d日",strtotime($data["date_to"]))); ?></th>
+              <th><?php echo ($data["agent_otap"]); ?></th>
+              <th><?php echo ($data["agent_otcr"]); ?></th>
+              <th>其他应付款-代理商保证金</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+        <!--  ----->
+       <h4>2. 往来账户概况</h4>  
+        <p class="info">
+      请登录新分销系统查询<?php echo (date("Y年m月d日",strtotime($data["date_from"]))); ?>到<?php echo (date("Y年m月d日",strtotime($data["date_to"]))); ?>期间按组织分组打印《 往来账户概况》 并签字，随本核对函一起邮寄至我司对应销售经理处。
+ </p>
+        <!--  ----->  
+         <!--  ----->
+       <h4>3.其他事项  </h4>  
+        <p class="info">
+      本函仅为复核账目之用，并非催款结算。若款项在上述日期之后已经付清，仍请及时函复为盼。
+	   </p>
+        <!--  ----->
+      <br /><br /><br /> 
+  <div class="col-xs-4 col-xs-offset-8">
+   <div class="  bottom">
+        浙江森马服饰股份有限公司<br />
+         <?php echo (date("Y年m月d日",strtotime($data["date_run"]))); ?> 
+        </div>
+         <div class="h20"></div>
+  </div> 
+  
+        <!--  -----> 
+         <div>
+      <table  id="listTable" class="table table-striped table-bordered "  cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th width="50%">
+              <p class="b_1">信息证明无误</p>
+<p class="b_2"> 客户：</p>
+<p class="b_3 info">（本人亲笔签字按手印或公司户盖公章）</p>
+<p class="b_4"> 年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日</p>
+</th>
+              <th width="50%">
+               <p class="b_1">信息不符及需加证明事项(详细附后)</p>
+<p class="b_2"> 客户：</p>
+<p class="b_3 info">（本人亲笔签字按手印或公司户盖公章）</p>
+<p class="b_4"> 年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日</p>
+              
+             </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+        <!--  -----> 
+        
+        <!--  -----> 
+    </div>
+  </div>
+  <!-- top ----->
+ 
+   
+</div>
+<!--  container  --> 
+<script type="text/javascript">
+ $("#btnPrint").click(function(){    
+          $("#printShow").printArea();  
+      });  
+</script>
+ 
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,589 @@
+[ 2016-10-17T09:19:36+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T09:19:36+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:12:57+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T10:12:57+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T10:16:14+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T10:16:14+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:15+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:15+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:16:15+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:16+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:16+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:16+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:16+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T10:16:16+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:16+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:17+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:17+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:17+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:17+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:17+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:16:17+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:16:17+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:18+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:18+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:16:18+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:18+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:18+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:16:18+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:19+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:16:19+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:17:03+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:17:03+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:17:04+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:17:04+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:17:05+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:17:05+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:17:05+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:17:05+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T10:17:05+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:17:05+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+
+[ 2016-10-17T10:27:28+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:27:28+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:27:29+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T10:27:29+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:27:29+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:27:29+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:28:12+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:28:12+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:28:13+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:28:13+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:28:13+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:28:13+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:31:42+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T10:31:42+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:31:43+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:31:43+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:31:44+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:31:44+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:31:44+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:31:44+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:23+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:23+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:47+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:47+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:48+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:48+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:32:49+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:49+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:32:49+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:49+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:50+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:50+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:50+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:50+08:00 ] 180.173.104.43 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:32:51+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T10:32:51+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:33:46+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:33:47+08:00 ] 180.173.105.255 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T10:53:20+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:53:20+08:00 ] 118.178.15.71 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T10:53:20+08:00 ] 180.173.104.42 /loanpi.php/Service/soaptest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T11:26:44+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T11:26:44+08:00 ] 10.90.19.36 http://w.semir.cn/loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T14:13:09+08:00 ] 180.173.104.43 /loanpi.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T14:13:09+08:00 ] 180.173.104.43 /loanpi.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T14:13:53+08:00 ] 180.173.105.255 /loanpi.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:13:54+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1476684833522
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:13:54+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:13:59+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:14:00+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1476684839676
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:14:00+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:14:01+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:14:05+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:15:43+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:15:49+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:16:04+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_add_do/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:17:16+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T14:17:16+08:00 ] 10.90.19.36 http://w.semir.cn/loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T14:17:43+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T14:17:43+08:00 ] 10.90.19.36 http://w.semir.cn/loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T14:18:04+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:18:05+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1476685084595
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:18:05+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-10-17T14:23:28+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-17T14:23:41+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdoe.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 非法操作:upstatusdoe
+
+[ 2016-10-17T14:23:46+08:00 ] 180.173.104.42 /loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-17T14:25:23+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T14:25:23+08:00 ] 10.90.19.36 http://w.semir.cn/loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T15:10:26+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T15:10:27+08:00 ] 10.90.19.36 http://w.semir.cn/loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T15:16:44+08:00 ] 10.192.1.10 /loanpi.php/Service/UpStatusToLocal
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-17T15:16:44+08:00 ] 10.90.19.36 http://w.semir.cn/loanpi.php/Service/upstatusdo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+

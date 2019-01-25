@@ -1,0 +1,2479 @@
+[ 2016-09-30T10:25:49+08:00 ] 180.173.104.43 /loanpi.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T10:25:49+08:00 ] 180.173.104.43 /loanpi.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:25:49+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:25:53+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475202344110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:25:53+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:25:59+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:26:36+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:30:35+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_add_do/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:30:46+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T10:30:46+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475202640776
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:30:46+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:30:49+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:30:52+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:51:18+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:51:18+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475203872935
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:51:18+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:51:28+08:00 ] 180.173.104.42 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:51:29+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:51:30+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475203884303
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:51:30+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:55:00+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:55:01+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475204095305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:55:01+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:55:02+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T10:55:28+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:56:23+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:56:28+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T10:56:39+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_add_do/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T11:05:35+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T11:05:35+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T11:05:36+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475204730071
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T11:05:37+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T11:05:40+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T11:07:27+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T11:07:50+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_add_do/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:04:27+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:04:27+08:00 ] 180.173.105.255 /loanpi.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T13:04:27+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:04:27+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475211861729
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:04:27+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:04:30+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T13:04:31+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475211865159
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:04:31+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:04:32+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T13:04:43+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:05:03+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T13:12:21+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:12:22+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475212335943
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:12:22+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:12:30+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:12:31+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T13:12:31+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:12:31+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475212345684
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:12:35+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:12:35+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475212349679
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:12:35+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:12:41+08:00 ] 180.173.104.42 /loanpi.php/repayment/view_repay/id/64
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:12:48+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:12:54+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:13:11+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:22:51+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T13:22:51+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475212965472
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:22:51+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:22:59+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:23:00+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:23:01+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:23:01+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475212975066
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:23:03+08:00 ] 180.173.104.42 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:23:03+08:00 ] 180.173.104.42 /loanpi.php/Register/special_list?_=1475212977709
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:23:03+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:23:10+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T13:23:21+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:23:32+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:24:36+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:24:36+08:00 ] 180.173.105.255 /loanpi.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T13:24:36+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:24:39+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475213071312
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:24:39+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:27:03+08:00 ] 180.173.104.42 /loanpi.php/repayment/view_repay/id/58
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:30:30+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T13:30:30+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475213424495
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:30:30+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:30:31+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:30:37+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:30:47+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_add_do/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:38:44+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:38:57+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:39:07+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:39:21+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_add_do/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:40:50+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:40:50+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475214044499
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:40:51+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:41:02+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:41:03+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:41:03+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475214057353
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:41:04+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:41:30+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:41:32+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T13:41:32+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:41:32+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475214085901
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:42:55+08:00 ] 180.173.104.42 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:42:56+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:42:56+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475214170097
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:42:56+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:52:23+08:00 ] 180.173.105.255 /loanpi.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:52:23+08:00 ] 180.173.105.255 /loanpi.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:52:23+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T13:52:28+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475214739177
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:52:28+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:52:40+08:00 ] 180.173.104.43 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:52:41+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:52:42+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:52:42+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475214756253
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:55:10+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:55:11+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:55:11+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475214905188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:55:11+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:55:12+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:55:18+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T13:55:18+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:55:19+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475214912703
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:55:31+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add/reid/61
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:58:55+08:00 ] 180.173.104.43 /loanpi.php/repayment/view_repay/id/63
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:58:59+08:00 ] 180.173.104.43 /loanpi.php/repayment/view_repay/id/62
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:59:17+08:00 ] 180.173.104.42 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:59:18+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T13:59:18+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475215152554
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:59:19+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:59:26+08:00 ] 180.173.104.43 /loanpi.php/repayment/view_repay/id/62
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:59:30+08:00 ] 180.173.104.43 /loanpi.php/repayment/view_repay/id/59
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:59:33+08:00 ] 180.173.104.43 /loanpi.php/repayment/view_repay/id/58
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T13:59:45+08:00 ] 180.173.104.43 /loanpi.php/repayment/view_repay/id/50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:03:11+08:00 ] 180.173.104.42 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:03:12+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:03:13+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475215386869
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:03:13+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:04:10+08:00 ] 180.173.104.43 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:04:11+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T14:04:11+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475215445702
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:04:11+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:04:49+08:00 ] 180.173.104.42 /loanpi.php/repayment/view_repay/id/61
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:09:35+08:00 ] 180.173.104.42 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:09:36+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:09:36+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475215769797
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:09:37+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:09:42+08:00 ] 180.173.104.42 /loanpi.php/Repayment/repay_add/reid/63
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:09:44+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:09:49+08:00 ] 180.173.104.42 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:09:51+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:09:51+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475215785303
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:09:51+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:10:55+08:00 ] 180.173.104.42 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:10:56+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T14:10:56+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475215850712
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:10:56+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:11:01+08:00 ] 180.173.105.255 /loanpi.php/repayment/view_repay/id/63
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:10+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:14:15+08:00 ] 180.173.104.42 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:14:15+08:00 ] 180.173.104.42 /loanpi.php/Register/special_list?_=1475216049428
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:15+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:17+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:14:23+08:00 ] 180.173.104.43 /loanpi.php/Repayment/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:14:23+08:00 ] 180.173.104.43 /loanpi.php/Repayment/history_list?_=1475216057653
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:33+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:37+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:14:38+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475216072043
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:38+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:40+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:40+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:51+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add/reid/64
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:51+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:14:58+08:00 ] 180.173.105.255 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:14:59+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T14:15:00+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475216093978
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:00+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:06+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:15:06+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475216099898
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:06+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:10+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:15:11+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475216104621
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:11+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:17+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:15:18+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475216112036
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:18+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:21+08:00 ] 180.173.104.43 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:22+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:15:22+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:22+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475216116367
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:27+08:00 ] 180.173.104.43 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:28+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:15:28+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:15:29+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475216122861
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:18:56+08:00 ] 180.173.104.42 /loanpi.php/Repayment/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:18:56+08:00 ] 180.173.104.42 /loanpi.php/Repayment/history_list?_=1475216330346
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:34:42+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:34:43+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:34:44+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475217278265
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:34:44+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:47:15+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:47:16+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:47:17+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:47:17+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218030647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:47:20+08:00 ] 180.173.104.42 /loanpi.php/repayment/view_repay/id/68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:47:39+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:47:39+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475218053239
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:47:40+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:47:44+08:00 ] 180.173.104.42 /loanpi.php/repayment/view_repay/id/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:47:47+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:47:54+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:48:16+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:52:53+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:52:53+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218366884
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:52:53+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:53:03+08:00 ] 180.173.104.43 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:53:04+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:53:05+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218378813
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:53:05+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:56:19+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:56:20+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:56:20+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218574129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:56:20+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:56:40+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:56:40+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475218594072
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:56:40+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:57:10+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:57:12+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218624366
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:57:12+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:07+08:00 ] 180.173.104.42 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T14:58:07+08:00 ] 180.173.104.42 /loanpi.php/Register/special_list?_=1475218681116
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:07+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:16+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:58:17+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218690590
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:17+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:26+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:28+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:58:28+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475218701979
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001953s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:28+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:31+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:58:31+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:31+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475218705068
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:37+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000976s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T14:58:42+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:58:46+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:06+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:59:14+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:59:14+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218747966
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:14+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:26+08:00 ] 180.173.104.42 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:28+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:59:28+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:28+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218761843
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:31+08:00 ] 180.173.104.42 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T14:59:31+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:31+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475218765297
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:38+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add/reid/64
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:42+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T14:59:42+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475218776118
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:42+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T14:59:44+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:00:03+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:00:08+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add/reid/64
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:00:14+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:02:03+08:00 ] 180.173.105.255 /loanpi.php/Repayment/repay_add/reid/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:02:07+08:00 ] 180.173.105.255 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:02:12+08:00 ] 180.173.105.255 /loanpi.php/Repayment/repay_add/reid/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:02:41+08:00 ] 180.173.105.255 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:02:42+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T15:02:42+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:02:42+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475218956511
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:03:00+08:00 ] 180.173.104.42 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T15:03:01+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:03:01+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475218975022
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:03:02+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T15:03:02+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475218976481
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:03:02+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:03:16+08:00 ] 180.173.104.42 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:03:17+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T15:03:18+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:03:18+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475218991908
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:27+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:28+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:04:29+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475219062752
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:29+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:30+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:04:31+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:31+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475219065352
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:34+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:04:35+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475219068621
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:35+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:45+08:00 ] 180.173.104.42 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:46+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T15:04:46+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:04:46+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475219080286
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:06:53+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:06:54+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T15:06:54+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475219208381
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:06:54+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:07:13+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T15:07:14+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475219227556
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:07:14+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:07:22+08:00 ] 180.173.104.42 /loanpi.php/Repayment/repay_add/reid/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:07:54+08:00 ] 180.173.105.255 /loanpi.php/repayment/view_repay/id/47
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:09:01+08:00 ] 180.173.104.42 /loanpi.php/Repayment/repay_add/reid/71
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:11:06+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:11:06+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:11:06+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475219460057
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:11:09+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add/reid/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:12:52+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add/reid/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:16:06+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:16:09+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:16:34+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:16:46+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:16:46+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:16:46+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475219800334
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:17:56+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:17:56+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:17:56+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475219870442
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:17:57+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T15:18:00+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:18:09+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_add_do/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:39:08+08:00 ] 180.173.105.255 /loanpi.php/Repayment/repay_add/reid/71
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:39:52+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add/reid/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:43:09+08:00 ] 180.173.105.255 /loanpi.php/Repayment/repay_add/reid/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:49:11+08:00 ] 180.173.104.42 /loanpi.php/Repayment/repay_add/reid/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:50:14+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:24+08:00 ] 180.173.104.43 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:34+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T15:51:34+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475221888334
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:34+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:45+08:00 ] 180.173.104.42 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:46+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:51:46+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:46+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475221900392
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:54+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:51:54+08:00 ] 180.173.105.255 /loanpi.php/Register/special_list?_=1475221907854
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:54+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:51:57+08:00 ] 180.173.104.42 /loanpi.php/Repayment/repay_add/reid/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:52:25+08:00 ] 180.173.105.255 /loanpi.php/Repayment/repay_add_do
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:52:26+08:00 ] 180.173.105.255 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:52:27+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:52:27+08:00 ] 180.173.104.42 /loanpi.php/Register/special_list?_=1475221940756
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:52:34+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:52:34+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475221947875
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:52:34+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:52:46+08:00 ] 180.173.104.43 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:52:48+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T15:52:48+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475221961998
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:52:48+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:53:00+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:53:01+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:53:01+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_list?_=1475221974970
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:53:01+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:53:09+08:00 ] 180.173.104.43 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T15:53:09+08:00 ] 180.173.104.43 /loanpi.php/Register/special_list?_=1475221982942
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:53:09+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T15:53:14+08:00 ] 180.173.104.43 /loanpi.php/repayment/view_repay/id/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:19:13+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:19:13+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475223546939
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:19:13+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:19:16+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:19:49+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:14+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:34:14+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475224447889
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:14+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:18+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:34:21+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:29+08:00 ] 180.173.104.42 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:34:30+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_list?_=1475224463573
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:30+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000977s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:32+08:00 ] 180.173.104.42 /loanpi.php/Register/special.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:34:32+08:00 ] 180.173.104.42 /loanpi.php/Register/special_list?_=1475224465890
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:32+08:00 ] 180.173.104.42 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:33+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_special_start/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:34:36+08:00 ] 180.173.104.42 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:51+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_add_do/t/S.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:34:58+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:34:58+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475224492179
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:34:58+08:00 ] 180.173.104.43 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:35:00+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_start/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-09-30T16:35:02+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_get_limit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:35:10+08:00 ] 180.173.105.255 /loanpi.php/Register/reg_add_do/t/N.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:35:19+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-09-30T16:35:19+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475224513185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:35:19+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:44:39+08:00 ] 180.173.104.43 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T16:44:40+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475225073553
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:44:40+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:44:50+08:00 ] 180.173.105.255 /loanpi.php/Register/get_pi_reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:44:51+08:00 ] 180.173.105.255 /loanpi.php/Register/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-09-30T16:44:51+08:00 ] 180.173.104.43 /loanpi.php/Register/reg_list?_=1475225085199
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+
+[ 2016-09-30T16:44:51+08:00 ] 180.173.105.255 /loanpi.php/Public/msg_repayment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 1146:Table 'sm_web.tp_pi' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_pi`
+

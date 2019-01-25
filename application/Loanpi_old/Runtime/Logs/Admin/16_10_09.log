@@ -1,0 +1,489 @@
+[ 2016-10-09T16:22:33+08:00 ] 180.173.104.42 /loanpiadmin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T16:22:33+08:00 ] 180.173.104.42 /loanpiadmin.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T16:22:45+08:00 ] 180.173.104.42 /loanpiadmin.php/Login/checklogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined index: HTTP_CDN_SRC_IP D:\wwwroot\httpdocs20160331\httpdocs\Application\Loanpi\Admin\Controller\LoginController.class.php 第 27 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.374000s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.374000s ]
+SQL: SHOW COLUMNS FROM `tp_loan_dmin_loginlogs` [ RunTime:0.377905s ]
+ERR: 1146:Table 'sm_web.tp_loan_dmin_loginlogs' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_loan_dmin_loginlogs`
+SQL: INSERT INTO `tp_loan_dmin_loginlogs` (`user_id`,`time`,`ip`,`contents`) VALUES ('admin',1476001358,null,'账号admin密码不正确！') [ RunTime:0.371070s ]
+ERR: 1146:Table 'sm_web.tp_loan_dmin_loginlogs' doesn't exist
+ [ SQL语句 ] : INSERT INTO `tp_loan_dmin_loginlogs` (`user_id`,`time`,`ip`,`contents`) VALUES ('admin',1476001358,null,'账号admin密码不正确！')
+
+[ 2016-10-09T16:22:55+08:00 ] 180.173.104.43 /loanpiadmin.php/Login/checklogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined index: HTTP_CDN_SRC_IP D:\wwwroot\httpdocs20160331\httpdocs\Application\Loanpi\Admin\Controller\LoginController.class.php 第 27 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.281232s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.286114s ]
+SQL: SHOW COLUMNS FROM `tp_loan_dmin_loginlogs` [ RunTime:0.296856s ]
+ERR: 1146:Table 'sm_web.tp_loan_dmin_loginlogs' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_loan_dmin_loginlogs`
+SQL: INSERT INTO `tp_loan_dmin_loginlogs` (`user_id`,`time`,`ip`,`contents`) VALUES ('admin',1476001371,null,'账号admin登录成功！') [ RunTime:0.301738s ]
+ERR: 1146:Table 'sm_web.tp_loan_dmin_loginlogs' doesn't exist
+ [ SQL语句 ] : INSERT INTO `tp_loan_dmin_loginlogs` (`user_id`,`time`,`ip`,`contents`) VALUES ('admin',1476001371,null,'账号admin登录成功！')
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.306621s ]
+SQL: UPDATE `tp_admin` SET `last_time`=1476001371 WHERE `user_id` = 'admin' [ RunTime:0.316386s ]
+
+[ 2016-10-09T16:22:58+08:00 ] 180.173.104.43 /loanpiadmin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-09T16:23:02+08:00 ] 180.173.104.43 /loanpiadmin.php/Index/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T16:23:08+08:00 ] 180.173.104.43 /loanpiadmin.php/Index/register_list?_=1476001315202
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.318339s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.328104s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.339822s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.349587s ]
+SQL: SELECT * FROM `tp_loan_register`  [ RunTime:0.362282s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.369117s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.372046s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000133' and rep_status = 1 ) LIMIT 1   [ RunTime:0.373999s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000140' and rep_status = 1 ) LIMIT 1   [ RunTime:0.012694s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000142' and rep_status = 1 ) LIMIT 1   [ RunTime:0.011718s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000143' and rep_status = 1 ) LIMIT 1   [ RunTime:0.012694s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000144' and rep_status = 1 ) LIMIT 1   [ RunTime:0.007812s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000145' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000146' and rep_status = 1 ) LIMIT 1   [ RunTime:0.007812s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000147' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000151' and rep_status = 1 ) LIMIT 1   [ RunTime:0.007812s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000152' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000153' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000154' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000155' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000156' and rep_status = 1 ) LIMIT 1   [ RunTime:0.007812s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000157' and rep_status = 1 ) LIMIT 1   [ RunTime:0.007812s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000158' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000159' and rep_status = 1 ) LIMIT 1   [ RunTime:0.006836s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000160' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000161' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000162' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000163' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000164' and rep_status = 1 ) LIMIT 1   [ RunTime:0.006835s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000165' and rep_status = 1 ) LIMIT 1   [ RunTime:0.006836s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000166' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000167' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000168' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000169' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000170' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000171' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000172' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000173' and rep_status = 1 ) LIMIT 1   [ RunTime:0.007812s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000174' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+
+[ 2016-10-09T16:23:08+08:00 ] 180.173.105.255 /loanpiadmin.php/Weblog/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T16:23:09+08:00 ] 180.173.105.255 /loanpiadmin.php/Weblog/weblog_list?_=1476001321803
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.006836s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.005859s ]
+SQL: SHOW COLUMNS FROM `tp_loan_weblog` [ RunTime:0.006835s ]
+SQL: SHOW COLUMNS FROM `tp_loan_weblog` [ RunTime:0.007812s ]
+SQL: SELECT * FROM `tp_loan_weblog`  [ RunTime:0.343728s ]
+
+[ 2016-10-09T16:23:22+08:00 ] 180.173.104.43 /loanpiadmin.php/Weblog/view_log/id/137
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.005859s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.210924s ]
+SQL: SHOW COLUMNS FROM `tp_loan_weblog` [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_weblog` [ RunTime:0.005859s ]
+SQL: SELECT * FROM `tp_loan_weblog` WHERE ( id = 137 ) LIMIT 1   [ RunTime:0.005859s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001953s ]
+
+[ 2016-10-09T16:24:11+08:00 ] 180.173.104.43 /loanpiadmin.php/Weblog/view_log/id/139
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.008788s ]
+SQL: SHOW COLUMNS FROM `tp_loan_weblog` [ RunTime:0.008789s ]
+SQL: SHOW COLUMNS FROM `tp_loan_weblog` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_weblog` WHERE ( id = 139 ) LIMIT 1   [ RunTime:0.005859s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-09T17:14:32+08:00 ] 180.173.104.43 /loanpiadmin.php/Weblog/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T17:14:33+08:00 ] 180.173.104.43 /loanpiadmin.php/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T17:14:36+08:00 ] 180.173.104.43 /loanpiadmin.php/Login/checklogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined index: HTTP_CDN_SRC_IP D:\wwwroot\httpdocs20160331\httpdocs\Application\Loanpi\Admin\Controller\LoginController.class.php 第 27 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.007813s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.007813s ]
+SQL: SHOW COLUMNS FROM `tp_loan_dmin_loginlogs` [ RunTime:0.006837s ]
+ERR: 1146:Table 'sm_web.tp_loan_dmin_loginlogs' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_loan_dmin_loginlogs`
+SQL: INSERT INTO `tp_loan_dmin_loginlogs` (`user_id`,`time`,`ip`,`contents`) VALUES ('admin',1476004476,null,'账号admin密码不正确！') [ RunTime:0.004883s ]
+ERR: 1146:Table 'sm_web.tp_loan_dmin_loginlogs' doesn't exist
+ [ SQL语句 ] : INSERT INTO `tp_loan_dmin_loginlogs` (`user_id`,`time`,`ip`,`contents`) VALUES ('admin',1476004476,null,'账号admin密码不正确！')
+
+[ 2016-10-09T17:14:41+08:00 ] 180.173.104.43 /loanpiadmin.php/Login/checklogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8] Undefined index: HTTP_CDN_SRC_IP D:\wwwroot\httpdocs20160331\httpdocs\Application\Loanpi\Admin\Controller\LoginController.class.php 第 27 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `user_name` = 'admin' LIMIT 1   [ RunTime:0.006835s ]
+SQL: SHOW COLUMNS FROM `tp_loan_dmin_loginlogs` [ RunTime:0.005859s ]
+ERR: 1146:Table 'sm_web.tp_loan_dmin_loginlogs' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tp_loan_dmin_loginlogs`
+SQL: INSERT INTO `tp_loan_dmin_loginlogs` (`user_id`,`time`,`ip`,`contents`) VALUES ('admin',1476004481,null,'账号admin登录成功！') [ RunTime:0.005859s ]
+ERR: 1146:Table 'sm_web.tp_loan_dmin_loginlogs' doesn't exist
+ [ SQL语句 ] : INSERT INTO `tp_loan_dmin_loginlogs` (`user_id`,`time`,`ip`,`contents`) VALUES ('admin',1476004481,null,'账号admin登录成功！')
+SQL: SHOW COLUMNS FROM `tp_admin` [ RunTime:0.006836s ]
+SQL: UPDATE `tp_admin` SET `last_time`=1476004481 WHERE `user_id` = 'admin' [ RunTime:0.009765s ]
+
+[ 2016-10-09T17:14:42+08:00 ] 180.173.104.43 /loanpiadmin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T17:14:42+08:00 ] 180.173.104.43 /loanpiadmin.php/Index/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T17:14:44+08:00 ] 180.173.104.43 /loanpiadmin.php/Index/register_list?_=1476004415869
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.007812s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.006836s ]
+SQL: SELECT * FROM `tp_loan_register`  [ RunTime:0.009765s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006835s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006836s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000133' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000140' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000142' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000143' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000144' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000145' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000146' and rep_status = 1 ) LIMIT 1   [ RunTime:0.007812s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000147' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000151' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000152' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000153' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000154' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000155' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000156' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000157' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000158' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000159' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000160' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000161' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000162' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000163' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000164' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000165' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000166' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000167' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000168' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000169' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000170' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000171' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000172' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000173' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000174' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+
+[ 2016-10-09T17:15:04+08:00 ] 180.173.105.255 /loanpiadmin.php/Index/repayment.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-10-09T17:15:05+08:00 ] 180.173.105.255 /loanpiadmin.php/Index/repayment_list?_=1476004437310
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.006836s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.005859s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.005859s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_repayment`  [ RunTime:0.007812s ]
+
+[ 2016-10-09T17:15:06+08:00 ] 180.173.105.255 /loanpiadmin.php/Index/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T17:15:06+08:00 ] 180.173.105.255 /loanpiadmin.php/Index/register_list?_=1476004438867
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.008788s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.005859s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.006835s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.006836s ]
+SQL: SELECT * FROM `tp_loan_register`  [ RunTime:0.009765s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006835s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000133' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000140' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000142' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000143' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000144' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000145' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000146' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000147' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000151' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000152' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000153' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000154' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000155' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000156' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000157' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000158' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000159' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000160' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000161' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000162' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000163' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000164' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000165' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000166' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000167' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000168' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000169' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000170' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000171' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000172' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000173' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000174' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+
+[ 2016-10-09T17:15:12+08:00 ] 180.173.104.43 /loanpiadmin.php/Weblog/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T17:15:13+08:00 ] 180.173.104.43 /loanpiadmin.php/Weblog/weblog_list?_=1476004445143
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.006835s ]
+SQL: SHOW COLUMNS FROM `tp_loan_weblog` [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_weblog` [ RunTime:0.005859s ]
+SQL: SELECT * FROM `tp_loan_weblog`  [ RunTime:0.333963s ]
+
+[ 2016-10-09T17:15:20+08:00 ] 180.173.105.255 /loanpiadmin.php/Index/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-09T17:15:21+08:00 ] 180.173.105.255 /loanpiadmin.php/Index/register_list?_=1476004453134
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.007812s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.008789s ]
+SQL: SELECT * FROM `tp_loan_register`  [ RunTime:0.009765s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.213853s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006835s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000133' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000140' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000142' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000143' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000144' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000145' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000146' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000147' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000151' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000152' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000153' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000154' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000155' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000156' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000157' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000158' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000159' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000160' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000161' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000162' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000163' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000164' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000165' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000166' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000167' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004882s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000168' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000169' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000170' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000171' and rep_status = 1 ) LIMIT 1   [ RunTime:0.004883s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000172' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000173' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+SQL: SELECT SUM(rep_amount) AS tp_sum FROM `tp_loan_repayment` WHERE ( sap_code = '0000000174' and rep_status = 1 ) LIMIT 1   [ RunTime:0.005859s ]
+
+[ 2016-10-09T17:16:16+08:00 ] 180.173.104.42 /loanpiadmin.php/Index/view_repay/id/69
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.005859s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_register` WHERE ( id =69 ) LIMIT 1   [ RunTime:0.006835s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_repayment` WHERE ( sap_code = '0000000171' )  [ RunTime:0.005859s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-10-09T17:16:21+08:00 ] 180.173.104.42 /loanpiadmin.php/Index/view_repay/id/64
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wwwroot\httpdocs20160331\httpdocs\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `tp_loan_admin` [ RunTime:0.007812s ]
+SQL: SELECT * FROM `tp_loan_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.005859s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.006835s ]
+SQL: SHOW COLUMNS FROM `tp_loan_register` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_register` WHERE ( id =64 ) LIMIT 1   [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006836s ]
+SQL: SHOW COLUMNS FROM `tp_loan_repayment` [ RunTime:0.006835s ]
+SQL: SELECT * FROM `tp_loan_repayment` WHERE ( sap_code = '0000000166' )  [ RunTime:0.005859s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025389s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
