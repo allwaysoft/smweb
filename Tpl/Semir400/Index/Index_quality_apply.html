@@ -204,18 +204,9 @@
 	$('#sale_type').change(function(){
 		var bootstrapValidator = $('#subForm').data('bootstrapValidator');
 		if($(this).val()==1){
-			 $("#salenote").show();
-			 $("input").attr("disabled","disable");
-			 $("textarea").attr("disabled","disable");
-			 $("select").attr("disabled","disable");
-			$('#sale_type').removeAttr("disabled");
-			 $("button[type='submit']").attr("disabled","disable");  
+			 $("#salenote").show();		
 		}else if($(this).val()==0){
 			 $("#salenote").hide();
-			 $("input").removeAttr("disabled");
-			 $("textarea").removeAttr("disabled");
-			 $("select").removeAttr("disabled");
-			 $("button[type='submit']").removeAttr("disabled");
 		}
 	})
 	
@@ -420,7 +411,7 @@
               </div>
 			  <div class="col-sm-5"  id="salenote" style="display:none;">
                     <ul class="text-danger" >
-                      <li>消费者购买的产品，没过季产品，在质保期内（服装三个月，鞋、配一个月）门店可直接退换货，无须反馈商务网。</li>
+                      <li>消费者购买的产品，在未过季情况下，质保期内（服装三个月，鞋、配一个月）门店可直接退换货，无须反馈商务网。</li>
                       <li>店铺在退次时须填写次品回执单并附上购物小票，回执单填写要求：具体店铺名称、编号、货品款号、颜色、规格、次 品原因、标注疵点部位、缺一不可，不然次品仓会给予退回。</li>
                     </ul>
               </div>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:p1="http://w.balabala.cn" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:p="http://www.w3.org/2001/XMLSchema" name="UpStatementFromPi" targetNamespace="http://w.semir.cn">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://w.semir.cn" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element name="UpStatementDo" type="p1:UpStatementDoRequest">
+        	</xsd:element>
+			<xsd:element name="UpStatementDoResponse" type="p1:UpStatementDoReturn"/>
+			<xsd:complexType name="UpStatementDoRequest">
+				<xsd:sequence>
+					<xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="ID" type="xsd:string"/>
+								<xsd:element name="AGENT_CODE" type="xsd:string"/>
+								<xsd:element name="AGENT_KPF" type="xsd:string"/>
+								<xsd:element name="NAME1" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="DATE_FROM" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="DATE_TO" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="DATE_RUN" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="ARAR" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="ARCR" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="DKAR" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="DKCR" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+								<xsd:element name="OTAP" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+								<xsd:element name="OTCR" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+								<xsd:element name="YL1" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="YL2" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="YL3" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="YL4" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+								<xsd:element name="YL5" type="xsd:string" minOccurs="0" maxOccurs="1">
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="UpStatementDoReturn">
+				<xsd:sequence>
+					<xsd:element name="MESS_FLAG" type="xsd:string"/>
+					<xsd:element name="MESSAGE" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="UpStatusFromPi">
+		<wsdl:part name="NewPart" type="p:string"/>
+	</wsdl:message>
+	<wsdl:message name="UpStatusFromPiDoResponse">
+		<wsdl:part name="NewPart" type="p:string"/>
+	</wsdl:message>
+	<wsdl:message name="UpStatusFromPiDo">
+		<wsdl:part name="NewPart" type="p:string"/>
+	</wsdl:message>
+	<wsdl:message name="UpStatusDo">
+		<wsdl:part name="UpStatementDo" element="p1:UpStatementDo"/>
+	</wsdl:message>
+	<wsdl:message name="UpStatementDoResponse">
+		<wsdl:part name="UpStatementDoResponse" element="p1:UpStatementDoResponse">
+    	</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="UpStatementFromPi">
+		<wsdl:operation name="UpStatementDo">
+			<wsdl:input name="UpStatusDo" message="p1:UpStatusDo"/>
+			<wsdl:output name="UpStatusDoResponse" message="p1:UpStatementDoResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="UpStatementFromPiBinding" type="p1:UpStatementFromPi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+		<wsdl:operation name="UpStatementDo">
+			<soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			<wsdl:input name="UpStatusDo">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:input>
+			<wsdl:output name="UpStatusDoResponse">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="UpStatementFromPiService">
+		<wsdl:port name="UpStatementFromPiPort" binding="p1:UpStatementFromPiBinding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+			<soap:address location="http://w.semir.cn/loanpi.php/Service/upstatementdo.html" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
