@@ -189,9 +189,8 @@
 	$('#style_id').change(function(){
 		styleid = $(this).val();
         $.ajax({
-            type: "POST",
-            url: "fetch_colorcode",
-		   data:'style_id='+styleid,
+            type: "GET",
+            url: "fetch_colorcode?style_id="+styleid,
             success:function(msg){
             	$('#colorarea').html(msg);
             	 $("#subForm").bootstrapValidator('addField','color_id[]');

@@ -211,7 +211,7 @@ class IndexController extends CheckUserController {
     }
 	
     public function fetch_colorcode(){
-    	$style_id = $id = I('post.style_id');
+    	$style_id = $id = I("param.style_id");
     	$returnmsg = '';
     	if($style_id){
 	    	$colors = $this->colorcodes($style_id);
