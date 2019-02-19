@@ -1,0 +1,45 @@
+﻿/**
+ * @fileOverview 
+ * @author daiying.zhang
+ */
+.jscrollbar
+{
+	position: relative;
+	float: left;
+	font-size: 12px;
+	text-align: justify;
+	line-height: 24px; padding-right:10px;
+}
+.jscrollbar .x, .jscrollbar .y
+{
+	position: absolute; background:url(../images/gundongbj.jpg) 0 0 no-repeat;
+	float: right;
+}
+.jscrollbar .x
+{
+	width: 100%;
+	left: 0;
+	bottom: 0;
+}
+.jscrollbar .y
+{
+	height: 100%;
+	top: 0;
+	right: 0;
+}
+/*  */
+.jscrollbar .x .thumb, .jscrollbar .y .thumb
+{
+	position: absolute; background-color:#eee; height:10px; width:11px; border-radius:12px;
+	float: right;
+}
+
+.jscrollbar .x .thumb
+{
+	height: 100%;
+	bottom: 0; display:none;}
+.jscrollbar .y .thumb
+{
+	width: 100%;
+	left: 0;
+}

@@ -1,0 +1,80 @@
+@charset "utf-8";
+.dropdown {
+	
+	outline: none;
+	display: inline-block;
+*display:inline;
+z-index: 990;
+}
+.dropdown h4 {
+	cursor: default;
+	text-indent: 5px;
+	margin: 0;
+	padding: 0;
+}
+.dropdown * {
+	-moz-user-select: none;
+}
+.dropdown h4.over {
+}
+.dropdown div {
+	display: block; /*fix bug*/
+	z-index:999;
+}
+.dropdown ul {
+	position: absolute;
+	display: none;
+	margin: 0;
+	padding: 0;
+	z-index:999; 
+}
+.dropdown ul li {
+	text-indent: 5px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	cursor: default;
+	
+}
+.dropdown ul li.over {
+}
+.dropselectbox {
+	display: inline; 
+}
+/* write you style here */
+.dropselectbox {
+	 
+}
+.dropdown h4 {
+	height: 21px;
+	font: 14px/21px "微软雅黑",Arial, Helvetica, sans-serif; 
+	background: url(../images/droparrow.gif) no-repeat right center;
+	color:#333;
+	padding:2px 5px;
+}
+.dropdown h4.over { 
+	background:#EBF3F1 url(../images/droparrowover.gif) no-repeat right center;
+	color:#999;
+	 
+}
+.dropdown h4.current {
+	border-color: #003;
+}
+.dropdown ul {
+	position:absolute; 
+	background: #FFF;  
+	z-index:999;
+	
+}
+.dropdown ul li {
+	background: #FFF;
+	height: 19px;
+	font: 400 14px/19px "微软雅黑",Arial, Helvetica, sans-serif;
+	padding:2px 5px;
+	color:#333;
+}
+.dropdown ul li.over {
+	background:#EAEAEA;
+	color:#000;
+}

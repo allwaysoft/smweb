@@ -1,0 +1,33 @@
+/* 全局css */
+/* 表格 */
+.table {
+	margin-bottom:5px;
+	background: #C6DCF2;
+	font-size:12px;
+	text-align:left
+}
+.table td {
+	padding-left:10px;
+}
+.table tr .left{
+	width:180px;
+	text-align:right;
+	padding-right:10px;
+	color:#666;
+}
+.table .tr {
+	background: #fff;
+}
+.table .td {
+	padding-left:0px;
+}
+.table_title {
+	height:25px;
+	line-height:25px;
+	background: #F3F7FB;
+	font-weight:bold;
+	color:#0099cc;
+}
+
+.radio{border:none;background:none;}
+

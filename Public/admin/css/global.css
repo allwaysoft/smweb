@@ -1,0 +1,33 @@
+/*整个网站所有网页都用css样式*/
+body{ 
+ font-size:12px; font-family:"微软雅黑";  line-height:22px; color:#535353;
+}
+body,ul,ol,li,dl,dt,dd,form,input,textarea,h1,h2,h3,h4,h5,div,strong,p,table,tr,td{margin:0px;padding:0px;}
+a{color:#5c5c5c;text-decoration:none;
+outline:none;/*移除超链的虚线框  IE8,FF有用*/ 
+hide-focus: expression(this.hideFocus=true); /*IE6、IE7*/ }
+a:hover{color:#1D2821; text-decoration:underline;}
+img{border:none;}
+ul,li{list-style:none;}
+.clear{ clear:both; height:0px; overflow:hidden;}
+.enwords{font-family:Arial, Helvetica, sans-serif;}
+
+/*css 新风格*/
+.a_c{text-align:center;}
+.a_r{text-align:right;}
+.a_l{text-align:left;}
+
+.f_l{float:left;}
+.f_r{float:right;}
+.f_c{ margin:0 auto;}
+
+.black{color:black;}
+.red{color:red;}
+.blue{color:blue;}
+.gray,.gray a{ color:#c2c2c2;}
+.c3{color:#333;}
+.c9{color:#999;}
+
+
+.b{font-weight:bold;}
+.hand{cursor:pointer;}

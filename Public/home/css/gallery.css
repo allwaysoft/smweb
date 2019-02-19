@@ -1,0 +1,240 @@
+@charset "utf-8";
+/* CSS Document */
+/* page */
+.page_link{
+	font-family: "微软雅黑";
+	font-size:14px;
+	width: 1026px;
+	margin: 0 auto;
+	padding:10px 0 10px 0;
+	}
+.galleryPageNav {
+	font-family: "微软雅黑";
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	/*border-bottom: 1px solid #ccc;*/
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+.galleryPageNav .moreLink{
+	float:right;
+	font-size:16px;
+	padding:10px 10px 0 0;
+	}
+.galleryPageNav h2{
+	display: block;
+	font-size: 24px;
+	color: #000;
+	font-weight: normal;
+	padding:5px 0 10px 0;
+	}
+.galleryNav {
+	
+	}
+.galleryNav ul li{
+	padding:10px 15px;
+	width:220px; 
+	float:left;
+	display:block;
+	overflow:hidden;
+	text-align:center;	
+	}
+.galleryNav ul li .list{ 
+	border:1px solid #CCC;
+	padding:8px;
+	}
+.galleryNav ul li .list:hover{ 
+	border:2px solid #FF972F;
+	padding:7px;
+	filter: alpha(opacity=86);
+	-moz-opacity: 0.86;
+	opacity: 0.86;
+	}
+.galleryNav ul li .list .img{
+	height:150px;	
+	}
+.galleryNav ul li .list .img img{
+	max-width:200px;
+	max-height:150px;	
+	}
+
+
+.galleryNav ul li .list .title{
+	font-size:14px;
+	padding-top:6px;
+	width:200px;
+	height:24px;
+	overflow:hidden;
+	text-align:center;
+	}
+ 
+.galleryNav ul li .list .time{
+	font-size:12px;
+	}
+.galleryNav ul li .listOnly .title{
+	font-size:20px;
+	}
+.galleryNav ul li .listOnly .info{
+	padding:10px 0 10px 0;
+	font-size:12px;
+	line-height:18px;
+	}
+.galleryNav ul li .listOnly .time{
+	font-size:12px;
+	}
+.newsInfo h2{
+	font-size:26px;
+	padding:10px 0 10px 0;
+	text-align:center;
+	margin:0;
+	color:#37443E;
+	}
+.newsInfo .newsInfoTime{
+	font-size:12px;
+	padding:15px 20px 10px 0;
+	text-align:right;
+	border-bottom:2px solid #F2F2F2;
+	}
+.newsInfo .newsInfoImg{
+	padding:15px 0 0 0;
+	text-align:center;
+	}
+.newsInfo .newsInfoContents{
+	font-size:14px;
+	padding:15px 10px;
+	color:#37443E;
+	line-height:28px;
+	}
+.newsInfo .newsInfoContents img{
+	max-width:730px;
+	}
+
+
+.newRightNav {
+	border-bottom: #ccc 1px solid;
+	padding-bottom: 8px;
+	font-size: 12px;
+}
+
+.newRightNav .title{
+	font-size: 22px;
+	line-height: 40px;
+	height: 40px;
+	color: #000
+}
+.newRightNav ul{
+	 
+}
+.newRightNav ul li{
+	font-size:16px;
+	padding-bottom:2px;
+}
+.newRightNav ul li a{
+	padding:5px 0 5px 10px;
+	display:block;
+}
+.newRightNav ul li a:hover{
+ background:#F3FAF4;
+}
+.newRightNav ul li .curren{
+	color:#000;
+	padding:5px 0 5px 10px;
+	display:block;
+	background:#F3FAF4;
+	}
+.dongtainrdl{
+	padding-top:10px;
+}
+.dongtainrdd{
+	float:left;  
+	width:80px;
+	height:60px;
+	border:1px solid #F6F6F6;
+	text-align:center;
+	}
+.dongtainrdd img{
+	max-width:80px;
+	max-height:60px;
+	}
+.dongtainrdt{
+	float:left;
+	padding-left:10px;
+}
+.dongtainrdt .p_2{
+	font-size:12px;
+}
+/*分页*/
+.pageLine{
+	border-top:2px solid #999;
+}
+.page {
+	
+	padding:8px 0; 
+	color: #333;
+	font-size:14px;
+	font-family: "微软雅黑";
+}
+.page dl {
+	padding: 3px;
+}
+.page dl dt {
+	float: left;
+	width: 30%;
+}
+.page dl dd {
+	float: right;/*width:70%; text-align:right;*/
+}
+.pagination {
+	text-align:center;
+	
+}
+.pagination .rows{
+	padding-right:40px;
+	}
+.pagination .current{
+	background: #4D5C51;
+	border: 1px solid #223126;
+	color: #fff;
+	font-weight: bold;
+	margin-right:4px; 
+	display:inline-block;
+	padding:3px 12px;
+	}
+.pagination a {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	margin: 0 4px 0 0;
+	border: 1px solid #DAD9D9;
+	text-align: center;
+	text-decoration: none;
+	color: #646161;
+}
+.pagination a.danye {
+	display: inline-block;
+	width: 106px;
+}
+.pagination a.danye span {
+	padding: 0px 10px;
+}
+.pagination a.next, .pagination a.prev {
+	border: 1px solid #e1e1e1;
+	display: inline-block;
+	width: 68px;
+	height: 30px;
+	background:none;
+}
+.pagination a.current, .pagination a:hover {
+	background: #4D5C51;
+	border: 1px solid #223126;
+	color: #fff;
+	font-weight: bold
+}
+.pagination a.next:hover, .pagination a.prev:hover {
+	color: #fff;
+	font-weight: normal;
+	border-color: #e1e1e1
+}
+/**/

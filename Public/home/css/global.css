@@ -1,0 +1,120 @@
+@charset "utf-8";
+/*整个网站所有网页都用css样式*/
+body {
+	font-size: 13px;
+	font-family: microsoft yahei;
+	line-height: 22px;
+	color: #939393;
+	background: #fff;
+}
+body, ul, ol, li, dl, dt, dd, form, input, textarea, h1, h2, h3, h4, h5, div, strong, p, table, tr, td {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	color:#505050;
+	text-decoration: none;
+	outline: none;/*移除超链的虚线框  IE8,FF有用*/
+hide-focus: expression(this.hideFocus=true); /*IE6、IE7*/
+}
+a:hover {
+	color:#249843;
+	text-decoration: none;
+}
+img {
+	border: none;
+}
+ul, li {
+	list-style: none;
+}
+.clear {
+	clear: both;
+}
+.enwords {
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*css 新风格*/
+.a_c {
+	text-align: center;
+}
+.a_r {
+	text-align: right;
+}
+.a_l {
+	text-align: left;
+}
+.f_l {
+	float: left;
+}
+.f_r {
+	float: right;
+}
+.f_c {
+	margin: 0 auto;
+}
+.black {
+	color: black;
+}
+.red {
+	color: red;
+}
+.blue {
+	color: blue;
+}
+.gray, .gray a {
+	color: #c2c2c2;
+}
+.c3 {
+	color: #333;
+}
+.c9 {
+	color: #999;
+}
+.b {
+	font-weight: bold;
+}
+.hand {
+	cursor: pointer;
+}
+.rightLinkNav{
+	position:fixed; 
+	padding-left:20px;
+	right:10px;
+	top:240px;
+}
+.rightLinkNav .box{
+	padding:5px 8px;
+	border:2px solid #EAEAEA;
+	background:#FFF;
+}
+.rightLinkNav .box .qqlink a{
+	display:inline-block;
+	width:53px;
+	height:50px;
+	background:url(../images/qqc.png) center no-repeat;
+	 
+}
+.rightLinkNav .box .qqlink a:hover{
+	background:url(../images/qqc.png) center no-repeat;
+	 
+}
+.rightLinkNav .box .qqfont{
+	font-size:10px;
+	line-height:16px;
+}
+
+.rightLinkNav .backTop{
+	display:none;
+	padding-top:5px;
+}
+.rightLinkNav .backTop a{
+	background:#EEE;
+	padding:10px 2px;
+	display:block;
+	text-align:center;
+	color:#666;
+}
+.rightLinkNav .backTop a:hover{
+	background:#999;
+	color:#FFF;
+}

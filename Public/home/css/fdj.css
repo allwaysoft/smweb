@@ -1,0 +1,251 @@
+@CHARSET "UTF-8";
+/* smallImg */
+.smallImg {
+	position: relative;
+	top: 0px;
+	height: 420px;
+	padding: 15px 10px 0 0px;
+	width: 72px;
+	overflow: hidden;
+	float: left;
+}
+.scrollbutton {
+	width: 72px;
+	height: 10px;
+	overflow: hidden;
+	position: absolute;
+	background: url(../images/zoom.png) no-repeat;
+}
+.scrollbutton.smallImgUp {
+	background-color: #666;
+	background-position: 12px 0;
+	cursor: pointer;
+	top: 0px;
+}
+.scrollbutton.smallImgDown {
+	background-color: #666;
+	background-position: 12px -11px;
+	cursor: pointer;
+	bottom: 8px;
+}
+.scrollbutton.smallImgUp.disabled {
+	background-color: #CCC;
+	background-position: 12px -22px;
+	cursor: default;
+}
+.scrollbutton.smallImgDown.disabled {
+	background-color: #CCC;
+	background-position: 12px -33px;
+}
+#imageMenu {
+	height: 350px;
+	overflow: hidden;
+}
+#imageMenu li {
+	height: 90px;
+	width: 72px;
+	overflow: hidden;
+}
+#imageMenu li img {
+	padding: 1px;
+	/*border: 1px solid #E8E8E8;*/
+	width: 68px;
+	height: 75px;
+	cursor: pointer;
+}
+#imageMenu li#onlickImg img {
+	border: 1px solid #FFF;
+}
+/* bigImg */
+.bigImg {
+	position: relative;
+	float: left;
+	width: 400px;
+	height: 500px;
+	padding: 5px;
+	border: 1px solid #E4E4E4;
+	overflow: hidden;
+}
+.bigImg #midimg {
+	width: 400px;
+	height: 500px;
+}
+.bigImg #winSelector {
+	width: 235px;
+	height: 210px;
+}
+#winSelector {
+	position: absolute;
+	cursor: crosshair;
+	filter: alpha(opacity=15);
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+	background-color: #000;
+	border: 1px solid #fff;
+}
+/* bigView */
+#bigView {
+	position: absolute;
+	border: 1px solid #E4E4E4;
+	overflow: hidden;
+	width: 25px;
+	height: 35px;
+	top: 300px;
+	left: 540px;
+	z-index: 999;
+}
+#bigView img {
+	position: absolute;
+}
+a.abtn {
+	display: block;
+	height: 200px;
+	width: 17px;
+	overflow: hidden;
+	background: url(../images/arrow3.png) no-repeat 0px 50%;
+}
+a.aleft {
+	/* background-color:#999; */
+	float: left;
+}
+a.agrayleft {
+	cursor: default;
+	/* background-color:#CCC; */
+	background-position: -34px 50%;
+}
+a.aright {
+	float: right;
+	/* background-color:#999; */
+	background-position: -17px 50%;
+}
+a.agrayright {
+	cursor: default;
+	/* background-color:#CCC; */
+	background-position: -51px 50%;
+}
+.scrolllist {
+	width: 1011px;
+	margin: 0 auto;
+	border: 1px solid #CCC;
+	padding: 5px 0 5px 0;
+}
+.scrolllist .imglist_w {
+	width: 970px;
+	height: 200px;
+	overflow: hidden;
+	float: left;
+	position: relative;/*必要元素*/
+}
+.scrolllist .imglist_w ul {
+	width: 20000px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.scrolllist .imglist_w li {
+	width: 130px;
+	float: left;
+	padding: 5px; 
+	height:200px;
+	overflow: hidden;
+	text-align:center;
+}
+.scrolllist .imglist_w li:hover{
+	background:#F3F8F7;
+}
+.scrolllist .imglist_w li img {
+	padding: 2px;
+}
+.scrolllist .imglist_w li a {
+	text-decoration: none;
+}
+.scrolllist .imglist_w li a:hover img {
+	filter: alpha(opacity=86);
+	-moz-opacity: 0.86;
+	opacity: 0.86;
+}
+.scrolllist .imglist_w li p {
+	text-align: center;
+	border-top:1px solid #CCC;
+}
+#xzw_starSys {
+	width: 100%;
+}
+#xzw_starBox {
+	position: relative;
+	width: 120px;
+	float: left
+}
+/**/
+#xzw_starSys .description {
+	clear: both;
+	padding: 10px 0px
+}
+#xzw_starSys .star {
+	height: 20px;
+	width: 120px;
+	position: relative;
+	background: url(../images/star.png) repeat-x;
+	cursor: pointer
+}
+#xzw_starSys .star li {
+	float: left;
+	padding: 0px;
+	margin: 0px
+}
+
+#xzw_starSys .star li a {
+	display: block;
+	width: 24px;
+	height: 20px;
+	overflow: hidden;
+	text-indent: -9999px;
+	position: absolute;
+	z-index: 5;
+	padding: 0;
+}
+#xzw_starSys .star li a:hover {
+	background: url(../images/star.png) 0 -25px repeat-x;
+	z-index: 3;
+	left: 0
+}
+#xzw_starSys .star a.one-star {
+	left: 0
+}
+#xzw_starSys .star a.one-star:hover {
+	width: 24px
+}
+#xzw_starSys .star a.two-stars {
+	left: 24px
+}
+#xzw_starSys .star a.two-stars:hover {
+	width: 48px
+}
+#xzw_starSys .star a.three-stars {
+	left: 48px
+}
+#xzw_starSys .star a.three-stars:hover {
+	width: 72px
+}
+#xzw_starSys .star a.four-stars {
+	left: 72px
+}
+#xzw_starSys .star a.four-stars:hover {
+	width: 96px
+}
+#xzw_starSys .star a.five-stars {
+	left: 96px
+}
+#xzw_starSys .star a.five-stars:hover {
+	width: 120px
+}
+#xzw_starSys .current-rating {
+	background: url(../images/star.png) 0 -25px repeat-x;
+	position: absolute;
+	height: 20px;
+	z-index: 1;
+	top: 0;
+	left: 0
+}
+
+/* 赞 */

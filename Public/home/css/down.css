@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* CSS Document */
+/* page */
+.page_link {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	width: 1026px;
+	margin: 0 auto;
+	padding: 10px 0 10px 0;
+}
+.newsPageNav {
+	font-family: "微软雅黑";
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	/*border-bottom: 1px solid #ccc;*/
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+.newsPageNav .moreLink {
+	float: right;
+	font-size: 16px;
+	padding: 10px 10px 0 0;
+}
+.newsPageNav h2 {
+	display: block;
+	font-size: 24px;
+	color: #000;
+	font-weight: normal;
+	padding: 5px 0 10px 0;
+	border-bottom:2px solid #CCC;
+}
+.newsNav {
+	
+	}
+.newsNav ul li{
+	padding:15px 0 10px 0;
+	border-bottom:1px solid #F3F3F3;
+	height:90;
+	display:block;
+	overflow:hidden;	
+	}
+.newsNav ul li .img{
+	float:left;
+	padding-right:20px;	
+	}
+.newsNav ul li .list{
+	float:left;
+	
+	}
+
+.newsNav ul li .list .title{
+	font-size:18px;
+	}
+.newsNav ul li .list .info{
+	padding-top:5px;
+	font-size:12px;
+	line-height:18px;  
+	}
+.newsNav ul li .list .time{
+	padding-top:10px;
+	font-size:12px;
+	}
+.newsInfo h2{
+	font-size:26px;
+	padding:10px 0 10px 0;
+	text-align:center;
+	margin:0;
+	color:#37443E;
+	}
+.newsInfo .newsInfoTime{
+	font-size:12px;
+	padding:15px 20px 10px 0;
+	text-align:right;
+	border-bottom:2px solid #F2F2F2;
+	}
+ 
+.newsInfo .newsInfoContents{
+	font-size:14px;
+	padding:15px 10px;
+	color:#37443E;
+	line-height:28px;
+	}
+.newRightNav {
+	border-bottom: #ccc 1px solid;
+	padding-bottom: 8px;
+	font-size: 12px;
+}
+.newRightNav .title {
+	font-size: 22px;
+	line-height: 40px;
+	height: 40px;
+	color: #000
+}
+.newRightNav ul {
+}
+.newRightNav ul li {
+	font-size: 16px;
+	padding-bottom: 2px;
+}
+.newRightNav ul li a {
+	padding: 5px 0 5px 10px;
+	display: block;
+}
+.newRightNav ul li a:hover {
+	background: #F3FAF4;
+}
+.newRightNav ul li .curren {
+	color: #000;
+	padding: 5px 0 5px 10px;
+	display: block;
+	background: #F3FAF4;
+}
+.banner_div_send {
+	width: 100%;
+	background: #f4f5f4;
+}
+.banner_send {
+	width: 1026px;
+	margin: 0 auto;
+	padding: 10px 0 10px;
+}
+a:hover {
+	text-decoration: none;
+}
+.downNav ul {
+}
+.downNav ul li {
+	padding:  0;
+	border-bottom: 1px solid #F3F3F3;
+	 
+	display: block;
+	overflow: hidden;
+}
+.downNav .list {
+	float: left;
+	width: 600px;
+}
+ 
+.downNav ul li .list .title {
+	font-size: 20px;
+}
+.downNav_1 {
+}
+.title_t_ges {
+	font-size: 14px;
+	margin-left: 20px;
+}
+.downDizhi{
+	border:2px solid #CCC;
+	}
+.downDizhi .fontTitle{
+	font-size:18px;
+	color:#030;
+	padding:10px;
+	font-weight:bold;
+	background:#F5F5F5;
+	}
+.dizhiList {
+	padding:15px;
+}
+.dizhiList li{
+	float:left;
+	padding-right:15px;
+}
+.dizhiList li a { 
+	padding:5px 15px 5px 30px;
+	font-size:14px;
+	background:url(../images/downloadg.png) 10px 50% no-repeat;
+}
+.dizhiList li a:hover {
+	color:#060;
+	background:#F3FAF4 url(../images/download.png) 10px 50% no-repeat;
+}
