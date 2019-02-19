@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<title>我的</title>
+<link href="css/global.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css?333" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="js/svg/css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="js/svg/css/default.css">
+<style>
+.circle {
+	display: inline-block;
+	margin: .6em 1em;
+}
+
+.circles-integer {
+	font-size: .8em;
+}
+#center{
+	margin-top:calc(50% - 9rem - 2px);
+	margin-top:-webkit-calc(50% - 9rem - 2px);
+}
+.list_list a{ display:table;}
+</style>
+</head>
+
+<body>
+	<header>
+        <div><img class="logo" src="images/logo.png"/></div>
+	</header>
+    <div class="center" id="center">
+        <div class="list_list">
+            <ul>
+            	<li>
+                <a href="baseinfo.html">
+                	<div class="circle" id="circles-1"></div>
+                	<span class="title">我的信息</span>
+                </a>
+                </li>
+                <li>
+                <a href="familyinfo.html">
+                	<div class="circle" id="circles-2"></div>
+                	<span class="title">家庭情况</span>
+                </a>
+                </li>
+                <li>
+                <a href="leaninfo.html">
+                	<div class="circle" id="circles-3"></div>
+                	<span class="title">学习经历</span>
+                </a>
+                </li>
+                <li>
+                <a href="jobinfo.html">
+                	<div class="circle" id="circles-4"></div>
+                	<span class="title">工作经历</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/svg/js/circles.min.js"></script>
+<script type="text/javascript">
+var colors = ['#dddddd', '#009E41'], circles = [];
+
+for (var i = 1; i <= 4; i++) {
+	var child = document.getElementById('circles-' + i),
+		percentage = 10 + (i * 10);
+
+	circles.push(Circles.create({
+		id:         child.id,
+		value:		percentage,
+		radius:     45,
+		width:      5,
+		colors:     colors
+	}));
+}
+</script>
+</html>

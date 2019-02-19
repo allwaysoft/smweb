@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<link href="css/global.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery.1.7.2.min.js"></script>
+<link href="js/mobiscroll/css/mobiscroll.custom-2.17.1.min.css" rel="stylesheet" type="text/css" />
+<script src="js/mobiscroll/js/mobiscroll.custom-2.17.1.min.js" type="text/javascript"></script>
+<title>应聘信息</title>
+</head>
+
+<body>
+	<header>
+        <div><img class="logo" src="images/logo.png"/></div>
+    </header>
+    <div class="center">
+    	<div class="info" style="margin-bottom: 2.9rem;">
+        	<ul class="schoolList">
+            	<li>
+                    <h1>学习经历</h1>
+                </li>
+                <li class="list">
+                	<ul>
+                    	<li style="border:0">
+                        	<div><i class="no">No.1</i>
+                            <button class="addship">新增</button>
+                            </div>
+                        </li>
+                    	<li>
+                        	<span>入校年月</span><input name="name" type="text" class="datelist" placeholder="入校年月"/>
+                        </li>
+                        <li>
+                        	<span>离校年月</span><input name="ship" type="text" class="datelist" placeholder="离校年月"/>
+                        </li>
+                        <li>
+                        	<span>学校名称</span><input name="SchoolName" type="text" placeholder="学校名称"/>
+                        </li>
+                        <li>
+                        	<span>专&emsp;&emsp;业</span><input name="Profession" type="text" placeholder="专业"/>
+                        </li>
+                        <li>
+                        	<span>毕业证书</span>
+                            <select name="IsFinished">
+                            	<option value="">请选择</option>
+                                <option value="1">有</option>
+                                <option value="0">无</option>
+                            </select>
+                        </li>
+                        <li>
+                        	<span>所获学历</span>
+                            <select name="Education">
+                            	<option value="">请选择</option>
+                                <option value="博士">博士</option>
+                                <option value="硕士">硕士</option>
+                                <option value="本科">本科</option>
+                                <option value="大专">大专</option>
+                                <option value="高中（中专/中技/职高）">高中（中专/中技/职高）</option>
+                                <option value="初中">初中</option>
+                                <option value="小学">小学</option>
+                            </select>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="btn fixed">
+            <input type="button" value="返回" class="btns prev w45 h23 fs12" /> <input
+            type="button" value="保存" class="btns next w45 h23 fs12" /> 
+		</div>
+    </div>
+</body>
+<script>
+$(function () {
+	$('.datelist').mobiscroll().date({
+		theme: '',      // Specify theme like: theme: 'ios' or omit setting to use default
+		lang: 'zh',    // Specify language like: lang: 'pl' or omit setting to use default
+		display: 'modal',  // Specify display mode like: display: 'bottom' or omit setting to use default
+		dateFormat: 'yyyy-mm',
+		mode: 'scroller'        // More info about mode: http://docs.mobiscroll.com/2-17-1/datetime#!opt-mode
+	}); 
+});
+$('.addship').click(function(){
+	var i=$('.list').length; 
+		i=i+1;
+	var content='<li class="list">';
+        content+='<ul>';
+        content+='<li style="border:0">';
+        content+='<div><i class="no">No.'+i+'</i>';
+        content+='<button class="delship" onclick="delSchool(this);">删除</button>';
+        content+='</div>';
+        content+='</li>';
+        content+='<li>';
+        content+='<span>入校年月</span><input name="name" type="text" class="datelist" placeholder="入校年月"/>';
+        content+='</li>';
+        content+='<li>';
+        content+='<span>离校年月</span><input name="ship" type="text" class="datelist" placeholder="离校年月"/>';
+        content+='</li>';
+        content+='<li>';
+        content+='<span>学校名称</span><input name="SchoolName" type="text" placeholder="学校名称"/>';
+        content+='</li>';
+        content+='<li>';
+        content+='<span>专&emsp;&emsp;业</span><input name="Profession" type="text" placeholder="专业"/>';
+        content+='</li>';
+        content+='<li>';
+        content+='<span>毕业证书</span>';
+        content+='<select name="IsFinished">';
+        content+='<option value="">请选择</option>';
+        content+='<option value="1">有</option>';
+        content+='<option value="0">无</option>';
+        content+='</select>';
+        content+='</li>';
+        content+='<li>';
+        content+='<span>所获学历</span>';
+		content+='<select name="Education">';
+        content+='<option value="">请选择</option>';
+        content+='<option value="博士">博士</option>';
+        content+='<option value="硕士">硕士</option>';
+        content+='<option value="本科">本科</option>';
+        content+='<option value="大专">大专</option>';
+        content+='<option value="高中（中专/中技/职高）">高中（中专/中技/职高）</option>';
+        content+='<option value="初中">初中</option>';
+        content+='<option value="小学">小学</option>';
+        content+='</select>';
+        content+='</li>';
+        content+='</ul>';
+        content+='</li>';
+	$('.info .schoolList').append(content);
+	$(function () {
+		$('.datelist').mobiscroll().date({
+			theme: '',      // Specify theme like: theme: 'ios' or omit setting to use default
+			lang: 'zh',    // Specify language like: lang: 'pl' or omit setting to use default
+			display: 'modal',  // Specify display mode like: display: 'bottom' or omit setting to use default
+			dateFormat: 'yyyy-mm-dd',
+			mode: 'scroller'        // More info about mode: http://docs.mobiscroll.com/2-17-1/datetime#!opt-mode
+		}); 
+	});
+	if(i>=3){
+		$(this).attr('disabled',true);
+		$(this).css('background','#ccc');
+	}
+})
+
+function delSchool(obj){
+	$(obj).parents('.list').remove();
+	var i=$('.list').length; 
+	if(i<3){
+		$('.addship').attr('disabled',false);
+		$('.addship').css('background','#48b536');
+	}
+	$('.no').each(function(i) {
+		i++;
+        $(this).html('No.'+i);
+    });	
+}
+$('.prev').click(function(){
+		window.location.href='list.html'
+})
+</script>
+</html>

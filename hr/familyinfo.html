@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<link href="css/global.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css?333" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery.1.7.2.min.js"></script>
+<title>应聘信息</title>
+</head>
+
+<body>
+	<header>
+        <div><img class="logo" src="images/logo.png"/></div>
+    </header>
+    <div class="center">
+    	<div class="info">
+        	<ul class="shiplist">
+				<li>
+					<h1>
+						家庭情况<i>（若已婚，请提供配偶及子女信息）</i>
+					</h1>
+				</li>
+				<li class="list">
+					<ul>
+						<li style="border: 0">
+							<div>
+								<i class="no_s">No.1</i>
+								<button class="addship" id="addship">新增</button>
+							</div>
+						</li>
+						<li><span>姓&emsp;&emsp;名</span><input name="name" type="text"
+							placeholder="姓名" /></li>
+						<li><span>关&emsp;&emsp;系</span> <select name="ship">
+								<option value="">请选择</option>
+								<option value="父母">父母</option>
+								<option value="岳父母">岳父母</option>
+								<option value="公婆">公婆</option>
+								<option value="配偶">配偶</option>
+								<option value="子女">子女</option>
+								<option value="姐弟">姐弟</option>
+                                <option value="兄弟">兄弟</option>
+                                <option value="兄妹">兄妹</option>
+                                <option value="姐妹">姐妹</option>
+                                <option value="祖父母">祖父母</option>
+                                <option value="女婿">女婿</option>
+                                <option value="儿媳">儿媳</option>
+                                <option value="其他">其他</option>
+						</select></li>
+						<li><span>工作单位</span><input name="Company" type="text"
+							placeholder="工作单位" /></li>
+					</ul>
+				</li>
+
+			</ul>
+            
+            
+        </div>
+        <div class="btn">
+            	<input type="button" value="返回" class="btns prev w45 h23 fs12"/> 
+           		<input type="button" value="保存" class="btns next w45 h23 fs12"/> 
+            </div>
+    </div>
+</body>
+<script>
+$('#addship')
+			.click(
+					function() {
+						var i = $('.list').length;
+						i = i + 1;
+						var content = '<li class="list">';
+						content += '<ul>';
+						content += '<li style="border:0">';
+						content += '<div><i class="no_s">No.' + i + '</i>';
+						content += '<button class="delship" onclick="delship(this)">删除</button>';
+						content += '</div>';
+						content += '</li>';
+						content += '<li>';
+						content += '<span>姓&emsp;&emsp;名</span><input name="name" type="text" placeholder="姓名"/>';
+						content += '</li>';
+						content += '<li>';
+						content += '<span>关&emsp;&emsp;系</span><select name="ship">';
+						content += '<option value="">请选择</option>';
+						content += '<option value="父母">父母</option>';
+						content += '<option value="岳父母">岳父母</option>';
+						content += '<option value="公婆">公婆</option>';
+						content += '<option value="配偶">配偶</option>';
+						content += '<option value="子女">子女</option>';
+						content += '<option value="姐弟">姐弟</option>';
+                        content += '<option value="兄弟">兄弟</option>';
+                        content += '<option value="兄妹">兄妹</option>';
+                        content += '<option value="姐妹">姐妹</option>';
+                        content += '<option value="祖父母">祖父母</option>';
+                        content += '<option value="女婿">女婿</option>';
+                        content += '<option value="儿媳">儿媳</option>';
+                        content += '<option value="其他">其他</option></select>';
+						content += '</li>';
+						content += '<li>';
+						content += '<span>工作单位</span><input name="Company" type="text" placeholder="工作单位"/>';
+						content += '</li>';
+						content += '</ul>';
+						content += '</li>';
+						$('.info .shiplist').append(content);
+						if (i >= 4) {
+							$(this).attr('disabled', true);
+							$(this).css('background', '#ccc');
+						}
+					})
+	function delship(obj) {
+		$(obj).parents('.list').remove();
+		var i = $('.list').length;
+		if (i < 4) {
+			$('.addship').attr('disabled', false);
+			$('.addship').css('background', '#009e41');
+		}
+		$('.no_s').each(function(i) {
+			i++;
+			$(this).html('No.' + i);
+		});
+	}
+$('.prev').click(function(){
+		window.location.href='baseinfo.html'
+})
+$('.next').click(function(){
+		window.location.href='leaninfo.html'
+})
+</script>
+</html>

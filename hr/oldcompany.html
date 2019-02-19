@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<link href="css/global.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css?111" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery.1.7.2.min.js"></script>
+<title>应聘信息</title>
+</head>
+
+<body>
+	<header>
+        <div><img class="logo" src="images/logo.png"/></div>
+    </header>
+    <div class="center">
+    	<div class="info">
+        	<ul class="jobList">
+            	<li>
+                    <h1>最近任职公司薪资情况</h1>
+                </li>
+                <li>
+                	<span>工作时间</span>
+                    <select>
+                    	<option>请选择</option>
+                    	<option>5天/周(22天/月)</option>
+                        <option>5.5天/周(24天/月)</option>
+                        <option>6天/周(26天/月)</option>
+                    </select>
+                </li>
+                <li>
+                	<span>月薪总额</span><input type="tel"/>
+                </li>
+                <li>
+                	<span>补&emsp;&emsp;贴</span><input type="tel" class="input_s"/>元/月
+                </li>
+                <li>
+                	<span>补贴类型</span>
+                    <select>
+                    	<option>请选择</option>
+                        <option>餐饮</option>
+                        <option>通讯</option>
+                        <option>提成</option>
+                        <option>出差</option>
+                        <option>其他</option>
+                    </select>
+                </li>
+                <li>
+                    <ul>
+                        <li style="border:0">
+                            <div>奖金
+                            </div>
+                        </li>
+                        <li>
+                        	<span>季度奖</span><input type="tel" class="input_s"/>
+                        </li>
+                        <li>
+                        	<span>年终奖</span><input type="tel" class="input_s"/>
+                        </li>
+                        <li>
+                            <span>年总收入</span><input type="tel" class="input_s"/>元/年
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                	<span>期望年薪</span><input type="tel" class="input_s"/>(税前)
+                </li>
+                <li>
+                	<span>保密协议</span>
+                    <select>
+                    	<option>请选择</option>
+                        <option>无</option>
+                        <option>有，森马不在其限制范围内</option>
+                        <option>有，森马处于其限制范围内</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="btn">
+            	<input type="button" value="上一步" class="btns prev w45 h23 fs12"/> 
+           		<input type="button" value="下一步" class="btns next w45 h23 fs12"/> 
+            </div>
+       	</div>
+	</div>
+</body>
+<script>
+$('.prev').click(function(){
+		window.location.href='jobinfo.html'
+})
+$('.next').click(function(){
+		window.location.href='oldcompany.html'
+})
+</script>
+</html>
