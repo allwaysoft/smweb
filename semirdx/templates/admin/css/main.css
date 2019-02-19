@@ -1,0 +1,172 @@
+/*!
+ *  
+ *  
+ */
+ 
+body {
+	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+	line-height:normal;
+	font-size: 14px;
+}
+.boxLine{
+	background-color: #fff;
+    border: 2px solid #e7e9ec;
+    border-radius: 6px;
+    color: inherit;
+    font-size: 13px;
+    line-height: 1.72222;
+    margin: 0 0 15px;
+    padding: 8px;
+}
+.headerLink a {
+	font-size: 12px;
+}
+.navbar-static-top{
+	margin-bottom:40px;
+}
+.navList{
+	font-size:1.2em;
+	}
+.navList li{
+	padding:2px 0;
+	}
+.navList  > .active > a{
+	background-color: #EEE;
+}
+.navList li> .nav li > a{
+	font-size:0.9em;
+	padding:5px 0 5px 30px;
+	}
+.navList li> .nav .active> a{
+	background: #EEE;
+	}
+.navbar-static-top {
+	margin-bottom: 0;
+}
+.navbar-static-top li a {
+	font-size: 14px;
+	font-weight: normal;
+}
+.prodNav{
+	margin-top:30px; 
+}
+.prodNav >.affix, .prodNav >.affix-bottom,.prodNav .affix-top{ 
+}
+.prodNav .title{
+	font-size:1.8em;
+	border-bottom:2px solid #CCC;
+	padding-bottom:5px;
+} 
+.prodNav .panel {
+    margin-bottom: 0px;
+    border-radius: 0;
+	border: 0px solid transparent;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	/*box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);*/
+}
+.prodNav .panel-heading {
+	padding:12px 15px;
+    background-color: #FFF; 
+    color: #333;
+	border-radius: 0;
+	font-size:1.1em;
+}
+.prodNav .panel-heading a{
+	line-height: 1.42222;
+} 
+ .prodNav .panel-heading:hover,.prodNav .panel-body ul li:hover{
+	background:#F5F5F5;
+}
+.prodNav .active{
+	background:#F5F5F5;
+}
+
+.prodNav .panel-heading > .headDrop{
+	background: url(../images/arrow_down.png) 0 7px no-repeat;
+	padding-left:15px;
+}
+.prodNav  .headDropNo, .prodNav .active .headDrop{
+	background: url(../images/arrow_right.png)  2px 8px no-repeat;
+	padding-left:15px;
+}
+.prodNav .panel-body ul{
+	margin:0;
+	padding-left:0;
+	list-style:none;
+}
+.prodNav .panel-body ul li{
+	padding:10px 15px;
+	margin-bottom:2px;
+}
+ 
+
+
+
+footer {
+	background-color: #FFF;
+	border-top: 2px solid #CCC;
+	color: #bac1c8;
+	font-size: 15px;
+	padding-top: 20px;
+	margin-top: 20px;
+}
+.backLogin .form-group{
+	margin-bottom: 10px;
+	}
+.backLogin label {
+	margin-bottom: 0;
+	 line-height: 1.5;
+	}
+.my-form{
+	padding:15px;
+}
+.modal-header {
+	background: #ecf0f1;
+}
+.modal-footer {
+	background: #ecf0f1;
+}
+.btnUpload {
+	position: relative;	 
+}
+.btnUpload-intput {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	border: solid transparent;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+}
+ 
+.modal-body{
+	padding:0;
+}
+.bootstrap-dialog .bootstrap-dialog-title{
+	font-size:26px;
+	padding:0;
+	margin:0;
+	font-weight:bold;
+}
+.bootstrap-dialog-header{
+	padding:0
+}
+ 
+.productNav{
+	margin:0;
+	padding: 0; 
+}
+.productNav li{
+	list-style:none;
+	font-size:14px;
+	
+	line-height:30px;
+	padding:5px 0;
+}
+ 
+ul.productTh{
+	margin:0;
+	padding: 0 0 10px 20px;
+	list-style:none;
+}
