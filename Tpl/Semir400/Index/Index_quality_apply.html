@@ -204,8 +204,12 @@
 		var bootstrapValidator = $('#subForm').data('bootstrapValidator');
 		if($(this).val()==1){
 			 $("#salenote").show();		
+			 $("#p3_text").text('洗水唛正面（款号面）');
+			 $("#p4_text").text('销售小票 ');
 		}else if($(this).val()==0){
 			 $("#salenote").hide();
+			$("#p3_text").text('局部清晰大图');
+			$("#p4_text").text('洗水唛正面（款号面）');
 		}
 	})
 	
@@ -214,11 +218,9 @@
 		if($(this).val()==2){
 			$('#pic').hide();
 			$('#expressinfo').show();
-
 		}else if($(this).val()==1){
 			$('#pic').show();
 			$('#expressinfo').hide();
-	 
 		}else if($(this).val()==''){
 			$('#pic').hide();
 			$('#expressinfo').hide();
@@ -447,11 +449,11 @@
                   <input id="com_pic2" name="com_pic2" class="file" type="file"   data-min-file-count="0">
                  </div>
                  <div class="col-sm-3">
-                   <label class="control-label" for="com_pic3">洗水唛正面</label>
+                   <label class="control-label" for="com_pic3" id="p3_text">局部清晰大图</label>
                   <input id="com_pic3" name="com_pic3" class="file" type="file"   data-min-file-count="0">
                  </div>
                  <div class="col-sm-3">
-                   <label class="control-label" for="com_pic4">洗水唛反面</label>
+                   <label class="control-label" for="com_pic4" id="p4_text">洗水唛正面（款号面）</label>
                   <input id="com_pic4" name="com_pic4" class="file" type="file"   data-min-file-count="0">
                  </div>
                  </div>
