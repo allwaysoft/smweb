@@ -243,7 +243,7 @@ class IndexController extends CheckUserController {
     function curl_get_hana($request_uri){
     	$ch = curl_init ();
     	$header = ['Authorization: Basic RGV2MDE6U21AMTIzNDU2']; //设置一个你的浏览器agent的header
-    	curl_setopt ( $ch, CURLOPT_URL, "http://10.90.20.160:8000/Semir_Report_CalModel/3rdPartyIntergration/Odata/3rdService/".$request_uri);
+    	curl_setopt ( $ch, CURLOPT_URL, "http://10.90.20.170:8000/Semir_Report_CalModel/3rdPartyIntergration/Odata/3rdService/".$request_uri);
     	curl_setopt ( $ch, CURLOPT_TIMEOUT, 10 );
     	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
