@@ -195,7 +195,7 @@ li{list-style-type:none;float:left;}
 	      <ul>
           <volist name="info.com_pic" id="vo">
             <li class="uploadResult"> 
-            	<a href="<{$vo}>"><img src="<{$vo}>" class="previewImage"/> </a>
+            	<a href="<if condition='strpos($info["com_code"],"B") heq 0'>http://w.balabala.cn</if><{$vo}>"><img src="<if condition='strpos($info["com_code"],"B") heq 0'>http://w.balabala.cn</if><{$vo}>" class="previewImage"/> </a>
             </li>
           </volist>
           </ul>
@@ -240,7 +240,7 @@ li{list-style-type:none;float:left;}
 	      <ul>
           <volist name="vo.fol_pic" id="v">
             <li class="uploadResult"> 
-            	<a href="<{$v}>"><img src="<{$v}>" class="previewImage"/> </a>
+            	<a href="<if condition='strpos($info["com_code"],"B") heq 0'>http://w.balabala.cn</if><{$v}>"><img src="<if condition='strpos($info["com_code"],"B") heq 0'>http://w.balabala.cn</if><{$v}>" class="previewImage"/> </a>
             </li>
           </volist>
           </ul>

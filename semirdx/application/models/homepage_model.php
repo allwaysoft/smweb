@@ -41,7 +41,18 @@ function get_shangwu_newinfo($condition = "") {
         $query = $this->db->get();
         return $query->result();
     }
-
+    
+    function get_ehomePics($t) {
+    	$this->db->select('*');
+    	if ($t) {
+    		$this->db->where("hType", $t);
+    	}
+    	$this->db->from('ag_homepage_e');
+    	$this->db->order_by("hSort", 'desc');
+    	$query = $this->db->get();
+    	return $query->result();
+    }
+    
     function get_newproducts() {
         $this->db->select('*');
         $this->db->where("hType = 2");

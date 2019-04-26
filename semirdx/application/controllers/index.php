@@ -40,6 +40,24 @@ class Index extends CI_Controller {
         // print_r($_GET);
          
     }
+    
+    function eindex() {
+    	
+    	//print_r($data['menuTop']);
+    	$this->load->model('homepage_model');
+    	$t = FALSE;
+    	$data['bannerPics'] = $this->homepage_model->get_ehomePics($t);
+    	
+    	//$data['page_title'] = '';
+    	// print_r($data['menu']);
+    	// $this->cismarty->assign("menuTop", $data['menuTop']);
+    	$this->cismarty->assign("pageInfo", "");
+    	$this->cismarty->assign("data", $data);
+    	$this->cismarty->display($this->sysconfig_model->templates() . '/eindex.tpl');
+    	//print_r($_SERVER['HTTP_USER_AGENT']);
+    	//echo $_SERVER["HTTP_REFERER"];
+    	// print_r($_GET);
+    }
 
     function get_sww_news() {
         $this->load->model('homepage_model');
