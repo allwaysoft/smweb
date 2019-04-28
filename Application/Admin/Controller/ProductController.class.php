@@ -208,7 +208,12 @@ class ProductController extends AdminController{
 				}
 				
 			}
-			$this->success('导入成功',U('Product/index'));
+			if(sizeof($indata) > 0){
+				$this->success('导入成功',U('Product/index'));
+			}
+			else{
+				$this->success('导入失败，未读取到数据！',U('Product/index'));
+			}
 			/* if ($id) {
 				$this->success('导入成功',U('Product/index'));
 			}else 
