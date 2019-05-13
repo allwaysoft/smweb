@@ -14,7 +14,7 @@ class InfosController extends UserController{
 			$db->password=md5(trim($password));
 			$isbool=$db->where(array('id'=>$uid,'user_name'=>$user_name))->save();
 			if ($isbool) {
-				$this->redirect('Main/index',5,'密码修改成功，返回主页，跳转中...');
+				$this->redirect('Main/index','',1,'密码修改成功，返回主页，跳转中...');
 			}else 
 			{
 				echo "密码修改失败!<script>setInterval(function(){history.go(-1);},3000);</script>";
@@ -33,7 +33,7 @@ class InfosController extends UserController{
 		$password=$_POST['password'];
 		$db=M('Localuser');
 		$result=$db->where(array('id'=>$uid,'user_name'=>$user_name))->find();
-		if ($result['password']==md5($password)) {
+		if ($result['password']==$password || $result['password']==md5($password)) {
 			echo 'true';
 		}else 
 		{

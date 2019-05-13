@@ -36,9 +36,9 @@ class IndexController extends Controller {
         $validCode = $_POST['validCode'];
         $localName = M('Localuser')->where(array('user_name' => $uname))->find(); // localhost 检测是否有用户名
         // save password
-        $db = M('Localuser');
-        $data['password'] = $_POST['password'];
-        $db->where(array('user_name' => $uname))->save($data);
+//         $db = M('Localuser');
+//         $data['password'] = $_POST['password'];
+//         $db->where(array('user_name' => $uname))->save($data);
         // 验证码不正确
         $verify = new \Think\Verify();
         if ($verify->check($validCode) == false) {
@@ -55,6 +55,9 @@ class IndexController extends Controller {
 				//echo $uname;
 				//echo md5($password);
                 $local = M('Localuser')->where(array('user_name' => $uname, 'password' =>$password))->find();
+                if(!$local){
+                   $local = M('Localuser')->where(array('user_name' => $uname, 'password' => md5($password)))->find();
+                }
                 //var_dump($local);
 				if ($local) {
                     $this->checkloginUser($local, $password, $check);
@@ -80,6 +83,9 @@ class IndexController extends Controller {
                 } else {
                     // die('4'); // 密码错误
                     $local = M('Localuser')->where(array('user_name' => $uname, 'password' => $password))->find();
+                    if(!$local){
+                    	$local = M('Localuser')->where(array('user_name' => $uname, 'password' => md5($password)))->find();
+                    }
 					//print_r($local) //                
 				   if ($local) {
 					    $this->checkloginUser($local, $password, $check);
